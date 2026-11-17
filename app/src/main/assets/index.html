@@ -1,0 +1,1373 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f8f5f1">
+<title>MY LINE v18 · 장기 맞춤 다이어트 관리</title>
+<style>
+:root{--ink:#282c32;--muted:#74767b;--line:#e9e3dd;--paper:#f8f5f1;--white:#fff;--coral:#d86d5a;--coral-dark:#b84e42;--coral-soft:#fff0e9;--sage:#547d6d;--sage-soft:#eaf3ed;--gold:#bd8944;--shadow:0 8px 25px rgba(62,48,35,.05)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Pretendard","Apple SD Gothic Neo","Malgun Gothic",sans-serif;background:var(--paper);color:var(--ink);font-size:14px;line-height:1.55}button,input,select,textarea{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid #f0b4a8;outline-offset:2px}.app{max-width:1130px;margin:auto;padding:28px 24px 92px}.header{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:23px}.brand{display:flex;align-items:center;gap:11px}.mark{background:var(--coral);width:42px;height:42px;border-radius:14px;display:grid;place-items:center;color:#fff;font-size:23px;font-weight:800}.brandname{font-size:21px;font-weight:850;letter-spacing:-.8px}.micro{font-size:11px;font-weight:750;letter-spacing:1.25px;color:var(--coral);text-transform:uppercase}.muted{color:var(--muted)}.small{font-size:12px}.headright{display:flex;align-items:center;gap:9px;flex-wrap:wrap}.datepill,.weekpill{background:#fff;border:1px solid var(--line);padding:8px 11px;border-radius:12px;font-weight:700}.weekpill{background:var(--coral-soft);border-color:#f5d8cb;color:var(--coral-dark)}.tabs{display:flex;gap:7px;padding:5px;background:#efeae5;border-radius:15px;margin-bottom:24px;overflow:auto}.tab{border:0;border-radius:11px;padding:11px 20px;background:transparent;color:#67676b;font-weight:750;white-space:nowrap;flex:1}.tab.active{background:#fff;color:var(--ink);box-shadow:0 3px 8px #0000000b}.page{display:none}.page.active{display:block}.hero{border-radius:22px;background:linear-gradient(120deg,#fff7ef 10%,#f9e6de 100%);border:1px solid #efdfd6;padding:26px 29px;display:flex;justify-content:space-between;gap:20px;align-items:center;margin-bottom:20px}.hero h1{margin:6px 0 8px;font-size:27px;line-height:1.32;letter-spacing:-1px}.hero p{margin:0;color:#786a65;max-width:570px}.heroicon{font-size:70px;line-height:1;opacity:.87}.grid{display:grid;gap:16px}.metrics{grid-template-columns:repeat(4,minmax(0,1fr));margin-bottom:19px}.two{grid-template-columns:minmax(0,1.38fr) minmax(0,1fr)}.twoequal{grid-template-columns:repeat(2,minmax(0,1fr))}.card{background:var(--white);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:19px;padding:20px;min-width:0}.card h2{font-size:17px;letter-spacing:-.4px;margin:0 0 16px}.card h3{font-size:14px;margin:0 0 9px}.stat .label{font-size:12px;color:var(--muted);font-weight:700}.stat .value{font-size:27px;letter-spacing:-1px;font-weight:800;margin-top:7px}.stat .sub{color:var(--muted);font-size:11px;margin-top:2px}.accent{color:var(--coral-dark)}.green{color:var(--sage)}.progressbar{height:9px;background:#eee9e4;border-radius:99px;overflow:hidden}.progressbar>span{height:100%;background:linear-gradient(90deg,#dd9a79,var(--coral));display:block;border-radius:99px;transition:width .3s}.sectiontop{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:0 0 16px}.sectiontop h2{margin:0;font-size:20px;letter-spacing:-.5px}.hint{font-size:12px;color:var(--muted)}.pill{display:inline-block;padding:5px 9px;border-radius:99px;font-weight:800;font-size:11px;background:var(--sage-soft);color:var(--sage)}.pill.warm{background:var(--coral-soft);color:var(--coral-dark)}.keyvalue{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding:10px 0;align-items:center;gap:8px}.keyvalue:last-child{border:0}.btn{background:var(--coral);color:#fff;border:1px solid var(--coral);border-radius:12px;padding:10px 15px;font-weight:800}.btn:hover{background:var(--coral-dark)}.btn.secondary{background:#fff;color:var(--ink);border-color:var(--line)}.btn.secondary:hover{background:#fbf6f1}.btn.outline{background:transparent;color:var(--coral-dark);border-color:#eec7bf}.btn.tiny{font-size:11px;padding:6px 10px;border-radius:9px}.btn.danger{background:#fff;color:#a63c32;border-color:#f1c7c3}.field{display:flex;flex-direction:column;gap:5px;min-width:0}.field label{font-size:12px;color:#66686b;font-weight:750}.field input,.field select,.field textarea,.input{background:#fff;border:1px solid #ded8d1;border-radius:10px;padding:10px 11px;width:100%;min-width:0;color:#282c32}.field textarea{resize:vertical;min-height:66px}.formgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}.formgrid.four{grid-template-columns:repeat(4,minmax(0,1fr))}.buttonrow{display:flex;align-items:center;flex-wrap:wrap;gap:8px}.days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:7px;margin-bottom:19px}.day{background:#fff;border:1px solid var(--line);border-radius:14px;padding:11px 4px;text-align:center;min-width:0}.day.sel{border-color:var(--coral);background:var(--coral-soft)}.day b{display:block;font-size:13px}.day .dot{height:6px;width:6px;border-radius:100%;margin:6px auto 0;background:#e7e2db}.day .dot.done{background:var(--sage)}.day small{font-size:10px;color:var(--muted);display:block;margin-top:3px}.mealrow{padding:15px 0;border-bottom:1px solid var(--line)}.mealrow:last-child{border-bottom:0}.mealtop{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:6px}.mealtop strong{font-size:14px}.mealplan{color:#66666b;font-size:13px;margin:3px 0 11px}.mealfields{display:grid;grid-template-columns:minmax(0,2.5fr) repeat(3,minmax(65px,.65fr));gap:8px}.mealfields input{min-width:0;border:1px solid #e3dfd9;padding:8px;border-radius:9px;width:100%;font-size:12px}.numfoot{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-top:13px}.num{border-radius:11px;background:#f7f5f1;padding:10px;text-align:center}.num b{display:block;font-size:19px}.num span{display:block;color:var(--muted);font-size:11px}.workitem{display:flex;align-items:flex-start;gap:11px;padding:12px 0;border-bottom:1px solid var(--line)}.workitem:last-child{border:0}.workitem input[type=checkbox]{accent-color:var(--sage);width:19px;height:19px;margin:2px 0}.workmain{flex:1;min-width:0}.worktitle{font-weight:800}.workdetail{font-size:12px;color:var(--muted);margin:4px 0}.workmini{border:1px solid #e3dfd9;border-radius:8px;padding:6px 8px;width:85px;font-size:12px}.workitem.completed .worktitle{text-decoration:line-through;color:#9ca3a0}.workrow{display:flex;gap:6px;flex-wrap:wrap;align-items:center}.notice{background:#f7f6f2;border-radius:12px;padding:12px 14px;color:#73716a;font-size:12px;margin-top:14px}.banner{background:#fff2e9;border:1px solid #f4d7c7;color:#77574c;border-radius:14px;padding:13px 15px;margin-bottom:17px}.trend{height:190px;width:100%;display:block}.legend{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:12px;color:var(--muted)}.history{overflow:auto}table{border-collapse:collapse;width:100%;font-size:12px}th,td{padding:10px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}th{color:#7f7e7b;font-weight:750;background:#fbfaf8}tr:last-child td{border:0}.empty{padding:27px;text-align:center;color:#aaa;font-size:12px}.microtitle{font-size:11px;color:var(--coral);letter-spacing:.8px;font-weight:900;text-transform:uppercase}.setting-section{margin-bottom:24px}.settingshr{border:none;border-top:1px solid var(--line);margin:23px 0}.toast{position:fixed;right:20px;bottom:20px;border-radius:13px;padding:12px 17px;background:#303e38;color:#fff;box-shadow:0 12px 40px #0004;z-index:10;opacity:0;transform:translateY(12px);pointer-events:none;transition:.3s}.toast.show{opacity:1;transform:translateY(0)}.stepper{display:flex;align-items:center;gap:8px;margin-top:12px}.stepper .value{font-weight:800;min-width:70px;text-align:center}.toggle{display:flex;align-items:center;gap:8px;font-weight:700}.toggle input{accent-color:var(--sage);width:18px;height:18px}.todaybar{display:flex;align-items:center;gap:8px;margin-bottom:17px;flex-wrap:wrap}.todaybar input{width:160px;max-width:100%}.routine-caption{color:var(--muted);font-size:12px}.mini{font-size:11px}.hr{height:1px;background:var(--line);margin:17px 0}.weeknav{display:flex;gap:9px;align-items:center;margin-bottom:12px}.switch{display:inline-flex;gap:5px;background:#eeeae6;border-radius:12px;padding:4px}.switch button{background:transparent;border:0;border-radius:9px;padding:8px 12px;font-weight:800;color:#666}.switch button.sel{background:#fff;color:var(--ink)}.goalhelp{font-size:11px;color:var(--muted);margin-top:7px}.foot{color:#9a9691;text-align:center;font-size:11px;margin:28px 0 0}.metricgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:11px}.metricbox{background:#f9f7f3;border-radius:12px;padding:13px}.metricbox label{font-size:11px;color:#777;display:block}.metricbox b{font-size:17px}.weekphase{padding:10px 12px;background:var(--sage-soft);color:#466c5b;border-radius:11px;font-size:12px;margin-bottom:14px}.chart-controls{display:flex;gap:5px;margin:0 0 11px}.softtext{color:#9c8c82} .badgeDone{color:var(--sage);font-weight:850}.schedule-week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px}.schedule-item{border-radius:12px;background:#f7f5f2;padding:12px 6px;text-align:center;font-size:12px}.schedule-item b{display:block;margin:5px 0}.visually-hidden{position:absolute;height:1px;width:1px;overflow:hidden;clip:rect(0,0,0,0)}
+@media(max-width:780px){.app{padding:15px 13px 95px}.header{align-items:flex-start}.brandname{font-size:18px}.micro{font-size:10px}.mark{width:38px;height:38px}.headright{justify-content:flex-end}.datepill{display:none}.tabs{position:sticky;top:0;z-index:3;margin:0 -13px 18px;border-radius:0;padding:6px 12px}.tab{padding:10px 12px;font-size:12px}.hero{padding:20px;align-items:flex-end}.hero h1{font-size:22px}.heroicon{font-size:45px}.metrics{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.card{padding:16px;border-radius:15px}.grid.two,.grid.twoequal{grid-template-columns:1fr}.formgrid,.formgrid.four{grid-template-columns:repeat(2,minmax(0,1fr))}.mealfields{grid-template-columns:minmax(0,1fr) repeat(3,56px);gap:4px}.mealfields input{padding:7px 5px;font-size:11px}.numfoot{grid-template-columns:repeat(2,1fr)}.schedule-week{gap:4px}.schedule-item{font-size:10px;padding:10px 3px}.days{gap:4px}.day{padding:8px 2px}.day small{font-size:9px}.metricgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.todaybar input{width:155px}}
+@media(max-width:375px){.mealfields{grid-template-columns:minmax(0,1fr) repeat(3,49px)}.mealtop strong{font-size:12px}.tab{padding:10px 8px}.stat .value{font-size:23px}.heroicon{display:none}}
+@media print{.tabs,.header .headright,.btn,.todaybar{display:none!important}.page{display:block!important;break-after:page}.app{max-width:none}.card{break-inside:avoid}body{background:#fff}}
+
+/* v6: explicit ingredient and finished soup serving tables */
+.detail-card{border:1px solid #e8e0d7;border-radius:12px;background:#fcfbfa;margin:10px 0 13px;overflow:hidden}
+.detail-card summary{cursor:pointer;list-style:auto;color:var(--coral-dark);font-size:12px;font-weight:800;padding:10px 14px}
+.detail-card[open] summary{border-bottom:1px solid #eee7de}
+.detail-body{padding:10px 14px 13px}
+.gram-table{width:100%;font-size:12px;border-collapse:collapse}
+.gram-table th,.gram-table td{padding:6px 7px;white-space:normal;border-bottom:1px solid #eee8e2}
+.gram-table td:last-child,.gram-table th:last-child{text-align:right;font-variant-numeric:tabular-nums;font-weight:750;white-space:nowrap}
+.gram-table tr:last-child td{border-bottom:0}
+.gram-table .gram-head td{font-weight:800;background:#f2eee8;color:#57504d;padding:8px}
+.soup-stats{display:flex;gap:9px;flex-wrap:wrap;margin:10px 0 5px}
+.soup-stats span{background:#f0f3f2;color:#345548;padding:6px 11px;border-radius:9px;font-weight:800;font-size:12px}
+.meal-title-main{font-weight:850;font-size:14px}
+.meal-mode{font-size:11px;color:var(--muted);margin:3px 0 0}
+.meal-summary{font-size:12px;color:#666;margin:5px 0 9px}
+.measure-day-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:7px;margin:13px 0}
+.measure-day-grid button{padding:8px 3px;border-radius:11px;border:1px solid var(--line);background:#fff;color:#666;font-size:11px}
+.measure-day-grid button.active{background:var(--coral-soft);border-color:var(--coral);font-weight:800;color:var(--coral-dark)}
+.measure-food-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.measure-food-list .card{padding:15px}
+.measure-food-list .detail-card{margin-bottom:0}
+.soup-list{overflow-x:auto}
+.soup-list table{min-width:570px}
+.soup-list td{white-space:normal;vertical-align:top}
+.measure-note{padding:12px 14px;background:#f7f4ed;border-radius:12px;color:#6e6558;font-size:12px}
+.measure-weeknav{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.measure-weeknav select{width:auto;max-width:160px;background:#fff;border:1px solid var(--line);border-radius:9px;padding:8px 12px}
+@media(max-width:780px){.measure-food-list{grid-template-columns:1fr}.measure-day-grid{gap:4px}.measure-day-grid button{font-size:10px;padding:8px 2px}.tabs .tab{padding:10px 10px}}
+
+
+/* v7: Simple voluntary workout tracking, no prescribed routines */
+.muscle-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:18px}
+.muscle-chip{display:flex;align-items:center;justify-content:center;min-height:54px;position:relative;cursor:pointer;border:1px solid var(--line);border-radius:14px;background:#faf9f6;font-weight:800;color:#64645f;font-size:15px;transition:background .15s,border-color .15s}
+.muscle-chip input{position:absolute;opacity:0;width:100%;height:100%;margin:0;cursor:pointer}
+.muscle-chip.selected{border-color:#dd8877;background:#fff0e9;color:#9e5546}
+.muscle-chip:focus-within{outline:2px solid #dc8f80;outline-offset:2px}
+.done-toggle{display:flex;align-items:center;gap:15px;padding:16px;background:#f7f5f1;border:1px solid var(--line);border-radius:14px;cursor:pointer}
+.done-toggle.active{background:#e8f3ed;border-color:#a0c6b2}
+.done-toggle>input{width:24px;height:24px;accent-color:#4d9975;flex-shrink:0}
+.done-toggle span{display:flex;flex-direction:column;gap:3px}
+.done-toggle strong{font-size:17px}
+.done-toggle small{color:var(--muted);font-size:12px}
+.workout-recap{display:flex;flex-direction:column}
+.workout-recap-row{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid var(--line)}
+.workout-recap-row>span{font-size:12px;color:var(--muted);white-space:nowrap}
+.workout-recap-row>b{font-size:12px;text-align:right;max-width:70%;overflow-wrap:anywhere}
+@media(max-width:460px){.muscle-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}.muscle-chip{min-height:47px;font-size:13px}}
+
+/* v10: daily navigation + clear planned vs recorded nutrients */
+.food-daynav{display:grid;grid-template-columns:1fr auto 1fr;gap:9px;align-items:center;margin:0 0 16px}
+.food-daynav .btn{width:100%;padding:10px 8px}
+.food-daynav .btn:last-child{justify-self:end}
+.food-nav-center{min-width:120px;text-align:center;display:flex;flex-direction:column;line-height:1.35}
+.food-nav-center strong{font-size:15px}
+.food-nav-center small{font-size:11px;color:var(--muted);margin-top:3px}
+.food-daynav button:disabled{opacity:.35;cursor:default}
+.meal-head{display:flex;justify-content:space-between;align-items:center;gap:9px;margin-bottom:16px}
+.macro-section{background:#f7f5f2;border:1px solid #e9e1db;border-radius:15px;padding:13px;margin:6px 0 15px}
+.macro-title{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:11px}
+.macro-title b{font-size:13px}.macro-title>span{font-size:11px;color:#827e77}
+.macro-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:7px}
+.macro-tile{border:1px solid #e6e3de;border-radius:11px;background:#fff;padding:9px 4px;text-align:center;min-width:0;display:flex;flex-direction:column;gap:4px}
+.macro-tile>span{font-size:10px;color:#817c78;font-weight:650;white-space:nowrap}
+.macro-tile strong{font-size:17px;white-space:nowrap;line-height:1.2;font-variant-numeric:tabular-nums}
+.macro-tile small{font-size:9px;color:#908983;font-weight:500;margin-left:1px}
+.macro-grid.macro-small{margin:11px 0 9px;gap:5px}
+.macro-small .macro-tile{background:#fff9f5;border-color:#f2e6dc;padding:7px 3px}
+.macro-small .macro-tile strong{font-size:13px}
+.macro-small .macro-tile>span{font-size:9px}
+.meal-input-heading{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:13px 0 8px}
+.meal-input-heading span{font-size:11px;color:#666;font-weight:700}
+.mealfields.v10-food-inputs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}
+.v10-food-inputs>input{grid-column:1/-1;width:100%;font-size:13px}
+.v10-food-inputs label{display:flex;flex-direction:column;min-width:0;gap:5px}
+.v10-food-inputs label span{font-size:10px;white-space:nowrap;color:#817c78}
+.v10-food-inputs label input{width:100%;font-size:12px;padding:8px 5px;border:1px solid #e3dfd9;border-radius:9px}
+.actual-section{margin-top:18px}.actual-section .macro-tile{background:#fcfdfb}
+.nutr-note{border-top:1px solid var(--line);padding-top:12px;margin-top:12px;font-size:11px}
+@media(max-width:425px){.food-nav-center{min-width:100px}.food-nav-center strong{font-size:13px}.food-daynav{gap:6px}.food-daynav .btn{font-size:12px;padding:9px 5px}.macro-grid{gap:4px}.macro-tile{padding:7px 2px}.macro-tile strong{font-size:14px}.macro-small .macro-tile strong{font-size:12px}.macro-tile small{display:block;margin-left:0;font-size:9px}.v10-food-inputs label span{font-size:9px}}
+
+
+/* v12 - editable plan, ingredient checkboxes, and recipe instructions */
+.ing-check-list{border:1px solid #eee3dc;border-radius:13px;overflow:hidden;margin:12px 0 10px;background:#fff}
+.ing-check-head{padding:9px 12px;background:#f8f5f2;color:#665b53;font-weight:800;font-size:12px}
+.ing-check-row{display:grid;grid-template-columns:23px minmax(0,1fr) auto;align-items:center;gap:8px;padding:10px 13px;border-bottom:1px solid #f0ebe6;cursor:pointer;font-size:13px}
+.ing-check-row:last-child{border-bottom:0}.ing-check-row input{width:18px;height:18px;accent-color:#c96d59;margin:0}
+.ing-check-row em{font-style:normal;color:#7c766d;font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+.ing-check-row.ischecked{background:#f0f8f2}.ing-check-row.ischecked .ing-name{text-decoration:line-through;color:#778c80}
+.macro-section.actual-section{background:#eff6f1;border-color:#d3e6d8}.recipe-step-list{padding-left:22px;margin:8px 0 0;line-height:1.8}
+.recipe-step-list li{padding:6px 0;font-size:13px}.recipe-card .detail-card{margin-top:12px}
+.recipe-subtitle{margin:12px 0 7px;color:#a15347;font-weight:800}.recipe-tags{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0}
+.recipe-tag{background:#f0f3ed;color:#597561;font-size:11px;border-radius:999px;padding:3px 9px}
+.menu-editor{margin-top:15px;border:1px solid #e9ddd4;border-radius:15px;background:#fffaf6;padding:15px}
+.menu-editor h3{margin:0 0 7px}.menu-search{display:grid;grid-template-columns:1fr;gap:8px}
+.menu-results{display:grid;grid-template-columns:1fr;gap:5px;max-height:190px;overflow:auto;margin:9px 0 14px}
+.menu-result{border:1px solid #e4ddd7;padding:9px 12px;text-align:left;border-radius:9px;background:white;cursor:pointer;font-size:12px}
+.menu-result b{display:block;font-size:13px}.menu-result span{font-size:11px;color:#6d6a66}
+.menu-edit-fields{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}
+.menu-edit-fields label{display:flex;flex-direction:column;gap:3px;min-width:0;font-size:10px;color:#746d68}
+.menu-edit-fields input{width:100%;min-width:0;padding:8px 4px;border-radius:8px;border:1px solid #ddd8d2}
+.menu-editor textarea,.menu-editor input[type=text]{width:100%;border:1px solid #dfd7cf;border-radius:9px;padding:10px;background:#fff}
+.menu-actions{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0 2px}
+.menu-info{font-size:11px;color:#716b66;margin:9px 0;line-height:1.6}
+.meal-action-bar{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:9px}
+.meal-check-hint{font-size:11px;color:#77726e;margin-bottom:7px}
+@media(max-width:520px){.menu-edit-fields{grid-template-columns:repeat(3,minmax(0,1fr))}.macro-grid{grid-template-columns:repeat(5,minmax(0,1fr))}.meal-action-bar{align-items:flex-start}}
+
+
+/* v13: ingredient substitutions */
+.ing-check-row{grid-template-columns:minmax(0,1fr) auto auto;gap:8px}
+.ing-check-row .ing-check-label{display:flex;align-items:center;gap:9px;min-width:0;cursor:pointer}
+.ing-check-row .ing-name{min-width:0;overflow-wrap:anywhere}
+.ing-swap-btn{font-size:11px!important;padding:6px 8px!important;white-space:nowrap}
+.ing-restore-btn{color:#98634f!important;background:#fff9f2!important}
+.swap-modal{border:1px solid #e6dad2;border-radius:20px;padding:0;width:min(94vw,650px);max-height:90dvh;overflow:auto;background:var(--paper);box-shadow:0 16px 65px #0003}
+.swap-modal::backdrop{background:#242a2f90}
+.swap-content{padding:22px}
+.swap-source{padding:12px;border-radius:12px;background:#fff4e9;border:1px solid #f5ddd0;margin:13px 0}
+.swap-source strong{display:block;font-size:16px}
+.swap-source p{margin:5px 0 0;font-size:12px;color:#806a5c}
+.swap-options{display:grid;gap:8px;margin-top:12px}
+.swap-choice{display:flex;justify-content:space-between;gap:14px;align-items:center;text-align:left;padding:12px;border:1px solid #e5ddd5;border-radius:12px;background:#fff;width:100%;color:var(--ink)}
+.swap-choice:hover,.swap-choice:focus-visible{border-color:#ce8c73;background:#fff7f3}
+.swap-choice b{display:block;font-size:14px}
+.swap-choice small{display:block;color:#6d7279;font-size:11px;margin-top:3px}
+.swap-target-gram{font-weight:800;text-align:right;color:#b84e42;white-space:nowrap}
+.swap-target-gram small{display:block;color:#777}
+.swap-pills{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0}
+.swap-pill{border:1px solid #e5ddd5;background:#fff;border-radius:99px;padding:7px 11px;font-size:12px;font-weight:700}
+.swap-pill.selected{background:#fff0e9;border-color:#e3a89d;color:#b54f41}
+.swapped-note{font-size:11px;color:#af614e;margin-left:5px}
+@media(max-width:520px){.ing-check-row{gap:5px;padding:10px 8px}.ing-swap-btn{font-size:10px!important;padding:5px 6px!important}.swap-content{padding:16px}.swap-choice{padding:11px}}
+.rice-pack-note{background:#f2f5f0;border:1px solid #e0eadd;border-radius:12px;padding:10px 13px;color:#4b6657;font-size:12px;margin:10px 0 16px}
+
+/* v16: long-term calorie guidance and free product search */
+.smart-inline{background:#f1f6f1;padding:11px 13px;border-radius:12px;margin:12px 0;display:flex;align-items:center;justify-content:space-between;gap:9px;flex-wrap:wrap;color:#486e5a;font-size:12px}
+.smart-stats{grid-template-columns:repeat(4,minmax(0,1fr));margin:0 0 18px}.smart-stats .metricbox b{font-size:19px}
+.smart-fields{margin:16px 0}.smart-warning{background:#fff2e4;border:1px solid #e9c6a2;border-radius:12px;padding:11px;color:#815031;font-size:12px}
+.smart-week-list{display:grid;gap:8px}.smart-weekrow{display:flex;align-items:center;justify-content:space-between;gap:11px;background:#f9f7f4;border:1px solid #eee8e1;border-radius:12px;padding:12px}.smart-weekrow p{margin:2px 0;font-size:12px}.smart-weekrow small{font-size:11px;color:#79726b}.smart-weekrow button{flex-shrink:0}
+.online-searchbar{display:grid;grid-template-columns:minmax(0,1fr) 84px auto;gap:7px;margin:9px 0}.online-searchbar input{min-width:0}.online-searchbar button{padding-left:10px;padding-right:10px}.online-results{display:grid;gap:6px;max-height:260px;overflow:auto}
+@media(max-width:610px){.smart-stats{grid-template-columns:repeat(2,1fr)}.smart-stats .metricbox b{font-size:17px}.online-searchbar{grid-template-columns:1fr 74px auto}.online-searchbar .btn{font-size:11px}}
+
+/* v17: editable dated goal and explicit unrecorded baseline */
+.goal-summary{border:1px solid #b6d0c0;background:#f1f8f2;padding:14px;border-radius:13px;margin:14px 0;color:#315744}
+.goal-summary b{font-size:14px}.goal-summary p{margin:6px 0;line-height:1.5;font-size:12px}
+.goal-summary p b{font-size:12px}
+.smart-warning{margin:12px 0;line-height:1.6}
+.saved-badge{color:#547960;font-weight:700;font-size:11px;white-space:nowrap;align-self:center}
+.taste-buttons{display:flex;gap:6px;flex-wrap:wrap;margin:4px 0 10px}.taste-buttons .taste-on{color:#b64c53;background:#fff0f0;border-color:#efc5c2}.taste-buttons .taste-excluded{color:#665d57;background:#e9e7e3}
+.taste-tag-list{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 15px}.report-day{display:grid;grid-template-columns:1fr auto auto;gap:12px;border-bottom:1px solid #f0eae5;padding:10px 0;font-size:13px}
+.nutrition-source{font-size:11px;color:#77736b;margin:5px 0 10px}.report-day span{color:#7c7873}
+@media(max-width:640px){.saved-badge{font-size:10px}.headright{gap:4px}.report-day{gap:8px;font-size:12px}}
+
+/* v19: safer two-phase meal editing */
+.v19-buttons{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0}.v19-buttons .btn{font-size:12px}
+.v19-editor{margin:12px 0;padding:13px;background:#fff8f2;border:1px solid #e6d4c7;border-radius:13px}
+.v19-editrow{display:flex;align-items:center;gap:9px;padding:8px 0;border-bottom:1px solid #eee1d5}
+.v19-editrow .ingredient{flex:1;min-width:80px;font-weight:650;font-size:13px}
+.v19-editrow input{width:85px;min-width:0;padding:8px 6px;border:1px solid #d9c5b7;border-radius:9px;background:white;font-size:14px}
+.v19-warning{color:#98623f;font-size:12px;padding-top:7px}
+.v19-plan-preview{font-weight:700;font-size:12px;margin:10px 0;color:#72544b}
+.v19-readonly{background:#f6f3f0!important;color:#756e67}
+.v19-badge{font-size:11px;color:#865543;background:#f8e9de;border-radius:8px;padding:5px 8px}
+.v19-search-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(115px,1fr));gap:7px;margin-top:8px}
+.v19-search-list button{background:#fff;border:1px solid #e5d7c9;border-radius:9px;padding:9px;text-align:left;font-size:12px;color:#3b3430}
+@media(max-width:450px){.v19-editrow{flex-wrap:wrap}.v19-editrow .ingredient{flex-basis:100%}.v19-editrow input{width:75px}}
+
+</style>
+</head>
+<body>
+<div class="app">
+<header class="header"><div class="brand"><div class="mark">✿</div><div><div class="micro">PERSONAL BODYLINE TRACKER</div><div class="brandname">MY LINE <span style="font-weight:500;color:#aaa">/ 매일</span></div></div></div><div class="headright"><small class="saved-badge" id="save-indicator" aria-live="polite">자동 저장</small><span class="datepill" id="nowlabel"></span><span class="weekpill" id="weeklabel"></span></div></header>
+<nav class="tabs" role="tablist" aria-label="메뉴"><button class="tab active" data-tab="home">홈</button><button class="tab" data-tab="food">식단</button><button class="tab" data-tab="measure">상세 레시피</button><button class="tab" data-tab="workout">운동</button><button class="tab" data-tab="body">신체기록</button><button class="tab" data-tab="smart">스마트 관리</button><button class="tab" data-tab="report">주간 리포트</button><button class="tab" data-tab="settings">설정·백업</button></nav>
+<section id="home" class="page active"></section><section id="food" class="page"></section><section id="measure" class="page"></section><section id="workout" class="page"></section><section id="body" class="page"></section><section id="smart" class="page"></section><section id="report" class="page"></section><section id="settings" class="page"></section>
+<footer class="foot">MY LINE v19 · 주간 리포트 · 취향별 식단 추천 · 목표일 자유 변경 · 체중 첫 입력부터 시작 · 무료 음식 검색 · 기록은 이 기기에 저장되므로 백업 파일을 정기적으로 보관하세요.</footer>
+</div><div class="toast" id="toast" role="status" aria-live="polite"></div><input type="file" id="importfile" accept="application/json,.json" hidden>
+<script>
+'use strict';
+const KEY='myline_12weeks_20261116_v1';
+const WEEKDAYS=['일','월','화','수','목','금','토'];
+const DAY_LABELS=['월','화','수','목','금','토','일'];
+const START='2026-11-17';
+const BASE={weight:0,waist:0,belly:0,chest:0,underbust:0,thigh:0,calf:0,ankle:0,arm:0};
+const GOALS={weight:52,checkpoint:55,waist:24,caloriesMin:1450,caloriesMax:1650,proteinMin:80,proteinMax:95,water:1800};
+const MEALS=[["바나나 통보리 그릭요거트볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 30g, 꿀 8g, 바나나 100g, 삶은 달걀 50g","닭고기 카레라이스 ｜ 밥 130g, 닭다리살 110g, 감자 75g, 카레고형루 23g, 물 170g","오징어 김치볶음밥 ｜ 밥 130g, 오징어 160g, 김치 90g, 달걀 50g, 식용유 6g"],["귤 그래놀라 요거트볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 25g, 꿀 8g, 귤 150g, 삶은 달걀 50g","간장 계란볶음밥 + 닭고기 ｜ 밥 130g, 달걀 85g, 닭가슴살 90g, 간장 8g, 참기름 4g, 식용유 4g","대구 계란말이 밥 ｜ 밥 130g, 대구살 140g, 달걀 130g, 간장 7g, 식용유 5g"],["고구마 그릭요거트 ｜ 군고구마 160g, 그릭요거트 100g, 꿀 10g, 바나나 70g, 삶은 달걀 50g","닭가슴살 김치달걀밥 ｜ 밥 130g, 닭가슴살 120g, 김치 85g, 달걀 50g, 식용유 5g","소고기 카레라이스 ｜ 밥 130g, 소고기살코기 90g, 감자 75g, 카레고형루 23g, 물 170g"],["복숭아 그릭요거트볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 25g, 꿀 10g, 복숭아 170g, 삶은 달걀 50g","고등어구이 + 계란찜 ｜ 밥 130g, 고등어 110g, 달걀 85g, 물 80g, 소금 1g","고추장 소고기볶음밥 ｜ 밥 130g, 소고기살코기 110g, 달걀 50g, 고추장 14g, 식용유 4g"],["단백질 음료 + 달걀 + 과일 ｜ 더단백 250g, 달걀 100g, 바나나 130g","오므라이스 (식당형) ｜ 밥 130g, 달걀 135g, 소고기살코기 100g, 저당케첩 25g, 식용유 6g","소고기 구이 + 밥 ｜ 소고기살코기 165g, 밥 130g, 쌈장 12g, 김치 70g"],["오렌지 그릭요거트볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 30g, 꿀 8g, 오렌지 160g, 삶은 달걀 50g","소고기미역국 + 밥 + 계란말이 ｜ 밥 130g, 소고기살코기 120g, 미역(건조) 6g, 달걀 90g, 국간장 9g, 참기름 4g, 물 340g","조개구이 + 계란밥 ｜ 굴 230g, 밥 130g, 달걀 90g, 간장 8g, 참기름 5g"],["망고 그래놀라 그릭볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 28g, 꿀 8g, 망고 130g, 삶은 달걀 50g","참치 오므라이스 ｜ 밥 130g, 참치(물담금) 90g, 달걀 85g, 저당케첩 20g, 식용유 5g","고등어구이 + 계란찜 ｜ 밥 130g, 고등어 110g, 달걀 85g, 물 80g, 소금 1g"],["군고구마 + 하이뮨 + 귤 ｜ 군고구마 190g, 하이뮨 커피 더블샷 250g, 귤 130g","계란밥 + 소고기미역국 ｜ 밥 130g, 소고기살코기 75g, 미역(건조) 5g, 달걀 85g, 국간장 8g, 참기름 4g, 물 320g","소고기 간장 불고기 덮밥 ｜ 밥 130g, 소고기살코기 125g, 간장 13g, 설탕 5g, 식용유 5g"],["포도 그릭요거트볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 30g, 꿀 8g, 포도 125g, 삶은 달걀 50g","고추장 소고기볶음밥 ｜ 밥 130g, 소고기살코기 110g, 달걀 50g, 고추장 14g, 식용유 5g","돼지안심 김치볶음밥 ｜ 밥 130g, 돼지안심 110g, 김치 90g, 식용유 6g, 고추장 8g"],["더단백 + 삶은 달걀 + 귤 ｜ 더단백 250g, 삶은 달걀 100g, 귤 160g, 군고구마 100g","돼지안심구이 + 김치 + 밥 ｜ 밥 130g, 돼지안심 145g, 김치 70g, 식용유 6g","소고기 계란볶음밥 ｜ 밥 130g, 소고기살코기 110g, 달걀 50g, 간장 8g, 식용유 5g"],["수박 그릭요거트볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 30g, 꿀 8g, 수박 230g, 삶은 달걀 50g","새우볶음밥 + 계란말이 ｜ 밥 130g, 새우 135g, 달걀 130g, 간장 8g, 식용유 2g","고등어구이 + 계란찜 ｜ 밥 130g, 고등어 100g, 달걀 85g, 물 80g, 소금 1g"],["복숭아 그릭요거트볼 + 삶은 달걀 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 30g, 꿀 10g, 복숭아 160g, 삶은 달걀 100g","조개구이 + 계란밥 ｜ 굴 230g, 밥 130g, 달걀 90g, 간장 8g, 참기름 5g","김치볶음밥 + 계란후라이 (식당형) ｜ 밥 130g, 김치 90g, 소고기살코기 95g, 달걀 50g, 식용유 7g"],["사과 꿀 그래놀라 그릭볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 25g, 꿀 9g, 사과 160g, 삶은 달걀 50g","닭다리살덮밥 ｜ 밥 130g, 닭다리살 155g, 달걀 50g, 간장 12g, 식용유 5g","새우계란볶음밥 ｜ 밥 130g, 새우 160g, 달걀 90g, 식용유 7g, 간장 10g"],["오렌지 그릭요거트볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 30g, 꿀 8g, 오렌지 160g, 삶은 달걀 50g","소고기 미역국 + 밥 ｜ 밥 130g, 소고기살코기 105g, 미역(건조) 5g, 국간장 9g, 참기름 4g, 다진마늘 3g, 물 330g","닭고기 감자조림 덮밥 ｜ 밥 130g, 닭다리살 115g, 감자 140g, 간장 12g, 설탕 5g, 식용유 4g"],["그릭요거트·망고·삶은 달걀 ｜ 그릭요거트 100g, 망고 150g, 달걀 150g, 꿀 8g","새우 계란볶음밥 ｜ 밥 130g, 새우 130g, 달걀 85g, 간장 9g, 식용유 6g","소고기 장조림 + 계란밥 ｜ 밥 130g, 소고기살코기 125g, 달걀 85g, 간장 12g, 설탕 5g, 김 3g"],["바나나 꿀 그래놀라 그릭볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 25g, 꿀 9g, 바나나 100g, 삶은 달걀 50g","닭다리살 간장계란덮밥 ｜ 밥 130g, 닭다리살 110g, 달걀 85g, 간장 10g, 설탕 3g, 식용유 4g","소고기뭇국 + 계란밥 (무는 건짐) ｜ 밥 130g, 소고기살코기 95g, 무(육수용/건짐) 100g, 달걀 50g, 국간장 9g, 다진마늘 3g, 물 340g"],["하이뮨 + 군고구마 + 삶은 달걀 ｜ 하이뮨 커피 더블샷 250g, 군고구마 170g, 삶은 달걀 50g","오징어 간장볶음 + 밥 ｜ 밥 130g, 오징어 150g, 달걀 50g, 간장 10g, 참기름 4g, 식용유 5g","닭다리살 간장계란덮밥 ｜ 밥 130g, 닭다리살 110g, 달걀 85g, 간장 10g, 설탕 3g, 식용유 4g"],["귤 그래놀라 요거트볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 25g, 꿀 8g, 귤 150g, 삶은 달걀 50g","돼지안심 김치찜 + 밥 ｜ 밥 130g, 돼지안심 135g, 김치 120g, 다진마늘 4g, 물 120g, 참기름 4g","닭고기 감자조림 덮밥 ｜ 밥 130g, 닭다리살 115g, 감자 140g, 간장 12g, 설탕 5g, 식용유 4g"],["고구마 그릭요거트 ｜ 군고구마 160g, 그릭요거트 100g, 꿀 10g, 바나나 70g, 삶은 달걀 50g","소고기뭇국 + 밥 + 계란후라이 ｜ 밥 130g, 소고기살코기 130g, 달걀 90g, 무(육수용/건짐) 100g, 국간장 9g, 물 350g","소고기구이 김치볶음밥 ｜ 밥 130g, 소고기살코기 125g, 김치 90g, 달걀 50g, 식용유 6g"],["복숭아 그릭요거트볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 25g, 꿀 10g, 복숭아 170g, 삶은 달걀 50g","소고기 덮밥 + 계란후라이 ｜ 밥 130g, 소고기살코기 140g, 달걀 90g, 간장 10g, 식용유 6g","토마토 소고기 파스타(채소없이) ｜ 파스타면(삶은 것) 190g, 소고기살코기 130g, 저당케첩 35g, 식용유 5g, 다진마늘 3g"],["귤 그래놀라 요거트볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 25g, 꿀 8g, 귤 150g, 삶은 달걀 50g","소고기 계란볶음밥 ｜ 밥 130g, 소고기살코기 110g, 달걀 50g, 간장 8g, 식용유 5g","김치계란볶음밥 + 소고기구이 ｜ 밥 130g, 김치 85g, 달걀 85g, 소고기살코기 80g, 식용유 5g, 저당케첩 14g"],["고구마 그릭요거트 ｜ 군고구마 160g, 그릭요거트 100g, 꿀 10g, 바나나 70g, 삶은 달걀 50g","소고기 계란덮밥 ｜ 밥 130g, 소고기살코기 110g, 달걀 85g, 간장 12g, 설탕 3g, 식용유 2g","닭고기 카레라이스 ｜ 밥 130g, 닭다리살 110g, 감자 75g, 카레고형루 23g, 물 170g"],["복숭아 그릭요거트볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 35g, 꿀 10g, 복숭아 170g, 삶은 달걀 50g","광어구이 + 간장계란밥 ｜ 밥 130g, 광어회 150g, 달걀 85g, 참기름 4g, 간장 10g","돼지안심 간장볶음밥 ｜ 밥 130g, 돼지안심 120g, 달걀 50g, 간장 10g, 식용유 6g"],["단백질 음료 + 달걀 + 과일 ｜ 더단백 250g, 달걀 100g, 바나나 130g","소고기 감자조림 덮밥 ｜ 밥 130g, 소고기살코기 110g, 감자 130g, 간장 12g, 설탕 5g, 식용유 4g","새우볶음밥 + 계란말이 ｜ 밥 130g, 새우 135g, 달걀 130g, 간장 8g, 식용유 6g"],["오렌지 그릭요거트볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 30g, 꿀 8g, 오렌지 160g, 삶은 달걀 50g","닭다리살 간장구이 덮밥 ｜ 밥 130g, 닭다리살 135g, 간장 13g, 설탕 4g, 식용유 5g","김치계란볶음밥 + 소고기구이 ｜ 밥 130g, 김치 85g, 달걀 85g, 소고기살코기 80g, 식용유 5g, 저당케첩 14g"],["망고 통보리 그릭요거트볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 30g, 꿀 8g, 망고 120g, 삶은 달걀 50g","새우계란볶음밥 ｜ 밥 130g, 새우 160g, 달걀 90g, 식용유 7g, 간장 10g","소고기 덮밥 + 계란후라이 ｜ 밥 130g, 소고기살코기 140g, 달걀 90g, 간장 10g, 식용유 4g"],["바나나 꿀 그래놀라 그릭볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 25g, 꿀 9g, 바나나 100g, 삶은 달걀 50g","계란밥 + 고등어구이 ｜ 밥 130g, 달걀 90g, 고등어 130g, 간장 9g, 참기름 4g","초밥 (생선+밥) + 계란찜 ｜ 광어회 140g, 밥 130g, 간장 12g, 달걀 90g, 물 80g"],["포도 그릭요거트볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 25g, 꿀 8g, 포도 125g, 삶은 달걀 50g","돼지안심 간장볶음밥 ｜ 밥 130g, 돼지안심 120g, 달걀 50g, 간장 10g, 식용유 6g","소고기 오므라이스 ｜ 밥 130g, 소고기살코기 85g, 달걀 85g, 저당케첩 22g, 식용유 6g"],["더단백 + 삶은 달걀 + 사과 ｜ 더단백 250g, 삶은 달걀 100g, 사과 170g, 군고구마 100g","닭다리살구이 + 김치 + 밥 ｜ 밥 130g, 닭다리살 135g, 김치 80g, 식용유 5g","닭다리살 계란볶음밥 ｜ 밥 130g, 닭다리살 120g, 달걀 50g, 간장 8g, 식용유 4g"],["수박 그릭요거트볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 40g, 꿀 8g, 수박 230g, 삶은 달걀 50g","참치 계란비빔밥 ｜ 밥 130g, 참치(물담금) 110g, 달걀 85g, 김치 60g, 저당케첩 15g, 참기름 4g","광어구이 + 간장계란밥 ｜ 밥 130g, 광어회 150g, 달걀 85g, 참기름 4g, 간장 10g"],["오렌지 그릭요거트볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 35g, 꿀 10g, 오렌지 160g, 삶은 달걀 50g","소고기 간장 불고기 덮밥 ｜ 밥 130g, 소고기살코기 125g, 간장 13g, 설탕 5g, 식용유 5g","돼지안심 불고기 덮밥 ｜ 밥 130g, 돼지안심 135g, 간장 13g, 설탕 5g, 식용유 5g"],["사과 꿀 그래놀라 그릭볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 25g, 꿀 9g, 사과 160g, 삶은 달걀 50g","계란말이 + 닭가슴살 + 밥 ｜ 밥 130g, 달걀 130g, 닭가슴살 110g, 김치 75g, 식용유 4g","소고기 오므라이스 ｜ 밥 130g, 소고기살코기 85g, 달걀 85g, 저당케첩 22g, 식용유 2g"],["하이뮨 + 군고구마 + 바나나 ｜ 하이뮨 커피 더블샷 250g, 군고구마 150g, 바나나 100g","쌀국수 소고기 국물면 ｜ 쌀국수면(삶은 것) 300g, 소고기살코기 140g, 물 400g, 간장 7g","소고기 구이 + 밥 ｜ 소고기살코기 165g, 밥 130g, 쌈장 12g, 김치 70g"],["망고 그래놀라 그릭볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 28g, 꿀 8g, 망고 130g, 삶은 달걀 50g","돼지목살 구이 + 밥 ｜ 돼지목살 140g, 밥 130g, 쌈장 12g, 김치 70g","조개구이 + 계란밥 ｜ 굴 230g, 밥 130g, 달걀 90g, 간장 8g, 참기름 5g"],["바나나 꿀 그래놀라 그릭볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 25g, 꿀 9g, 바나나 100g, 삶은 달걀 50g","소고기 구이 + 계란후라이 ｜ 밥 130g, 소고기살코기 125g, 달걀 50g, 식용유 5g, 간장 8g","계란밥 + 소고기미역국 ｜ 밥 130g, 소고기살코기 75g, 미역(건조) 5g, 달걀 85g, 국간장 8g, 참기름 4g, 물 320g"],["포도 통보리 그릭요거트볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 35g, 꿀 8g, 포도 120g, 삶은 달걀 50g","오징어 김치볶음밥 ｜ 밥 130g, 오징어 160g, 김치 90g, 달걀 50g, 식용유 6g","소고기 구이 + 계란후라이 ｜ 밥 130g, 소고기살코기 125g, 달걀 50g, 식용유 5g, 간장 8g"],["귤 그래놀라 요거트볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 40g, 꿀 8g, 귤 150g, 삶은 달걀 50g","소고기 김치찌개(고기 위주) + 밥 ｜ 밥 130g, 소고기살코기 120g, 김치 110g, 물 260g, 고춧가루 3g, 다진마늘 3g, 식용유 4g","돼지안심 김치찜 + 밥 ｜ 밥 130g, 돼지안심 135g, 김치 120g, 다진마늘 4g, 물 120g, 참기름 4g"],["고구마 그릭요거트 ｜ 군고구마 160g, 그릭요거트 100g, 꿀 10g, 바나나 70g, 삶은 달걀 50g","김치계란볶음밥 + 소고기구이 ｜ 밥 130g, 김치 85g, 달걀 85g, 소고기살코기 80g, 식용유 5g, 저당케첩 14g","돼지안심 달걀장조림밥 ｜ 밥 130g, 돼지안심 145g, 달걀 85g, 간장 12g, 설탕 5g"],["복숭아 그릭요거트볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 35g, 꿀 10g, 복숭아 170g, 삶은 달걀 50g","닭다리살 김치볶음밥 + 계란후라이 ｜ 밥 130g, 닭다리살 90g, 김치 80g, 달걀 50g, 식용유 5g, 간장 7g","계란밥 + 소고기미역국 ｜ 밥 130g, 소고기살코기 75g, 미역(건조) 5g, 달걀 85g, 국간장 8g, 참기름 4g, 물 320g"],["단백질 음료 + 달걀 + 과일 ｜ 더단백 250g, 달걀 100g, 바나나 260g","광어회 + 밥 ｜ 광어회 210g, 밥 130g, 간장 12g, 와사비 4g, 김 4g","김치볶음밥 + 계란후라이 (식당형) ｜ 밥 130g, 김치 90g, 소고기살코기 95g, 달걀 50g, 식용유 7g"],["오렌지 그릭요거트볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 30g, 꿀 8g, 오렌지 160g, 삶은 달걀 50g","오므라이스 (식당형) ｜ 밥 130g, 달걀 135g, 소고기살코기 100g, 저당케첩 25g, 식용유 6g","닭다리살덮밥 ｜ 밥 130g, 닭다리살 155g, 달걀 50g, 간장 12g, 식용유 5g"],["복숭아 그릭요거트볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 30g, 꿀 10g, 복숭아 170g, 삶은 달걀 50g","대구살구이 + 김치계란밥 ｜ 밥 130g, 대구살 150g, 달걀 85g, 김치 75g, 식용유 4g","닭가슴살 김치달걀밥 ｜ 밥 130g, 닭가슴살 120g, 김치 85g, 달걀 50g, 식용유 5g"],["단백질 음료 + 달걀 + 과일 ｜ 더단백 250g, 달걀 100g, 바나나 130g","닭고기 감자조림 덮밥 ｜ 밥 130g, 닭다리살 115g, 감자 140g, 간장 12g, 설탕 5g, 식용유 4g","참치 계란비빔밥 ｜ 밥 130g, 참치(물담금) 110g, 달걀 85g, 김치 60g, 저당케첩 15g, 참기름 4g"],["오렌지 그릭요거트볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 30g, 꿀 8g, 오렌지 160g, 삶은 달걀 50g","고등어 데리야키 밥 ｜ 밥 130g, 고등어 110g, 간장 10g, 설탕 6g, 식용유 3g","김치계란볶음밥 + 닭고기 ｜ 밥 130g, 김치 95g, 달걀 85g, 닭다리살 85g, 식용유 5g, 저당케첩 12g"],["더단백 + 삶은 달걀 + 복숭아 ｜ 더단백 250g, 삶은 달걀 100g, 복숭아 180g","돼지안심 달걀장조림밥 ｜ 밥 130g, 돼지안심 145g, 달걀 85g, 간장 12g, 설탕 5g","돼지고기 카레라이스 ｜ 밥 130g, 돼지안심 115g, 감자 85g, 카레고형루 23g, 물 170g"],["바나나 꿀 그래놀라 그릭볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 25g, 꿀 9g, 바나나 100g, 삶은 달걀 50g","소고기 카레라이스 ｜ 밥 130g, 소고기살코기 90g, 감자 75g, 카레고형루 23g, 물 170g","닭가슴살 김치달걀밥 ｜ 밥 130g, 닭가슴살 120g, 김치 85g, 달걀 50g, 식용유 5g"],["수박 그릭요거트볼 + 삶은 달걀 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 25g, 꿀 10g, 수박 220g, 삶은 달걀 100g","초밥 (생선+밥) + 계란찜 ｜ 광어회 140g, 밥 130g, 간장 12g, 달걀 90g, 물 80g","소고기뭇국 + 밥 + 계란후라이 ｜ 밥 130g, 소고기살코기 130g, 달걀 90g, 무(육수용/건짐) 100g, 국간장 9g, 물 350g"],["귤 그래놀라 요거트볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 25g, 꿀 8g, 귤 150g, 삶은 달걀 50g","조개구이 + 계란밥 ｜ 굴 230g, 밥 130g, 달걀 90g, 간장 8g, 참기름 5g","토마토 소고기 파스타(채소없이) ｜ 파스타면(삶은 것) 230g, 소고기살코기 130g, 저당케첩 35g, 식용유 5g, 다진마늘 3g"],["수박 그릭요거트볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 30g, 꿀 8g, 수박 230g, 삶은 달걀 50g","계란마요 참치덮밥 ｜ 밥 130g, 참치(물담금) 110g, 달걀 85g, 마요네즈 10g, 김 4g, 간장 6g","대구살구이 + 김치계란밥 ｜ 밥 130g, 대구살 150g, 달걀 85g, 김치 75g, 식용유 4g"],["하이뮨 + 군고구마 + 오렌지 ｜ 하이뮨 커피 더블샷 250g, 군고구마 170g, 오렌지 180g","돼지안심 불고기 덮밥 ｜ 밥 130g, 돼지안심 135g, 간장 13g, 설탕 5g, 식용유 5g","닭다리살 간장구이 덮밥 ｜ 밥 130g, 닭다리살 135g, 간장 13g, 설탕 4g, 식용유 8g"],["사과 꿀 그래놀라 그릭볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 35g, 꿀 9g, 사과 160g, 삶은 달걀 50g","닭다리살 구이 + 미역국 + 밥 ｜ 밥 130g, 닭다리살 125g, 미역(건조) 5g, 국간장 8g, 참기름 4g, 물 300g","닭고기 오므라이스 ｜ 밥 130g, 닭다리살 90g, 달걀 85g, 저당케첩 20g, 식용유 5g"],["사과 통보리 그릭요거트볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 30g, 꿀 8g, 사과 150g, 삶은 달걀 50g","닭고기 오므라이스 ｜ 밥 130g, 닭다리살 90g, 달걀 85g, 저당케첩 20g, 식용유 5g","새우 계란볶음밥 ｜ 밥 130g, 새우 130g, 달걀 85g, 간장 9g, 식용유 6g"],["망고 그래놀라 그릭볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 38g, 꿀 8g, 망고 130g, 삶은 달걀 50g","소고기뭇국 + 계란밥 (무는 건짐) ｜ 밥 130g, 소고기살코기 95g, 무(육수용/건짐) 100g, 달걀 50g, 국간장 9g, 다진마늘 3g, 물 340g","대구살구이 + 김치계란밥 ｜ 밥 130g, 대구살 150g, 달걀 85g, 김치 75g, 식용유 4g"],["더단백 + 삶은 달걀 + 바나나 ｜ 더단백 250g, 삶은 달걀 100g, 바나나 100g","김치볶음밥 + 계란후라이 (식당형) ｜ 밥 130g, 김치 90g, 소고기살코기 95g, 달걀 50g, 식용유 7g","소고기 덮밥 + 계란후라이 ｜ 밥 130g, 소고기살코기 140g, 달걀 90g, 간장 10g, 식용유 6g"],["포도 그릭요거트볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 25g, 꿀 8g, 포도 125g, 삶은 달걀 50g","소고기뭇국 + 밥 + 계란후라이 ｜ 밥 130g, 소고기살코기 130g, 달걀 90g, 무(육수용/건짐) 100g, 국간장 9g, 물 350g","초밥 (생선+밥) + 계란찜 ｜ 광어회 140g, 밥 130g, 간장 12g, 달걀 90g, 물 80g"],["귤 그래놀라 요거트볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 40g, 꿀 8g, 귤 150g, 삶은 달걀 50g","참치 김치찌개 + 계란밥 ｜ 밥 130g, 참치(물담금) 110g, 김치 120g, 달걀 85g, 물 260g, 고춧가루 3g","소고기 김치찌개(고기 위주) + 밥 ｜ 밥 130g, 소고기살코기 120g, 김치 110g, 물 260g, 고춧가루 3g, 다진마늘 3g, 식용유 4g"],["고구마 그릭요거트 ｜ 군고구마 160g, 그릭요거트 100g, 꿀 10g, 바나나 70g, 삶은 달걀 50g","김치계란볶음밥 + 닭고기 ｜ 밥 130g, 김치 95g, 달걀 85g, 닭다리살 85g, 식용유 5g, 저당케첩 12g","소고기 김치볶음밥 + 계란후라이 ｜ 밥 130g, 소고기살코기 80g, 김치 80g, 달걀 50g, 참기름 3g, 식용유 4g, 간장 5g"],["복숭아 그릭요거트볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 45g, 꿀 10g, 복숭아 170g, 삶은 달걀 50g","돼지안심 김치볶음밥 ｜ 밥 130g, 돼지안심 110g, 김치 90g, 식용유 6g, 고추장 8g","계란밥 + 소고기뭇국 (무는 건짐) ｜ 밥 130g, 소고기살코기 85g, 달걀 85g, 무(육수용/건짐) 90g, 국간장 8g, 물 310g"],["단백질 음료 + 달걀 + 과일 ｜ 더단백 250g, 달걀 100g, 바나나 190g","새우 카레라이스 ｜ 밥 130g, 새우 140g, 감자 80g, 카레고형루 25g, 물 170g","돼지안심구이 + 김치 + 밥 ｜ 밥 130g, 돼지안심 145g, 김치 70g, 식용유 9g"],["오렌지 그릭요거트볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 30g, 꿀 8g, 오렌지 160g, 삶은 달걀 50g","닭다리살 계란볶음밥 ｜ 밥 130g, 닭다리살 120g, 달걀 50g, 간장 8g, 식용유 5g","소고기 김치찌개(고기 위주) + 밥 ｜ 밥 130g, 소고기살코기 120g, 김치 110g, 물 260g, 고춧가루 3g, 다진마늘 3g, 식용유 4g"],["귤 통보리 그릭요거트볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 30g, 꿀 10g, 귤 150g, 삶은 달걀 50g","돼지안심 불고기 덮밥 ｜ 밥 130g, 돼지안심 165g, 간장 14g, 설탕 5g, 식용유 6g","소고기 구이 + 밥 ｜ 소고기살코기 165g, 밥 130g, 쌈장 12g, 김치 70g"],["바나나 꿀 그래놀라 그릭볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 25g, 꿀 9g, 바나나 100g, 삶은 달걀 50g","새우계란볶음밥 ｜ 밥 130g, 새우 160g, 달걀 90g, 식용유 7g, 간장 10g","조개구이 + 계란밥 ｜ 굴 230g, 밥 130g, 달걀 90g, 간장 8g, 참기름 5g"],["오렌지 그릭요거트볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 30g, 꿀 8g, 오렌지 160g, 삶은 달걀 50g","대구 계란말이 밥 ｜ 밥 130g, 대구살 140g, 달걀 130g, 간장 7g, 식용유 2g","계란말이 + 닭가슴살 + 밥 ｜ 밥 130g, 달걀 130g, 닭가슴살 100g, 김치 75g, 식용유 2g"],["하이뮨 + 군고구마 + 귤 ｜ 하이뮨 커피 더블샷 250g, 군고구마 170g, 귤 150g","소고기 김치볶음밥 + 계란후라이 ｜ 밥 130g, 소고기살코기 80g, 김치 80g, 달걀 50g, 참기름 3g, 식용유 4g, 간장 5g","새우 카레라이스 ｜ 밥 130g, 새우 140g, 감자 80g, 카레고형루 25g, 물 170g, 식용유 3g"],["바나나 꿀 그래놀라 그릭볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 25g, 꿀 9g, 바나나 100g, 삶은 달걀 50g","닭고기 카레라이스 ｜ 밥 130g, 닭다리살 110g, 감자 75g, 카레고형루 23g, 물 170g","소고기 계란덮밥 ｜ 밥 130g, 소고기살코기 110g, 달걀 85g, 간장 12g, 설탕 3g, 식용유 3g"],["복숭아 통보리 그릭요거트볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 30g, 꿀 8g, 복숭아 160g, 삶은 달걀 50g","간장 계란볶음밥 + 닭고기 ｜ 밥 130g, 달걀 85g, 닭가슴살 90g, 간장 8g, 참기름 4g, 식용유 4g","계란마요 참치덮밥 ｜ 밥 130g, 참치(물담금) 110g, 달걀 85g, 마요네즈 10g, 김 4g, 간장 6g"],["귤 그래놀라 요거트볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 25g, 꿀 8g, 귤 150g, 삶은 달걀 50g","닭가슴살 김치달걀밥 ｜ 밥 130g, 닭가슴살 120g, 김치 85g, 달걀 50g, 식용유 2g","계란말이 + 닭가슴살 + 밥 ｜ 밥 130g, 달걀 130g, 닭가슴살 110g, 김치 75g, 식용유 2g"],["고구마 달걀 + 더단백 ｜ 군고구마 160g, 달걀 100g, 더단백 250g","소고기구이 김치볶음밥 ｜ 밥 130g, 소고기살코기 125g, 김치 90g, 달걀 50g, 식용유 6g","김치볶음밥 + 계란후라이 (식당형) ｜ 밥 130g, 김치 90g, 소고기살코기 95g, 달걀 50g, 식용유 7g"],["복숭아 그릭요거트볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 25g, 꿀 10g, 복숭아 170g, 삶은 달걀 50g","쌀국수 소고기 국물면 ｜ 쌀국수면(삶은 것) 300g, 소고기살코기 140g, 물 400g, 간장 7g","닭다리살덮밥 ｜ 밥 130g, 닭다리살 155g, 달걀 50g, 간장 12g, 식용유 5g"],["사과 꿀 그래놀라 그릭볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 25g, 꿀 9g, 사과 160g, 삶은 달걀 50g","소고기 장조림 + 계란밥 ｜ 밥 130g, 소고기살코기 125g, 달걀 85g, 간장 12g, 설탕 5g, 김 3g","참치 오므라이스 ｜ 밥 130g, 참치(물담금) 90g, 달걀 85g, 저당케첩 20g, 식용유 5g"],["더단백 + 삶은 달걀 + 망고 ｜ 더단백 250g, 삶은 달걀 100g, 망고 130g, 군고구마 130g","참치 오므라이스 ｜ 밥 130g, 참치(물담금) 90g, 달걀 85g, 저당케첩 20g, 식용유 5g","참치 김치볶음밥 + 계란 ｜ 밥 130g, 참치(물담금) 85g, 김치 85g, 달걀 85g, 식용유 5g"],["망고 그래놀라 그릭볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 38g, 꿀 8g, 망고 130g, 삶은 달걀 50g","계란밥 + 소고기미역국 ｜ 밥 130g, 소고기살코기 75g, 미역(건조) 5g, 달걀 85g, 국간장 8g, 참기름 4g, 물 320g","오징어 간장볶음 + 밥 ｜ 밥 130g, 오징어 150g, 달걀 50g, 간장 10g, 참기름 4g, 식용유 5g"],["포도 듬뿍 그릭요거트볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 30g, 꿀 8g, 포도 150g, 삶은 달걀 50g","고추장 소고기볶음밥 ｜ 밥 130g, 소고기살코기 110g, 달걀 50g, 고추장 14g, 식용유 5g","고등어 데리야키 밥 ｜ 밥 130g, 고등어 110g, 간장 10g, 설탕 6g, 식용유 3g"],["포도 그릭요거트볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 40g, 꿀 8g, 포도 125g, 삶은 달걀 50g","돼지안심구이 + 김치 + 밥 ｜ 밥 130g, 돼지안심 145g, 김치 70g, 식용유 6g","참치 오므라이스 ｜ 밥 130g, 참치(물담금) 90g, 달걀 85g, 저당케첩 20g, 식용유 5g"],["그릭요거트·사과·삶은 달걀 ｜ 그릭요거트 100g, 사과 180g, 달걀 150g, 꿀 9g","고등어구이 정식(채소반찬 제외) ｜ 밥 130g, 고등어 145g, 달걀 50g, 김치 70g, 간장 10g","소고기뭇국 + 밥 + 계란후라이 ｜ 밥 130g, 소고기살코기 130g, 달걀 90g, 무(육수용/건짐) 100g, 국간장 9g, 물 350g"],["수박 그릭요거트볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 30g, 꿀 8g, 수박 230g, 삶은 달걀 50g","광어회 + 밥 ｜ 광어회 210g, 밥 130g, 간장 12g, 와사비 4g, 김 4g","토마토 소고기 파스타(채소없이) ｜ 파스타면(삶은 것) 230g, 소고기살코기 130g, 저당케첩 35g, 식용유 5g, 다진마늘 3g"],["복숭아 그릭요거트볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 25g, 꿀 10g, 복숭아 170g, 삶은 달걀 50g","소고기 오므라이스 ｜ 밥 130g, 소고기살코기 85g, 달걀 85g, 저당케첩 22g, 식용유 6g","간장 계란볶음밥 + 닭고기 ｜ 밥 130g, 달걀 85g, 닭가슴살 90g, 간장 8g, 참기름 4g, 식용유 4g"],["단백질 음료 + 달걀 + 과일 ｜ 더단백 250g, 달걀 100g, 바나나 130g, 군고구마 100g","소고기 미역국 + 밥 ｜ 밥 130g, 소고기살코기 105g, 미역(건조) 5g, 국간장 9g, 참기름 4g, 다진마늘 3g, 물 330g","닭다리살구이 + 김치 + 밥 ｜ 밥 130g, 닭다리살 135g, 김치 80g, 식용유 5g"],["오렌지 그릭요거트볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 45g, 꿀 8g, 오렌지 160g, 삶은 달걀 50g","새우 계란볶음밥 ｜ 밥 130g, 새우 130g, 달걀 85g, 간장 9g, 식용유 6g","참치 김치찌개 + 계란밥 ｜ 밥 130g, 참치(물담금) 110g, 김치 120g, 달걀 85g, 물 260g, 고춧가루 3g"],["하이뮨 + 군고구마 + 사과 ｜ 하이뮨 커피 더블샷 250g, 군고구마 250g, 사과 150g","닭다리살 간장계란덮밥 ｜ 밥 130g, 닭다리살 110g, 달걀 85g, 간장 10g, 설탕 3g, 식용유 3g","닭다리살 김치볶음밥 + 계란후라이 ｜ 밥 130g, 닭다리살 90g, 김치 80g, 달걀 50g, 식용유 2g, 간장 7g"],["바나나 꿀 그래놀라 그릭볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 30g, 꿀 9g, 바나나 100g, 삶은 달걀 50g","오징어 간장볶음 + 밥 ｜ 밥 130g, 오징어 150g, 달걀 50g, 간장 10g, 참기름 4g, 식용유 5g","간장 계란볶음밥 + 닭고기 ｜ 밥 130g, 달걀 85g, 닭가슴살 90g, 간장 8g, 참기름 4g, 식용유 4g"],["바나나 그릭요거트볼 + 삶은 달걀 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 25g, 꿀 10g, 바나나 100g, 삶은 달걀 100g","토마토 소고기 파스타(채소없이) ｜ 파스타면(삶은 것) 225g, 소고기살코기 130g, 저당케첩 35g, 식용유 2g, 다진마늘 3g","소고기 덮밥 + 계란후라이 ｜ 밥 130g, 소고기살코기 90g, 달걀 90g, 간장 10g, 식용유 2g"],["귤 그래놀라 요거트볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 25g, 꿀 8g, 귤 150g, 삶은 달걀 50g","초밥 (생선+밥) + 계란찜 ｜ 광어회 140g, 밥 130g, 간장 12g, 달걀 90g, 물 80g","소고기 카레라이스 ｜ 밥 130g, 소고기살코기 120g, 카레고형루 25g, 감자 85g, 물 160g"],["바나나 꿀 그래놀라 그릭볼 ｜ 그릭요거트 100g, 오!그래놀라 저당 통보리 25g, 꿀 9g, 바나나 100g, 삶은 달걀 50g","소고기 김치볶음밥 + 계란후라이 ｜ 밥 130g, 소고기살코기 80g, 김치 80g, 달걀 50g, 참기름 3g, 식용유 4g, 간장 5g","고추장 소고기볶음밥 ｜ 밥 130g, 소고기살코기 110g, 달걀 50g, 고추장 14g, 식용유 5g"]];
+const MEAL_DETAILS=[[{"name":"바나나 통보리 그릭요거트볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",30],["꿀",8],["바나나",100],["삶은 달걀",50]],"mode":"아침"},{"name":"닭고기 카레라이스","items":[["밥",130],["닭다리살",110],["감자",75],["카레고형루",23],["물",170]],"mode":"도시락"},{"name":"오징어 김치볶음밥","items":[["밥",130],["오징어",160],["김치",90],["달걀",50],["식용유",6]],"mode":"도시락"}],[{"name":"귤 그래놀라 요거트볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",25],["꿀",8],["귤",150],["삶은 달걀",50]],"mode":"아침"},{"name":"간장 계란볶음밥 + 닭고기","items":[["밥",130],["달걀",85],["닭가슴살",90],["간장",8],["참기름",4],["식용유",4]],"mode":"도시락"},{"name":"대구 계란말이 밥","items":[["밥",130],["대구살",140],["달걀",130],["간장",7],["식용유",5]],"mode":"도시락"}],[{"name":"고구마 그릭요거트","items":[["군고구마",160],["그릭요거트",100],["꿀",10],["바나나",70],["삶은 달걀",50]],"mode":"아침"},{"name":"닭가슴살 김치달걀밥","items":[["밥",130],["닭가슴살",120],["김치",85],["달걀",50],["식용유",5]],"mode":"도시락"},{"name":"소고기 카레라이스","items":[["밥",130],["소고기살코기",90],["감자",75],["카레고형루",23],["물",170]],"mode":"도시락"}],[{"name":"복숭아 그릭요거트볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",25],["꿀",10],["복숭아",170],["삶은 달걀",50]],"mode":"아침"},{"name":"고등어구이 + 계란찜","items":[["밥",130],["고등어",110],["달걀",85],["물",80],["소금",1]],"mode":"도시락"},{"name":"고추장 소고기볶음밥","items":[["밥",130],["소고기살코기",110],["달걀",50],["고추장",14],["식용유",4]],"mode":"도시락"}],[{"name":"단백질 음료 + 달걀 + 과일","items":[["더단백",250],["달걀",100],["바나나",130]],"mode":"아침"},{"name":"오므라이스 (식당형)","items":[["밥",130],["달걀",135],["소고기살코기",100],["저당케첩",25],["식용유",6]],"mode":"외식 대략량"},{"name":"소고기 구이 + 밥","items":[["소고기살코기",165],["밥",130],["쌈장",12],["김치",70]],"mode":"외식 대략량"}],[{"name":"오렌지 그릭요거트볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",30],["꿀",8],["오렌지",160],["삶은 달걀",50]],"mode":"아침"},{"name":"소고기미역국 + 밥 + 계란말이","items":[["밥",130],["소고기살코기",120],["미역(건조)",6],["달걀",90],["국간장",9],["참기름",4],["물",340]],"mode":"외식 대략량","serving":{"broth":220,"solids":168,"parts":[["소고기살코기",120],["불린 미역",48]],"note":"국물 220g / 건더기 168g (소고기살코기 120g, 불린 미역 48g) · 불린 미역 무게는 추정치"}},{"name":"조개구이 + 계란밥","items":[["굴",230],["밥",130],["달걀",90],["간장",8],["참기름",5]],"mode":"외식 대략량"}],[{"name":"망고 그래놀라 그릭볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",28],["꿀",8],["망고",130],["삶은 달걀",50]],"mode":"아침"},{"name":"참치 오므라이스","items":[["밥",130],["참치(물담금)",90],["달걀",85],["저당케첩",20],["식용유",5]],"mode":"도시락"},{"name":"고등어구이 + 계란찜","items":[["밥",130],["고등어",110],["달걀",85],["물",80],["소금",1]],"mode":"도시락"}],[{"name":"군고구마 + 하이뮨 + 귤","items":[["군고구마",190],["하이뮨 커피 더블샷",250],["귤",130]],"mode":"아침"},{"name":"계란밥 + 소고기미역국","items":[["밥",130],["소고기살코기",75],["미역(건조)",5],["달걀",85],["국간장",8],["참기름",4],["물",320]],"mode":"국","serving":{"broth":220,"solids":115,"parts":[["소고기살코기",75],["불린 미역",40]],"note":"국물 220g / 건더기 115g (소고기살코기 75g, 불린 미역 40g) · 불린 미역 무게는 추정치"}},{"name":"소고기 간장 불고기 덮밥","items":[["밥",130],["소고기살코기",125],["간장",13],["설탕",5],["식용유",5]],"mode":"도시락"}],[{"name":"포도 그릭요거트볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",30],["꿀",8],["포도",125],["삶은 달걀",50]],"mode":"아침"},{"name":"고추장 소고기볶음밥","items":[["밥",130],["소고기살코기",110],["달걀",50],["고추장",14],["식용유",5]],"mode":"도시락"},{"name":"돼지안심 김치볶음밥","items":[["밥",130],["돼지안심",110],["김치",90],["식용유",6],["고추장",8]],"mode":"도시락"}],[{"name":"더단백 + 삶은 달걀 + 귤","items":[["더단백",250],["삶은 달걀",100],["귤",160],["군고구마",100]],"mode":"아침"},{"name":"돼지안심구이 + 김치 + 밥","items":[["밥",130],["돼지안심",145],["김치",70],["식용유",6]],"mode":"도시락"},{"name":"소고기 계란볶음밥","items":[["밥",130],["소고기살코기",110],["달걀",50],["간장",8],["식용유",5]],"mode":"도시락"}],[{"name":"수박 그릭요거트볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",30],["꿀",8],["수박",230],["삶은 달걀",50]],"mode":"아침"},{"name":"새우볶음밥 + 계란말이","items":[["밥",130],["새우",135],["달걀",130],["간장",8],["식용유",2]],"mode":"도시락"},{"name":"고등어구이 + 계란찜","items":[["밥",130],["고등어",100],["달걀",85],["물",80],["소금",1]],"mode":"도시락"}],[{"name":"복숭아 그릭요거트볼 + 삶은 달걀","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",30],["꿀",10],["복숭아",160],["삶은 달걀",100]],"mode":"아침"},{"name":"조개구이 + 계란밥","items":[["굴",230],["밥",130],["달걀",90],["간장",8],["참기름",5]],"mode":"외식 대략량"},{"name":"김치볶음밥 + 계란후라이 (식당형)","items":[["밥",130],["김치",90],["소고기살코기",95],["달걀",50],["식용유",7]],"mode":"외식 대략량"}],[{"name":"사과 꿀 그래놀라 그릭볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",25],["꿀",9],["사과",160],["삶은 달걀",50]],"mode":"아침"},{"name":"닭다리살덮밥","items":[["밥",130],["닭다리살",155],["달걀",50],["간장",12],["식용유",5]],"mode":"외식 대략량"},{"name":"새우계란볶음밥","items":[["밥",130],["새우",160],["달걀",90],["식용유",7],["간장",10]],"mode":"외식 대략량"}],[{"name":"오렌지 그릭요거트볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",30],["꿀",8],["오렌지",160],["삶은 달걀",50]],"mode":"아침"},{"name":"소고기 미역국 + 밥","items":[["밥",130],["소고기살코기",105],["미역(건조)",5],["국간장",9],["참기름",4],["다진마늘",3],["물",330]],"mode":"국","serving":{"broth":220,"solids":145,"parts":[["소고기살코기",105],["불린 미역",40]],"note":"국물 220g / 건더기 145g (소고기살코기 105g, 불린 미역 40g) · 불린 미역 무게는 추정치"}},{"name":"닭고기 감자조림 덮밥","items":[["밥",130],["닭다리살",115],["감자",140],["간장",12],["설탕",5],["식용유",4]],"mode":"도시락"}],[{"name":"그릭요거트·망고·삶은 달걀","items":[["그릭요거트",100],["망고",150],["달걀",150],["꿀",8]],"mode":"아침"},{"name":"새우 계란볶음밥","items":[["밥",130],["새우",130],["달걀",85],["간장",9],["식용유",6]],"mode":"도시락"},{"name":"소고기 장조림 + 계란밥","items":[["밥",130],["소고기살코기",125],["달걀",85],["간장",12],["설탕",5],["김",3]],"mode":"도시락"}],[{"name":"바나나 꿀 그래놀라 그릭볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",25],["꿀",9],["바나나",100],["삶은 달걀",50]],"mode":"아침"},{"name":"닭다리살 간장계란덮밥","items":[["밥",130],["닭다리살",110],["달걀",85],["간장",10],["설탕",3],["식용유",4]],"mode":"도시락"},{"name":"소고기뭇국 + 계란밥 (무는 건짐)","items":[["밥",130],["소고기살코기",95],["무(육수용/건짐)",100],["달걀",50],["국간장",9],["다진마늘",3],["물",340]],"mode":"국","serving":{"broth":220,"solids":95,"parts":[["소고기살코기",95]],"note":"국물 220g / 건더기 95g (소고기살코기 95g) · 무는 육수만 내고 건져내기"}}],[{"name":"하이뮨 + 군고구마 + 삶은 달걀","items":[["하이뮨 커피 더블샷",250],["군고구마",170],["삶은 달걀",50]],"mode":"아침"},{"name":"오징어 간장볶음 + 밥","items":[["밥",130],["오징어",150],["달걀",50],["간장",10],["참기름",4],["식용유",5]],"mode":"도시락"},{"name":"닭다리살 간장계란덮밥","items":[["밥",130],["닭다리살",110],["달걀",85],["간장",10],["설탕",3],["식용유",4]],"mode":"도시락"}],[{"name":"귤 그래놀라 요거트볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",25],["꿀",8],["귤",150],["삶은 달걀",50]],"mode":"아침"},{"name":"돼지안심 김치찜 + 밥","items":[["밥",130],["돼지안심",135],["김치",120],["다진마늘",4],["물",120],["참기름",4]],"mode":"도시락"},{"name":"닭고기 감자조림 덮밥","items":[["밥",130],["닭다리살",115],["감자",140],["간장",12],["설탕",5],["식용유",4]],"mode":"도시락"}],[{"name":"고구마 그릭요거트","items":[["군고구마",160],["그릭요거트",100],["꿀",10],["바나나",70],["삶은 달걀",50]],"mode":"아침"},{"name":"소고기뭇국 + 밥 + 계란후라이","items":[["밥",130],["소고기살코기",130],["달걀",90],["무(육수용/건짐)",100],["국간장",9],["물",350]],"mode":"외식 대략량","serving":{"broth":220,"solids":130,"parts":[["소고기살코기",130]],"note":"국물 220g / 건더기 130g (소고기살코기 130g) · 무는 육수만 내고 건져내기"}},{"name":"소고기구이 김치볶음밥","items":[["밥",130],["소고기살코기",125],["김치",90],["달걀",50],["식용유",6]],"mode":"외식 대략량"}],[{"name":"복숭아 그릭요거트볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",25],["꿀",10],["복숭아",170],["삶은 달걀",50]],"mode":"아침"},{"name":"소고기 덮밥 + 계란후라이","items":[["밥",130],["소고기살코기",140],["달걀",90],["간장",10],["식용유",6]],"mode":"외식 대략량"},{"name":"토마토 소고기 파스타(채소없이)","items":[["파스타면(삶은 것)",190],["소고기살코기",130],["저당케첩",35],["식용유",5],["다진마늘",3]],"mode":"외식 대략량"}],[{"name":"귤 그래놀라 요거트볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",25],["꿀",8],["귤",150],["삶은 달걀",50]],"mode":"아침"},{"name":"소고기 계란볶음밥","items":[["밥",130],["소고기살코기",110],["달걀",50],["간장",8],["식용유",5]],"mode":"도시락"},{"name":"김치계란볶음밥 + 소고기구이","items":[["밥",130],["김치",85],["달걀",85],["소고기살코기",80],["식용유",5],["저당케첩",14]],"mode":"도시락"}],[{"name":"고구마 그릭요거트","items":[["군고구마",160],["그릭요거트",100],["꿀",10],["바나나",70],["삶은 달걀",50]],"mode":"아침"},{"name":"소고기 계란덮밥","items":[["밥",130],["소고기살코기",110],["달걀",85],["간장",12],["설탕",3],["식용유",2]],"mode":"도시락"},{"name":"닭고기 카레라이스","items":[["밥",130],["닭다리살",110],["감자",75],["카레고형루",23],["물",170]],"mode":"도시락"}],[{"name":"복숭아 그릭요거트볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",35],["꿀",10],["복숭아",170],["삶은 달걀",50]],"mode":"아침"},{"name":"광어구이 + 간장계란밥","items":[["밥",130],["광어회",150],["달걀",85],["참기름",4],["간장",10]],"mode":"도시락"},{"name":"돼지안심 간장볶음밥","items":[["밥",130],["돼지안심",120],["달걀",50],["간장",10],["식용유",6]],"mode":"도시락"}],[{"name":"단백질 음료 + 달걀 + 과일","items":[["더단백",250],["달걀",100],["바나나",130]],"mode":"아침"},{"name":"소고기 감자조림 덮밥","items":[["밥",130],["소고기살코기",110],["감자",130],["간장",12],["설탕",5],["식용유",4]],"mode":"도시락"},{"name":"새우볶음밥 + 계란말이","items":[["밥",130],["새우",135],["달걀",130],["간장",8],["식용유",6]],"mode":"도시락"}],[{"name":"오렌지 그릭요거트볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",30],["꿀",8],["오렌지",160],["삶은 달걀",50]],"mode":"아침"},{"name":"닭다리살 간장구이 덮밥","items":[["밥",130],["닭다리살",135],["간장",13],["설탕",4],["식용유",5]],"mode":"도시락"},{"name":"김치계란볶음밥 + 소고기구이","items":[["밥",130],["김치",85],["달걀",85],["소고기살코기",80],["식용유",5],["저당케첩",14]],"mode":"도시락"}],[{"name":"망고 통보리 그릭요거트볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",30],["꿀",8],["망고",120],["삶은 달걀",50]],"mode":"아침"},{"name":"새우계란볶음밥","items":[["밥",130],["새우",160],["달걀",90],["식용유",7],["간장",10]],"mode":"외식 대략량"},{"name":"소고기 덮밥 + 계란후라이","items":[["밥",130],["소고기살코기",140],["달걀",90],["간장",10],["식용유",4]],"mode":"외식 대략량"}],[{"name":"바나나 꿀 그래놀라 그릭볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",25],["꿀",9],["바나나",100],["삶은 달걀",50]],"mode":"아침"},{"name":"계란밥 + 고등어구이","items":[["밥",130],["달걀",90],["고등어",130],["간장",9],["참기름",4]],"mode":"외식 대략량"},{"name":"초밥 (생선+밥) + 계란찜","items":[["광어회",140],["밥",130],["간장",12],["달걀",90],["물",80]],"mode":"외식 대략량"}],[{"name":"포도 그릭요거트볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",25],["꿀",8],["포도",125],["삶은 달걀",50]],"mode":"아침"},{"name":"돼지안심 간장볶음밥","items":[["밥",130],["돼지안심",120],["달걀",50],["간장",10],["식용유",6]],"mode":"도시락"},{"name":"소고기 오므라이스","items":[["밥",130],["소고기살코기",85],["달걀",85],["저당케첩",22],["식용유",6]],"mode":"도시락"}],[{"name":"더단백 + 삶은 달걀 + 사과","items":[["더단백",250],["삶은 달걀",100],["사과",170],["군고구마",100]],"mode":"아침"},{"name":"닭다리살구이 + 김치 + 밥","items":[["밥",130],["닭다리살",135],["김치",80],["식용유",5]],"mode":"도시락"},{"name":"닭다리살 계란볶음밥","items":[["밥",130],["닭다리살",120],["달걀",50],["간장",8],["식용유",4]],"mode":"도시락"}],[{"name":"수박 그릭요거트볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",40],["꿀",8],["수박",230],["삶은 달걀",50]],"mode":"아침"},{"name":"참치 계란비빔밥","items":[["밥",130],["참치(물담금)",110],["달걀",85],["김치",60],["저당케첩",15],["참기름",4]],"mode":"도시락"},{"name":"광어구이 + 간장계란밥","items":[["밥",130],["광어회",150],["달걀",85],["참기름",4],["간장",10]],"mode":"도시락"}],[{"name":"오렌지 그릭요거트볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",35],["꿀",10],["오렌지",160],["삶은 달걀",50]],"mode":"아침"},{"name":"소고기 간장 불고기 덮밥","items":[["밥",130],["소고기살코기",125],["간장",13],["설탕",5],["식용유",5]],"mode":"도시락"},{"name":"돼지안심 불고기 덮밥","items":[["밥",130],["돼지안심",135],["간장",13],["설탕",5],["식용유",5]],"mode":"도시락"}],[{"name":"사과 꿀 그래놀라 그릭볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",25],["꿀",9],["사과",160],["삶은 달걀",50]],"mode":"아침"},{"name":"계란말이 + 닭가슴살 + 밥","items":[["밥",130],["달걀",130],["닭가슴살",110],["김치",75],["식용유",4]],"mode":"도시락"},{"name":"소고기 오므라이스","items":[["밥",130],["소고기살코기",85],["달걀",85],["저당케첩",22],["식용유",2]],"mode":"도시락"}],[{"name":"하이뮨 + 군고구마 + 바나나","items":[["하이뮨 커피 더블샷",250],["군고구마",150],["바나나",100]],"mode":"아침"},{"name":"쌀국수 소고기 국물면","items":[["쌀국수면(삶은 것)",300],["소고기살코기",140],["물",400],["간장",7]],"mode":"외식 대략량","serving":{"broth":300,"solids":440,"parts":[["쌀국수면(삶은 것)",300],["소고기살코기",140]],"note":"국물 300g / 건더기 440g (쌀국수면(삶은 것) 300g, 소고기살코기 140g)"}},{"name":"소고기 구이 + 밥","items":[["소고기살코기",165],["밥",130],["쌈장",12],["김치",70]],"mode":"외식 대략량"}],[{"name":"망고 그래놀라 그릭볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",28],["꿀",8],["망고",130],["삶은 달걀",50]],"mode":"아침"},{"name":"돼지목살 구이 + 밥","items":[["돼지목살",140],["밥",130],["쌈장",12],["김치",70]],"mode":"외식 대략량"},{"name":"조개구이 + 계란밥","items":[["굴",230],["밥",130],["달걀",90],["간장",8],["참기름",5]],"mode":"외식 대략량"}],[{"name":"바나나 꿀 그래놀라 그릭볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",25],["꿀",9],["바나나",100],["삶은 달걀",50]],"mode":"아침"},{"name":"소고기 구이 + 계란후라이","items":[["밥",130],["소고기살코기",125],["달걀",50],["식용유",5],["간장",8]],"mode":"도시락"},{"name":"계란밥 + 소고기미역국","items":[["밥",130],["소고기살코기",75],["미역(건조)",5],["달걀",85],["국간장",8],["참기름",4],["물",320]],"mode":"국","serving":{"broth":220,"solids":115,"parts":[["소고기살코기",75],["불린 미역",40]],"note":"국물 220g / 건더기 115g (소고기살코기 75g, 불린 미역 40g) · 불린 미역 무게는 추정치"}}],[{"name":"포도 통보리 그릭요거트볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",35],["꿀",8],["포도",120],["삶은 달걀",50]],"mode":"아침"},{"name":"오징어 김치볶음밥","items":[["밥",130],["오징어",160],["김치",90],["달걀",50],["식용유",6]],"mode":"도시락"},{"name":"소고기 구이 + 계란후라이","items":[["밥",130],["소고기살코기",125],["달걀",50],["식용유",5],["간장",8]],"mode":"도시락"}],[{"name":"귤 그래놀라 요거트볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",40],["꿀",8],["귤",150],["삶은 달걀",50]],"mode":"아침"},{"name":"소고기 김치찌개(고기 위주) + 밥","items":[["밥",130],["소고기살코기",120],["김치",110],["물",260],["고춧가루",3],["다진마늘",3],["식용유",4]],"mode":"국","serving":{"broth":180,"solids":230,"parts":[["소고기살코기",120],["김치",110]],"note":"국물 180g / 건더기 230g (소고기살코기 120g, 김치 110g)"}},{"name":"돼지안심 김치찜 + 밥","items":[["밥",130],["돼지안심",135],["김치",120],["다진마늘",4],["물",120],["참기름",4]],"mode":"도시락"}],[{"name":"고구마 그릭요거트","items":[["군고구마",160],["그릭요거트",100],["꿀",10],["바나나",70],["삶은 달걀",50]],"mode":"아침"},{"name":"김치계란볶음밥 + 소고기구이","items":[["밥",130],["김치",85],["달걀",85],["소고기살코기",80],["식용유",5],["저당케첩",14]],"mode":"도시락"},{"name":"돼지안심 달걀장조림밥","items":[["밥",130],["돼지안심",145],["달걀",85],["간장",12],["설탕",5]],"mode":"도시락"}],[{"name":"복숭아 그릭요거트볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",35],["꿀",10],["복숭아",170],["삶은 달걀",50]],"mode":"아침"},{"name":"닭다리살 김치볶음밥 + 계란후라이","items":[["밥",130],["닭다리살",90],["김치",80],["달걀",50],["식용유",5],["간장",7]],"mode":"도시락"},{"name":"계란밥 + 소고기미역국","items":[["밥",130],["소고기살코기",75],["미역(건조)",5],["달걀",85],["국간장",8],["참기름",4],["물",320]],"mode":"국","serving":{"broth":220,"solids":115,"parts":[["소고기살코기",75],["불린 미역",40]],"note":"국물 220g / 건더기 115g (소고기살코기 75g, 불린 미역 40g) · 불린 미역 무게는 추정치"}}],[{"name":"단백질 음료 + 달걀 + 과일","items":[["더단백",250],["달걀",100],["바나나",260]],"mode":"아침"},{"name":"광어회 + 밥","items":[["광어회",210],["밥",130],["간장",12],["와사비",4],["김",4]],"mode":"외식 대략량"},{"name":"김치볶음밥 + 계란후라이 (식당형)","items":[["밥",130],["김치",90],["소고기살코기",95],["달걀",50],["식용유",7]],"mode":"외식 대략량"}],[{"name":"오렌지 그릭요거트볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",30],["꿀",8],["오렌지",160],["삶은 달걀",50]],"mode":"아침"},{"name":"오므라이스 (식당형)","items":[["밥",130],["달걀",135],["소고기살코기",100],["저당케첩",25],["식용유",6]],"mode":"외식 대략량"},{"name":"닭다리살덮밥","items":[["밥",130],["닭다리살",155],["달걀",50],["간장",12],["식용유",5]],"mode":"외식 대략량"}],[{"name":"복숭아 그릭요거트볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",30],["꿀",10],["복숭아",170],["삶은 달걀",50]],"mode":"아침"},{"name":"대구살구이 + 김치계란밥","items":[["밥",130],["대구살",150],["달걀",85],["김치",75],["식용유",4]],"mode":"도시락"},{"name":"닭가슴살 김치달걀밥","items":[["밥",130],["닭가슴살",120],["김치",85],["달걀",50],["식용유",5]],"mode":"도시락"}],[{"name":"단백질 음료 + 달걀 + 과일","items":[["더단백",250],["달걀",100],["바나나",130]],"mode":"아침"},{"name":"닭고기 감자조림 덮밥","items":[["밥",130],["닭다리살",115],["감자",140],["간장",12],["설탕",5],["식용유",4]],"mode":"도시락"},{"name":"참치 계란비빔밥","items":[["밥",130],["참치(물담금)",110],["달걀",85],["김치",60],["저당케첩",15],["참기름",4]],"mode":"도시락"}],[{"name":"오렌지 그릭요거트볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",30],["꿀",8],["오렌지",160],["삶은 달걀",50]],"mode":"아침"},{"name":"고등어 데리야키 밥","items":[["밥",130],["고등어",110],["간장",10],["설탕",6],["식용유",3]],"mode":"도시락"},{"name":"김치계란볶음밥 + 닭고기","items":[["밥",130],["김치",95],["달걀",85],["닭다리살",85],["식용유",5],["저당케첩",12]],"mode":"도시락"}],[{"name":"더단백 + 삶은 달걀 + 복숭아","items":[["더단백",250],["삶은 달걀",100],["복숭아",180]],"mode":"아침"},{"name":"돼지안심 달걀장조림밥","items":[["밥",130],["돼지안심",145],["달걀",85],["간장",12],["설탕",5]],"mode":"도시락"},{"name":"돼지고기 카레라이스","items":[["밥",130],["돼지안심",115],["감자",85],["카레고형루",23],["물",170]],"mode":"도시락"}],[{"name":"바나나 꿀 그래놀라 그릭볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",25],["꿀",9],["바나나",100],["삶은 달걀",50]],"mode":"아침"},{"name":"소고기 카레라이스","items":[["밥",130],["소고기살코기",90],["감자",75],["카레고형루",23],["물",170]],"mode":"도시락"},{"name":"닭가슴살 김치달걀밥","items":[["밥",130],["닭가슴살",120],["김치",85],["달걀",50],["식용유",5]],"mode":"도시락"}],[{"name":"수박 그릭요거트볼 + 삶은 달걀","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",25],["꿀",10],["수박",220],["삶은 달걀",100]],"mode":"아침"},{"name":"초밥 (생선+밥) + 계란찜","items":[["광어회",140],["밥",130],["간장",12],["달걀",90],["물",80]],"mode":"외식 대략량"},{"name":"소고기뭇국 + 밥 + 계란후라이","items":[["밥",130],["소고기살코기",130],["달걀",90],["무(육수용/건짐)",100],["국간장",9],["물",350]],"mode":"외식 대략량","serving":{"broth":220,"solids":130,"parts":[["소고기살코기",130]],"note":"국물 220g / 건더기 130g (소고기살코기 130g) · 무는 육수만 내고 건져내기"}}],[{"name":"귤 그래놀라 요거트볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",25],["꿀",8],["귤",150],["삶은 달걀",50]],"mode":"아침"},{"name":"조개구이 + 계란밥","items":[["굴",230],["밥",130],["달걀",90],["간장",8],["참기름",5]],"mode":"외식 대략량"},{"name":"토마토 소고기 파스타(채소없이)","items":[["파스타면(삶은 것)",230],["소고기살코기",130],["저당케첩",35],["식용유",5],["다진마늘",3]],"mode":"외식 대략량"}],[{"name":"수박 그릭요거트볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",30],["꿀",8],["수박",230],["삶은 달걀",50]],"mode":"아침"},{"name":"계란마요 참치덮밥","items":[["밥",130],["참치(물담금)",110],["달걀",85],["마요네즈",10],["김",4],["간장",6]],"mode":"도시락"},{"name":"대구살구이 + 김치계란밥","items":[["밥",130],["대구살",150],["달걀",85],["김치",75],["식용유",4]],"mode":"도시락"}],[{"name":"하이뮨 + 군고구마 + 오렌지","items":[["하이뮨 커피 더블샷",250],["군고구마",170],["오렌지",180]],"mode":"아침"},{"name":"돼지안심 불고기 덮밥","items":[["밥",130],["돼지안심",135],["간장",13],["설탕",5],["식용유",5]],"mode":"도시락"},{"name":"닭다리살 간장구이 덮밥","items":[["밥",130],["닭다리살",135],["간장",13],["설탕",4],["식용유",8]],"mode":"도시락"}],[{"name":"사과 꿀 그래놀라 그릭볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",35],["꿀",9],["사과",160],["삶은 달걀",50]],"mode":"아침"},{"name":"닭다리살 구이 + 미역국 + 밥","items":[["밥",130],["닭다리살",125],["미역(건조)",5],["국간장",8],["참기름",4],["물",300]],"mode":"도시락","serving":{"broth":220,"solids":165,"parts":[["닭다리살",125],["불린 미역",40]],"note":"국물 220g / 건더기 165g (닭다리살 125g, 불린 미역 40g) · 불린 미역 무게는 추정치"}},{"name":"닭고기 오므라이스","items":[["밥",130],["닭다리살",90],["달걀",85],["저당케첩",20],["식용유",5]],"mode":"도시락"}],[{"name":"사과 통보리 그릭요거트볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",30],["꿀",8],["사과",150],["삶은 달걀",50]],"mode":"아침"},{"name":"닭고기 오므라이스","items":[["밥",130],["닭다리살",90],["달걀",85],["저당케첩",20],["식용유",5]],"mode":"도시락"},{"name":"새우 계란볶음밥","items":[["밥",130],["새우",130],["달걀",85],["간장",9],["식용유",6]],"mode":"도시락"}],[{"name":"망고 그래놀라 그릭볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",38],["꿀",8],["망고",130],["삶은 달걀",50]],"mode":"아침"},{"name":"소고기뭇국 + 계란밥 (무는 건짐)","items":[["밥",130],["소고기살코기",95],["무(육수용/건짐)",100],["달걀",50],["국간장",9],["다진마늘",3],["물",340]],"mode":"국","serving":{"broth":220,"solids":95,"parts":[["소고기살코기",95]],"note":"국물 220g / 건더기 95g (소고기살코기 95g) · 무는 육수만 내고 건져내기"}},{"name":"대구살구이 + 김치계란밥","items":[["밥",130],["대구살",150],["달걀",85],["김치",75],["식용유",4]],"mode":"도시락"}],[{"name":"더단백 + 삶은 달걀 + 바나나","items":[["더단백",250],["삶은 달걀",100],["바나나",100]],"mode":"아침"},{"name":"김치볶음밥 + 계란후라이 (식당형)","items":[["밥",130],["김치",90],["소고기살코기",95],["달걀",50],["식용유",7]],"mode":"외식 대략량"},{"name":"소고기 덮밥 + 계란후라이","items":[["밥",130],["소고기살코기",140],["달걀",90],["간장",10],["식용유",6]],"mode":"외식 대략량"}],[{"name":"포도 그릭요거트볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",25],["꿀",8],["포도",125],["삶은 달걀",50]],"mode":"아침"},{"name":"소고기뭇국 + 밥 + 계란후라이","items":[["밥",130],["소고기살코기",130],["달걀",90],["무(육수용/건짐)",100],["국간장",9],["물",350]],"mode":"외식 대략량","serving":{"broth":220,"solids":130,"parts":[["소고기살코기",130]],"note":"국물 220g / 건더기 130g (소고기살코기 130g) · 무는 육수만 내고 건져내기"}},{"name":"초밥 (생선+밥) + 계란찜","items":[["광어회",140],["밥",130],["간장",12],["달걀",90],["물",80]],"mode":"외식 대략량"}],[{"name":"귤 그래놀라 요거트볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",40],["꿀",8],["귤",150],["삶은 달걀",50]],"mode":"아침"},{"name":"참치 김치찌개 + 계란밥","items":[["밥",130],["참치(물담금)",110],["김치",120],["달걀",85],["물",260],["고춧가루",3]],"mode":"국","serving":{"broth":180,"solids":230,"parts":[["참치(물담금)",110],["김치",120]],"note":"국물 180g / 건더기 230g (참치(물담금) 110g, 김치 120g)"}},{"name":"소고기 김치찌개(고기 위주) + 밥","items":[["밥",130],["소고기살코기",120],["김치",110],["물",260],["고춧가루",3],["다진마늘",3],["식용유",4]],"mode":"국","serving":{"broth":180,"solids":230,"parts":[["소고기살코기",120],["김치",110]],"note":"국물 180g / 건더기 230g (소고기살코기 120g, 김치 110g)"}}],[{"name":"고구마 그릭요거트","items":[["군고구마",160],["그릭요거트",100],["꿀",10],["바나나",70],["삶은 달걀",50]],"mode":"아침"},{"name":"김치계란볶음밥 + 닭고기","items":[["밥",130],["김치",95],["달걀",85],["닭다리살",85],["식용유",5],["저당케첩",12]],"mode":"도시락"},{"name":"소고기 김치볶음밥 + 계란후라이","items":[["밥",130],["소고기살코기",80],["김치",80],["달걀",50],["참기름",3],["식용유",4],["간장",5]],"mode":"도시락"}],[{"name":"복숭아 그릭요거트볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",45],["꿀",10],["복숭아",170],["삶은 달걀",50]],"mode":"아침"},{"name":"돼지안심 김치볶음밥","items":[["밥",130],["돼지안심",110],["김치",90],["식용유",6],["고추장",8]],"mode":"도시락"},{"name":"계란밥 + 소고기뭇국 (무는 건짐)","items":[["밥",130],["소고기살코기",85],["달걀",85],["무(육수용/건짐)",90],["국간장",8],["물",310]],"mode":"국","serving":{"broth":220,"solids":85,"parts":[["소고기살코기",85]],"note":"국물 220g / 건더기 85g (소고기살코기 85g) · 무는 육수만 내고 건져내기"}}],[{"name":"단백질 음료 + 달걀 + 과일","items":[["더단백",250],["달걀",100],["바나나",190]],"mode":"아침"},{"name":"새우 카레라이스","items":[["밥",130],["새우",140],["감자",80],["카레고형루",25],["물",170]],"mode":"도시락"},{"name":"돼지안심구이 + 김치 + 밥","items":[["밥",130],["돼지안심",145],["김치",70],["식용유",9]],"mode":"도시락"}],[{"name":"오렌지 그릭요거트볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",30],["꿀",8],["오렌지",160],["삶은 달걀",50]],"mode":"아침"},{"name":"닭다리살 계란볶음밥","items":[["밥",130],["닭다리살",120],["달걀",50],["간장",8],["식용유",5]],"mode":"도시락"},{"name":"소고기 김치찌개(고기 위주) + 밥","items":[["밥",130],["소고기살코기",120],["김치",110],["물",260],["고춧가루",3],["다진마늘",3],["식용유",4]],"mode":"국","serving":{"broth":180,"solids":230,"parts":[["소고기살코기",120],["김치",110]],"note":"국물 180g / 건더기 230g (소고기살코기 120g, 김치 110g)"}}],[{"name":"귤 통보리 그릭요거트볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",30],["꿀",10],["귤",150],["삶은 달걀",50]],"mode":"아침"},{"name":"돼지안심 불고기 덮밥","items":[["밥",130],["돼지안심",165],["간장",14],["설탕",5],["식용유",6]],"mode":"외식 대략량"},{"name":"소고기 구이 + 밥","items":[["소고기살코기",165],["밥",130],["쌈장",12],["김치",70]],"mode":"외식 대략량"}],[{"name":"바나나 꿀 그래놀라 그릭볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",25],["꿀",9],["바나나",100],["삶은 달걀",50]],"mode":"아침"},{"name":"새우계란볶음밥","items":[["밥",130],["새우",160],["달걀",90],["식용유",7],["간장",10]],"mode":"외식 대략량"},{"name":"조개구이 + 계란밥","items":[["굴",230],["밥",130],["달걀",90],["간장",8],["참기름",5]],"mode":"외식 대략량"}],[{"name":"오렌지 그릭요거트볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",30],["꿀",8],["오렌지",160],["삶은 달걀",50]],"mode":"아침"},{"name":"대구 계란말이 밥","items":[["밥",130],["대구살",140],["달걀",130],["간장",7],["식용유",2]],"mode":"도시락"},{"name":"계란말이 + 닭가슴살 + 밥","items":[["밥",130],["달걀",130],["닭가슴살",100],["김치",75],["식용유",2]],"mode":"도시락"}],[{"name":"하이뮨 + 군고구마 + 귤","items":[["하이뮨 커피 더블샷",250],["군고구마",170],["귤",150]],"mode":"아침"},{"name":"소고기 김치볶음밥 + 계란후라이","items":[["밥",130],["소고기살코기",80],["김치",80],["달걀",50],["참기름",3],["식용유",4],["간장",5]],"mode":"도시락"},{"name":"새우 카레라이스","items":[["밥",130],["새우",140],["감자",80],["카레고형루",25],["물",170],["식용유",3]],"mode":"도시락"}],[{"name":"바나나 꿀 그래놀라 그릭볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",25],["꿀",9],["바나나",100],["삶은 달걀",50]],"mode":"아침"},{"name":"닭고기 카레라이스","items":[["밥",130],["닭다리살",110],["감자",75],["카레고형루",23],["물",170]],"mode":"도시락"},{"name":"소고기 계란덮밥","items":[["밥",130],["소고기살코기",110],["달걀",85],["간장",12],["설탕",3],["식용유",3]],"mode":"도시락"}],[{"name":"복숭아 통보리 그릭요거트볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",30],["꿀",8],["복숭아",160],["삶은 달걀",50]],"mode":"아침"},{"name":"간장 계란볶음밥 + 닭고기","items":[["밥",130],["달걀",85],["닭가슴살",90],["간장",8],["참기름",4],["식용유",4]],"mode":"도시락"},{"name":"계란마요 참치덮밥","items":[["밥",130],["참치(물담금)",110],["달걀",85],["마요네즈",10],["김",4],["간장",6]],"mode":"도시락"}],[{"name":"귤 그래놀라 요거트볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",25],["꿀",8],["귤",150],["삶은 달걀",50]],"mode":"아침"},{"name":"닭가슴살 김치달걀밥","items":[["밥",130],["닭가슴살",120],["김치",85],["달걀",50],["식용유",2]],"mode":"도시락"},{"name":"계란말이 + 닭가슴살 + 밥","items":[["밥",130],["달걀",130],["닭가슴살",110],["김치",75],["식용유",2]],"mode":"도시락"}],[{"name":"고구마 달걀 + 더단백","items":[["군고구마",160],["달걀",100],["더단백",250]],"mode":"아침"},{"name":"소고기구이 김치볶음밥","items":[["밥",130],["소고기살코기",125],["김치",90],["달걀",50],["식용유",6]],"mode":"외식 대략량"},{"name":"김치볶음밥 + 계란후라이 (식당형)","items":[["밥",130],["김치",90],["소고기살코기",95],["달걀",50],["식용유",7]],"mode":"외식 대략량"}],[{"name":"복숭아 그릭요거트볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",25],["꿀",10],["복숭아",170],["삶은 달걀",50]],"mode":"아침"},{"name":"쌀국수 소고기 국물면","items":[["쌀국수면(삶은 것)",300],["소고기살코기",140],["물",400],["간장",7]],"mode":"외식 대략량","serving":{"broth":300,"solids":440,"parts":[["쌀국수면(삶은 것)",300],["소고기살코기",140]],"note":"국물 300g / 건더기 440g (쌀국수면(삶은 것) 300g, 소고기살코기 140g)"}},{"name":"닭다리살덮밥","items":[["밥",130],["닭다리살",155],["달걀",50],["간장",12],["식용유",5]],"mode":"외식 대략량"}],[{"name":"사과 꿀 그래놀라 그릭볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",25],["꿀",9],["사과",160],["삶은 달걀",50]],"mode":"아침"},{"name":"소고기 장조림 + 계란밥","items":[["밥",130],["소고기살코기",125],["달걀",85],["간장",12],["설탕",5],["김",3]],"mode":"도시락"},{"name":"참치 오므라이스","items":[["밥",130],["참치(물담금)",90],["달걀",85],["저당케첩",20],["식용유",5]],"mode":"도시락"}],[{"name":"더단백 + 삶은 달걀 + 망고","items":[["더단백",250],["삶은 달걀",100],["망고",130],["군고구마",130]],"mode":"아침"},{"name":"참치 오므라이스","items":[["밥",130],["참치(물담금)",90],["달걀",85],["저당케첩",20],["식용유",5]],"mode":"도시락"},{"name":"참치 김치볶음밥 + 계란","items":[["밥",130],["참치(물담금)",85],["김치",85],["달걀",85],["식용유",5]],"mode":"도시락"}],[{"name":"망고 그래놀라 그릭볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",38],["꿀",8],["망고",130],["삶은 달걀",50]],"mode":"아침"},{"name":"계란밥 + 소고기미역국","items":[["밥",130],["소고기살코기",75],["미역(건조)",5],["달걀",85],["국간장",8],["참기름",4],["물",320]],"mode":"국","serving":{"broth":220,"solids":115,"parts":[["소고기살코기",75],["불린 미역",40]],"note":"국물 220g / 건더기 115g (소고기살코기 75g, 불린 미역 40g) · 불린 미역 무게는 추정치"}},{"name":"오징어 간장볶음 + 밥","items":[["밥",130],["오징어",150],["달걀",50],["간장",10],["참기름",4],["식용유",5]],"mode":"도시락"}],[{"name":"포도 듬뿍 그릭요거트볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",30],["꿀",8],["포도",150],["삶은 달걀",50]],"mode":"아침"},{"name":"고추장 소고기볶음밥","items":[["밥",130],["소고기살코기",110],["달걀",50],["고추장",14],["식용유",5]],"mode":"도시락"},{"name":"고등어 데리야키 밥","items":[["밥",130],["고등어",110],["간장",10],["설탕",6],["식용유",3]],"mode":"도시락"}],[{"name":"포도 그릭요거트볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",40],["꿀",8],["포도",125],["삶은 달걀",50]],"mode":"아침"},{"name":"돼지안심구이 + 김치 + 밥","items":[["밥",130],["돼지안심",145],["김치",70],["식용유",6]],"mode":"도시락"},{"name":"참치 오므라이스","items":[["밥",130],["참치(물담금)",90],["달걀",85],["저당케첩",20],["식용유",5]],"mode":"도시락"}],[{"name":"그릭요거트·사과·삶은 달걀","items":[["그릭요거트",100],["사과",180],["달걀",150],["꿀",9]],"mode":"아침"},{"name":"고등어구이 정식(채소반찬 제외)","items":[["밥",130],["고등어",145],["달걀",50],["김치",70],["간장",10]],"mode":"외식 대략량"},{"name":"소고기뭇국 + 밥 + 계란후라이","items":[["밥",130],["소고기살코기",130],["달걀",90],["무(육수용/건짐)",100],["국간장",9],["물",350]],"mode":"외식 대략량","serving":{"broth":220,"solids":130,"parts":[["소고기살코기",130]],"note":"국물 220g / 건더기 130g (소고기살코기 130g) · 무는 육수만 내고 건져내기"}}],[{"name":"수박 그릭요거트볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",30],["꿀",8],["수박",230],["삶은 달걀",50]],"mode":"아침"},{"name":"광어회 + 밥","items":[["광어회",210],["밥",130],["간장",12],["와사비",4],["김",4]],"mode":"외식 대략량"},{"name":"토마토 소고기 파스타(채소없이)","items":[["파스타면(삶은 것)",230],["소고기살코기",130],["저당케첩",35],["식용유",5],["다진마늘",3]],"mode":"외식 대략량"}],[{"name":"복숭아 그릭요거트볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",25],["꿀",10],["복숭아",170],["삶은 달걀",50]],"mode":"아침"},{"name":"소고기 오므라이스","items":[["밥",130],["소고기살코기",85],["달걀",85],["저당케첩",22],["식용유",6]],"mode":"도시락"},{"name":"간장 계란볶음밥 + 닭고기","items":[["밥",130],["달걀",85],["닭가슴살",90],["간장",8],["참기름",4],["식용유",4]],"mode":"도시락"}],[{"name":"단백질 음료 + 달걀 + 과일","items":[["더단백",250],["달걀",100],["바나나",130],["군고구마",100]],"mode":"아침"},{"name":"소고기 미역국 + 밥","items":[["밥",130],["소고기살코기",105],["미역(건조)",5],["국간장",9],["참기름",4],["다진마늘",3],["물",330]],"mode":"국","serving":{"broth":220,"solids":145,"parts":[["소고기살코기",105],["불린 미역",40]],"note":"국물 220g / 건더기 145g (소고기살코기 105g, 불린 미역 40g) · 불린 미역 무게는 추정치"}},{"name":"닭다리살구이 + 김치 + 밥","items":[["밥",130],["닭다리살",135],["김치",80],["식용유",5]],"mode":"도시락"}],[{"name":"오렌지 그릭요거트볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",45],["꿀",8],["오렌지",160],["삶은 달걀",50]],"mode":"아침"},{"name":"새우 계란볶음밥","items":[["밥",130],["새우",130],["달걀",85],["간장",9],["식용유",6]],"mode":"도시락"},{"name":"참치 김치찌개 + 계란밥","items":[["밥",130],["참치(물담금)",110],["김치",120],["달걀",85],["물",260],["고춧가루",3]],"mode":"국","serving":{"broth":180,"solids":230,"parts":[["참치(물담금)",110],["김치",120]],"note":"국물 180g / 건더기 230g (참치(물담금) 110g, 김치 120g)"}}],[{"name":"하이뮨 + 군고구마 + 사과","items":[["하이뮨 커피 더블샷",250],["군고구마",250],["사과",150]],"mode":"아침"},{"name":"닭다리살 간장계란덮밥","items":[["밥",130],["닭다리살",110],["달걀",85],["간장",10],["설탕",3],["식용유",3]],"mode":"도시락"},{"name":"닭다리살 김치볶음밥 + 계란후라이","items":[["밥",130],["닭다리살",90],["김치",80],["달걀",50],["식용유",2],["간장",7]],"mode":"도시락"}],[{"name":"바나나 꿀 그래놀라 그릭볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",30],["꿀",9],["바나나",100],["삶은 달걀",50]],"mode":"아침"},{"name":"오징어 간장볶음 + 밥","items":[["밥",130],["오징어",150],["달걀",50],["간장",10],["참기름",4],["식용유",5]],"mode":"도시락"},{"name":"간장 계란볶음밥 + 닭고기","items":[["밥",130],["달걀",85],["닭가슴살",90],["간장",8],["참기름",4],["식용유",4]],"mode":"도시락"}],[{"name":"바나나 그릭요거트볼 + 삶은 달걀","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",25],["꿀",10],["바나나",100],["삶은 달걀",100]],"mode":"아침"},{"name":"토마토 소고기 파스타(채소없이)","items":[["파스타면(삶은 것)",225],["소고기살코기",130],["저당케첩",35],["식용유",2],["다진마늘",3]],"mode":"외식 대략량"},{"name":"소고기 덮밥 + 계란후라이","items":[["밥",130],["소고기살코기",90],["달걀",90],["간장",10],["식용유",2]],"mode":"외식 대략량"}],[{"name":"귤 그래놀라 요거트볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",25],["꿀",8],["귤",150],["삶은 달걀",50]],"mode":"아침"},{"name":"초밥 (생선+밥) + 계란찜","items":[["광어회",140],["밥",130],["간장",12],["달걀",90],["물",80]],"mode":"외식 대략량"},{"name":"소고기 카레라이스","items":[["밥",130],["소고기살코기",120],["카레고형루",25],["감자",85],["물",160]],"mode":"외식 대략량"}],[{"name":"바나나 꿀 그래놀라 그릭볼","items":[["그릭요거트",100],["오!그래놀라 저당 통보리",25],["꿀",9],["바나나",100],["삶은 달걀",50]],"mode":"아침"},{"name":"소고기 김치볶음밥 + 계란후라이","items":[["밥",130],["소고기살코기",80],["김치",80],["달걀",50],["참기름",3],["식용유",4],["간장",5]],"mode":"도시락"},{"name":"고추장 소고기볶음밥","items":[["밥",130],["소고기살코기",110],["달걀",50],["고추장",14],["식용유",5]],"mode":"도시락"}]];
+const MEAL_META=[{"kcal":1438,"protein":90},{"kcal":1454,"protein":113},{"kcal":1503,"protein":97},{"kcal":1483,"protein":98},{"kcal":1546,"protein":131},{"kcal":1541,"protein":104},{"kcal":1415,"protein":94},{"kcal":1407,"protein":97},{"kcal":1414,"protein":94},{"kcal":1464,"protein":120},{"kcal":1458,"protein":108},{"kcal":1541,"protein":99},{"kcal":1515,"protein":122},{"kcal":1424,"protein":89},{"kcal":1484,"protein":125},{"kcal":1406,"protein":98},{"kcal":1428,"protein":106},{"kcal":1423,"protein":98},{"kcal":1621,"protein":113},{"kcal":1664,"protein":118},{"kcal":1429,"protein":95},{"kcal":1574,"protein":98},{"kcal":1419,"protein":108},{"kcal":1479,"protein":123},{"kcal":1437,"protein":95},{"kcal":1564,"protein":125},{"kcal":1511,"protein":107},{"kcal":1430,"protein":99},{"kcal":1483,"protein":115},{"kcal":1410,"protein":107},{"kcal":1407,"protein":99},{"kcal":1488,"protein":109},{"kcal":1560,"protein":117},{"kcal":1522,"protein":96},{"kcal":1445,"protein":98},{"kcal":1459,"protein":99},{"kcal":1415,"protein":100},{"kcal":1563,"protein":111},{"kcal":1410,"protein":89},{"kcal":1403,"protein":120},{"kcal":1636,"protein":117},{"kcal":1423,"protein":116},{"kcal":1403,"protein":113},{"kcal":1438,"protein":86},{"kcal":1417,"protein":128},{"kcal":1432,"protein":96},{"kcal":1480,"protein":119},{"kcal":1615,"protein":104},{"kcal":1411,"protein":112},{"kcal":1401,"protein":106},{"kcal":1422,"protein":93},{"kcal":1414,"protein":101},{"kcal":1406,"protein":105},{"kcal":1511,"protein":123},{"kcal":1416,"protein":112},{"kcal":1402,"protein":101},{"kcal":1496,"protein":89},{"kcal":1401,"protein":93},{"kcal":1409,"protein":119},{"kcal":1426,"protein":98},{"kcal":1492,"protein":119},{"kcal":1467,"protein":109},{"kcal":1498,"protein":123},{"kcal":1405,"protein":96},{"kcal":1513,"protein":97},{"kcal":1417,"protein":105},{"kcal":1440,"protein":121},{"kcal":1556,"protein":116},{"kcal":1591,"protein":114},{"kcal":1430,"protein":104},{"kcal":1407,"protein":109},{"kcal":1414,"protein":89},{"kcal":1481,"protein":88},{"kcal":1401,"protein":100},{"kcal":1617,"protein":124},{"kcal":1509,"protein":116},{"kcal":1433,"protein":98},{"kcal":1424,"protein":108},{"kcal":1419,"protein":109},{"kcal":1516,"protein":102},{"kcal":1414,"protein":95},{"kcal":1655,"protein":113},{"kcal":1428,"protein":100},{"kcal":1440,"protein":91}];
+const MUSCLE_GROUPS=['하체','등','가슴','어깨','코어','팔'];
+const SMART_DEFAULT={height:166.5,birth:'1995-04',activity:'desk',mode:'gentle',targetDate:''};
+const defaultData=()=>({startDate:START,baseline:{...BASE},goals:{...GOALS},measurements:[],days:{},customMenus:[],smart:{...SMART_DEFAULT},taste:{favorites:[],excluded:[]}});
+const NORMAL_TASTE={favorites:[],excluded:[]};
+const META_KEY=KEY+'_device_meta';
+const clone=(o)=>JSON.parse(JSON.stringify(o));
+function load(){try{const s=JSON.parse(localStorage.getItem(KEY)||'null');if(s&&typeof s==='object')return {startDate:s.startDate==='2026-11-16'?START:(s.startDate||START),baseline:{...BASE,...s.baseline},goals:{...GOALS,...s.goals},measurements:Array.isArray(s.measurements)?s.measurements:[],days:s.days&&typeof s.days==='object'?s.days:{},customMenus:Array.isArray(s.customMenus)?s.customMenus:[],smart:{...SMART_DEFAULT,...(s.smart||{})}}}catch(e){}return defaultData()}
+let data=load(); if(!Array.isArray(data.customMenus))data.customMenus=[];
+if(!data.taste||typeof data.taste!=='object')data.taste={...NORMAL_TASTE};
+for(const key of ['favorites','excluded'])if(!Array.isArray(data.taste[key]))data.taste[key]=[];
+let undoSnapshot=null;let deviceMeta={};try{deviceMeta=JSON.parse(localStorage.getItem(META_KEY)||'{}')||{}}catch(e){}
+const LEGACY_SAMPLE={weight:57,waist:28,belly:32,chest:84,underbust:73,thigh:50,calf:35.5,ankle:20,arm:26};
+for(const [k,old] of Object.entries(LEGACY_SAMPLE)){if(Number(data.baseline[k])===old)data.baseline[k]=0}
+// Migration changes only untouched example baseline values; dated measurements are never modified.
+
+if(!data.smart)data.smart={...SMART_DEFAULT};
+let activeTab='home',selectedDate=(localISO(new Date())<START?START:localISO(new Date())),viewWeek=null,chartType='weight',editingIndex=-1;
+function localISO(d){const y=d.getFullYear(),m=String(d.getMonth()+1).padStart(2,'0'),day=String(d.getDate()).padStart(2,'0');return `${y}-${m}-${day}`}
+function parseDate(s){const [y,m,d]=String(s).split('-').map(Number);return new Date(y,m-1,d,12)}
+function addDays(s,n){const d=parseDate(s);d.setDate(d.getDate()+n);return localISO(d)}
+function daysBetween(a,b){return Math.round((parseDate(b)-parseDate(a))/86400000)}
+function weekFrom(date){return Math.max(1,Math.floor(daysBetween(data.startDate,date)/7)+1)}
+function weekStart(w){return addDays(data.startDate,(w-1)*7)}
+function dateLabel(s){return `${Number(s.slice(5,7))}/${Number(s.slice(8,10))}(${WEEKDAYS[parseDate(s).getDay()]})`}
+function dateLong(s){const d=parseDate(s);return `${d.getFullYear()}년 ${d.getMonth()+1}월 ${d.getDate()}일`}
+function dayIndex(s){return (parseDate(s).getDay()+6)%7}
+function mealIndex(s){return Math.max(0,Math.min(83,daysBetween(data.startDate,s)))}
+function pickTasteMeal(pool,slot,seed){
+ const prefs=data.taste||NORMAL_TASTE;
+ const allowed=pool.filter(m=>!prefs.excluded.includes(m.name));
+ const list=allowed.length?allowed:pool;
+ if(!list.length)return clone(MEAL_DETAILS[0][slot]);
+ const favorites=list.filter(m=>prefs.favorites.includes(m.name));
+ // Favorite meals appear more frequently, but other options remain available.
+ const weighted=favorites.length?[...list,...favorites,...favorites]:list;
+ return clone(weighted[((seed%weighted.length)+weighted.length)%weighted.length]);
+}
+function futureMenuForDate(date){
+ const serial=Math.max(84,daysBetween(data.startDate,date));
+ const weekend=[0,6].includes(parseDate(date).getDay());
+ const valid=MEAL_DETAILS.map((m,i)=>({m,i})).filter(v=>[0,6].includes(parseDate(addDays(data.startDate,v.i)).getDay())===weekend);
+ const available=valid.length?valid:MEAL_DETAILS.map((m,i)=>({m,i}));
+ const breakfast=pickTasteMeal(MEAL_DETAILS.map(x=>x[0]),0,serial*29+Math.floor(serial/7)*17+31);
+ const lunch=pickTasteMeal(available.map(v=>v.m[1]),1,serial*17+Math.floor(serial/7)*31+7);
+ const dinner=pickTasteMeal(available.map(v=>v.m[2]),2,serial*23+Math.floor(serial/7)*19+53);
+ return [breakfast,lunch,dinner];
+}
+function tasteButtons(name){
+ const f=data.taste.favorites.includes(name),x=data.taste.excluded.includes(name);
+ return `<div class="taste-buttons"><button class="btn secondary tiny ${f?'taste-on':''}" data-action="taste-favorite" data-name="${esc(name)}" aria-pressed="${f}" title="즐겨찾기">${f?'♥ 즐겨찾기':'♡ 즐겨찾기'}</button><button class="btn secondary tiny ${x?'taste-excluded':''}" data-action="taste-exclude" data-name="${esc(name)}" aria-pressed="${x}">${x?'제외 중 ✕':'추천 제외'}</button></div>`;
+}
+function toggleTaste(which,name){
+ if(!name)return;
+ const fav=new Set(data.taste.favorites),exc=new Set(data.taste.excluded),set=which==='favorite'?fav:exc;
+ if(set.has(name))set.delete(name);else{set.add(name);if(which==='favorite')exc.delete(name);else fav.delete(name)}
+ data.taste.favorites=[...fav];data.taste.excluded=[...exc];save();render();toast('메뉴 취향을 저장했어. 이후 추천 메뉴에 반영돼.');
+}
+
+function mealForDate(s){return detailForDate(s).map(m=>m.name+' ｜ '+m.items.map(([k,g])=>k+' '+fmt(g)+'g').join(', '))}
+function mealMeta(s){return MEAL_META[mealIndex(s)]}
+function n(v){const x=Number(v);return Number.isFinite(x)?x:0}
+function fmt(x,d=1){return Number.isFinite(Number(x))?Number(x).toFixed(d).replace(/\.0$/,''):'—'}
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function save(){
+ try{
+  const incoming=JSON.stringify(data),previous=localStorage.getItem(KEY);
+  if(previous&&previous!==incoming)undoSnapshot=previous;
+  localStorage.setItem(KEY,incoming);
+  deviceMeta.savedAt=new Date().toISOString();
+  localStorage.setItem(META_KEY,JSON.stringify(deviceMeta));
+  const label=document.getElementById('save-indicator');
+  if(label){label.textContent='✓ 기록 저장됨';label.title='이 기기에 자동 저장됨 · '+new Date().toLocaleString('ko-KR')}
+  return true;
+ }catch(e){const label=document.getElementById('save-indicator');if(label)label.textContent='⚠ 저장 실패';toast('저장 실패. 남은 저장 공간을 확인하고 JSON 백업을 받아 줘.');return false;}
+}
+function undoLastSave(){
+ if(!undoSnapshot){toast('이번 실행에서 되돌릴 기록이 없어.');return}
+ if(!confirm('바로 직전 저장 상태로 되돌릴까?'))return;
+ try{const old=JSON.parse(undoSnapshot);undoSnapshot=null;data={...defaultData(),...old,taste:{...NORMAL_TASTE,...(old.taste||{})}};
+  localStorage.setItem(KEY,JSON.stringify(data));deviceMeta.savedAt=new Date().toISOString();localStorage.setItem(META_KEY,JSON.stringify(deviceMeta));render();toast('마지막 저장을 되돌렸어.');}
+ catch(e){toast('되돌리기에 실패했어. 백업을 확인해 줘.')}
+}
+function backupStatusText(){return deviceMeta.backedUpAt?'확인된 마지막 백업: '+new Date(deviceMeta.backedUpAt).toLocaleString('ko-KR'):'확인된 백업 없음 · JSON 파일을 안전하게 보관해 줘'}
+window.myLineBackupSaved=function(){deviceMeta.backedUpAt=new Date().toISOString();localStorage.setItem(META_KEY,JSON.stringify(deviceMeta));toast('JSON 백업 파일 저장 완료');if(activeTab==='settings')renderSettings()};
+function toast(msg){const el=document.getElementById('toast');el.textContent=msg;el.classList.add('show');clearTimeout(toast.t);toast.t=setTimeout(()=>el.classList.remove('show'),2600)}
+function getDay(s){if(!data.days[s])data.days[s]={meals:{},exercises:{},workoutDone:false,muscleGroups:[],water:0,sleep:'',bowel:false,period:false,note:''};return data.days[s]}
+function lastMeasurement(){return [...data.measurements].sort((a,b)=>a.date.localeCompare(b.date)).at(-1)||null}
+function lastValue(k){const rec=[...data.measurements].filter(v=>v[k]!==''&&v[k]!=null&&Number.isFinite(Number(v[k]))&&Number(v[k])>0).sort((a,b)=>a.date.localeCompare(b.date)).at(-1);return rec?{value:n(rec[k]),date:rec.date}:{value:n(data.baseline[k]),date:null}}
+function changeText(k,unit){const rec=lastValue(k),base=n(data.baseline[k]);if(!rec.date)return '첫 측정 전 · 입력 대기';if(base<=0)return `${rec.date} 첫 측정`;const delta=rec.value-base;return `${delta>0?'+':''}${fmt(delta)}${unit} (시작 대비)`}
+function progressPercent(){const seq=[...data.measurements].filter(v=>Number(v.weight)>0).sort((a,b)=>a.date.localeCompare(b.date));if(!seq.length)return 0;const base=n(seq[0].weight),target=n(data.goals.weight),curr=n(seq.at(-1).weight);if(base<=target)return 100;return Math.max(0,Math.min(100,(base-curr)/(base-target)*100))}
+function weekDone(w){let done=0;for(let i=0;i<7;i++){const date=addDays(weekStart(w),i);if(data.days[date]?.workoutDone===true)done++}return {done,total:7}}
+function workoutLabel(date){const d=data.days[date]||{};const groups=Array.isArray(d.muscleGroups)?d.muscleGroups.filter(x=>MUSCLE_GROUPS.includes(x)):[];return groups.length?groups.join(' · '):(d.workoutDone?'완료 (부위 미선택)':'기록 없음')}
+function dailyMeals(date){const d=getDay(date),vals=[0,1,2].map(i=>d.meals?.[i]).filter(Boolean);return vals.reduce((a,v)=>{for(const k of ['kcal','carb','protein','fat','sugar','fiber'])a[k]+=n(v[k]);if(v.eaten)a.count++;return a},{kcal:0,carb:0,protein:0,fat:0,sugar:0,fiber:0,count:0})}
+function renderNav(){document.querySelectorAll('[data-tab]').forEach(x=>{x.classList.toggle('active',x.dataset.tab===activeTab);x.setAttribute('aria-selected',String(x.dataset.tab===activeTab))});document.querySelectorAll('.page').forEach(x=>x.classList.toggle('active',x.id===activeTab));document.getElementById('nowlabel').textContent=dateLong(localISO(new Date()));document.getElementById('weeklabel').textContent=`${weekFrom(localISO(new Date()))}주차`}
+// v16: calorie estimates follow body weight and activity, not waist or breast measurements.
+// Personal defaults: woman born Apr 1995, height 166.5cm, office-based work.
+function fullGoalDate(s){if(!s)return '미설정';const d=parseDate(s);return `${d.getFullYear()}년 ${d.getMonth()+1}월 ${d.getDate()}일`}
+function latestWeight(){const value=lastValue('weight').value;return value>0?value:null}
+function smartEstimate(){
+ const st={...SMART_DEFAULT,...data.smart};
+ const height=Math.max(130,Math.min(210,Number(st.height)||166.5));
+ const birth=String(st.birth||'1995-04'),now=parseDate(localISO(new Date()));
+ const parts=birth.split('-').map(Number);let age=now.getFullYear()-(parts[0]||1995);
+ if(now.getMonth()+1<(parts[1]||4))age--;age=Math.max(18,Math.min(95,age));
+ const weight=latestWeight();
+ const goalWeight=Number(data.goals.weight)||0;
+ const goalDate=typeof st.targetDate==='string'?st.targetDate:'';
+ const daysLeft=goalDate?daysBetween(localISO(new Date()),goalDate):null;
+ const trend=smartTrend(),act={desk:1.38,light:1.5,active:1.62}[st.activity]||1.38;
+ const basic={weight,height,age,goalWeight,goalDate,daysLeft,trend,activity:st.activity,ready:false,target:null,maintenance:null,basal:null,protein:null,required:null,projected:null,earliest:null,deltaKg:null,bmi:null,goalBmi:goalWeight/((height/100)**2),maxDeficit:0,needDeficit:0,warning:'',status:'측정 대기'};
+ if(!weight){basic.warning='아직 현재 체중을 기록하지 않았어. 신체기록에 아침 공복 체중을 저장한 뒤 계산할게.';return basic}
+ const bmi=weight/((height/100)**2),basal=10*weight+6.25*height-5*age-161;
+ const maintenance=Math.round((basal*act)/10)*10;
+ basic.bmi=bmi;basic.basal=Math.round(basal);basic.maintenance=maintenance;basic.protein=Math.round(weight*1.45);
+ if(!goalDate){basic.warning='목표 날짜를 선택하면 목표일까지 필요한 열량을 계산할게.';return basic}
+ if(!goalWeight||goalWeight<30||goalWeight>300){basic.warning='목표 체중을 확인해 줘.';return basic}
+ if(daysLeft==null||daysLeft<=0){basic.warning='목표 날짜를 오늘 이후로 설정해 줘.';return basic}
+ const deltaKg=Math.max(0,weight-goalWeight);
+ const needDeficit=deltaKg*7700/daysLeft;
+ const goalBmi=goalWeight/((height/100)**2);
+ const floor=1400; // conservative automatic floor for this adult female tracker; not a personalized clinical prescription
+ const lean=bmi<21.0;
+ const maxDeficit=goalBmi<18.5||bmi<19.4?0:Math.max(0,Math.min(lean?250:450,maintenance-floor));
+ const achievableDeficit=Math.min(Math.max(0,needDeficit),maxDeficit);
+ const target=goalWeight>=weight?maintenance:Math.min(maintenance,Math.max(floor,maintenance-achievableDeficit));
+ const actualDeficit=Math.max(0,maintenance-target);
+ const projected=goalWeight>=weight?weight:Math.max(goalWeight,weight-actualDeficit*daysLeft/7700);
+ const earliest=deltaKg>0&&maxDeficit>0?addDays(localISO(new Date()),Math.ceil(deltaKg*7700/maxDeficit)):null;
+ let warning='',status='목표에 맞춰 계산됨';
+ if(goalBmi<18.5){warning='목표 체중이 저체중 범위야. 자동 감량 권장량을 제시하지 않고 유지 열량을 보여줘. 목표를 의료진과 상의해 줘.';status='저체중 목표 주의';}
+ else if(bmi<19.4&&deltaKg>0){warning='현재 체중이 저체중 경계에 가까워 추가 열량 적자를 자동으로 권하지 않아.';status='감량보다 유지 권장';}
+ else if(deltaKg===0){status='목표 체중 도달 또는 이하';warning='현재 체중이 목표 이하라 감량 열량 대신 유지 열량을 제시해.';}
+ else if(needDeficit>maxDeficit+1){status='목표 날짜 재조정 권장';warning=`목표일까지 필요한 하루 적자 약 ${Math.round(needDeficit)}kcal는 보수적으로 설정한 적자 ${Math.round(maxDeficit)}kcal보다 커. ${earliest?fullGoalDate(earliest)+' 이후를 목표로 고려해 줘.':'현재는 감량 제한을 권하지 않아.'}`;}
+ if(goalBmi>=18.5&&goalBmi<19.2){warning+=(warning?' ':'')+'목표 BMI가 저체중 경계에 가까워. 가슴·근력·생리 건강을 확인하며 조절해 줘.';}
+ return {...basic,ready:true,weight,bmi,basal:Math.round(basal),maintenance,protein:basic.protein,target:Math.round(target/10)*10,required:Math.round(maintenance-needDeficit),projected,earliest,deltaKg,needDeficit,maxDeficit,goalBmi,status,warning};
+}
+function smartTrend(){
+ const arr=[...data.measurements].filter(v=>v.weight!==''&&v.weight!=null&&n(v.weight)>0).sort((a,b)=>a.date.localeCompare(b.date));
+ if(arr.length<2)return null;
+ const last=arr.at(-1),first=[...arr].reverse().find(x=>daysBetween(x.date,last.date)>=10&&daysBetween(x.date,last.date)<=45);
+ if(!first)return null;
+ const diffDays=daysBetween(first.date,last.date);
+ return {weekly:(n(last.weight)-n(first.weight))*7/diffDays,from:first.date,to:last.date};
+}
+function average(values){return values.length?values.reduce((s,v)=>s+v,0)/values.length:null}
+function weightOverview(){
+ const recs=data.measurements.filter(r=>r.date&&Number(r.weight)>0&&r.date<=localISO(new Date())).sort((a,b)=>a.date.localeCompare(b.date));
+ if(!recs.length)return {ready:false,reason:'아침 공복 체중을 기록하면 7일 평균과 추세를 분석해.'};
+ const end=recs.at(-1).date;
+ const recent=recs.filter(r=>daysBetween(r.date,end)>=0&&daysBetween(r.date,end)<7);
+ const prior=recs.filter(r=>daysBetween(r.date,end)>=7&&daysBetween(r.date,end)<14);
+ const a=average(recent.map(r=>Number(r.weight))),b=average(prior.map(r=>Number(r.weight)));
+ const delta=(a!=null&&b!=null&&recent.length>=2&&prior.length>=2)?a-b:null;
+ const period=Object.entries(data.days).some(([dt,v])=>v?.period&&daysBetween(dt,end)>=0&&daysBetween(dt,end)<=13);
+ const stable=delta!=null&&Math.abs(delta)<0.1;
+ return {ready:true,recent:a,prior:b,delta,recentCount:recent.length,priorCount:prior.length,last:end,period,stable,records:recs.length};
+}
+function weightOverviewCard(){const w=weightOverview();if(!w.ready)return `<div class="notice">${esc(w.reason)}</div>`;
+ const change=w.delta==null?'비교 대기':(w.delta>0?'+':'')+fmt(w.delta,2)+'kg';
+ const note=w.delta==null?'최근 7일과 그전 7일에 각각 2회 이상 측정하면 평균을 비교할 수 있어.':w.period?'최근 생리 기록이 있어. 수분 때문에 체중이 일시적으로 늘 수 있으니 단기 변화를 단정하지 마.':w.delta<-.7?'감량 속도가 빠르게 나타났어. 식사량·피로·생리 상태를 점검해.':w.stable?'최근 7일 평균 변화가 작아. 2~3주 추세를 본 뒤 활동량과 식단을 점검하자.':w.delta<0?'최근 7일 평균이 낮아졌어. 현재 루틴을 유지하면서 컨디션을 확인해.':'최근 7일 평균이 높아졌어. 수분 변화 가능성도 있으니 한 주만 보고 식사를 줄이지 마.';
+ return `<div class="grid metrics" style="grid-template-columns:repeat(2,minmax(0,1fr));gap:9px"><div class="metricbox"><label>최근 7일 평균 (${w.recentCount}회)</label><b>${fmt(w.recent,2)}kg</b></div><div class="metricbox"><label>이전 7일 대비</label><b>${change}</b></div></div><p class="hint">${esc(note)}</p>`;
+}
+function getWeekReport(date){
+ const start=weekStart(weekFrom(date)),dates=Array.from({length:7},(_,i)=>addDays(start,i));
+ const tracked=dates.map(day=>({date:day,d:data.days[day]||null}));
+ let meals=0,daysRecorded=0,activeDays=0,workouts=0;const totals={kcal:0,carb:0,protein:0,fat:0,sugar:0};
+ for(const {d} of tracked){if(!d)continue;
+  if(d.workoutDone)workouts++;
+  const items=[0,1,2].map(i=>d.meals?.[i]).filter(r=>r&&(r.eaten||r.calcMode==='manual'||r.checkedItems?.length));
+  if(!items.length)continue;daysRecorded++;
+  for(const m of items){meals++;for(const k of NUTRI_KEYS)totals[k]+=Number(m[k])||0}
+ }
+ const weights=data.measurements.filter(r=>dates.includes(r.date)&&Number(r.weight)>0).map(r=>Number(r.weight));
+ return {start,end:dates.at(-1),dates,meals,daysRecorded,workouts,totals,weights,weightAvg:average(weights),coverage:Math.round(meals/21*100)};
+}
+function renderReport(){
+ const report=getWeekReport(selectedDate),estimate=smartEstimate(),w=weightOverview(),goal=estimate.ready?estimate.target:null;
+ const daily=Object.fromEntries(NUTRI_KEYS.map(k=>[k,report.daysRecorded?report.totals[k]/report.daysRecorded:null]));
+ const dailyLines=report.dates.map(dt=>{const d=data.days[dt]||{},food=[0,1,2].filter(i=>{const r=d.meals?.[i];return r&&(r.eaten||r.calcMode==='manual'||r.checkedItems?.length)}).length;
+  return `<div class="report-day"><b>${esc(dateLabel(dt))}</b><span>식사 ${food}/3</span><span>운동 ${d.workoutDone?'✓':'—'}</span></div>`}).join('');
+ document.getElementById('report').innerHTML=`<div class="sectiontop"><div><div class="micro">WEEKLY REVIEW</div><h2>주간 다이어트 리포트</h2></div><span class="pill">${weekFrom(selectedDate)}주차</span></div>
+ <div class="buttonrow"><button class="btn secondary" data-action="report-prev">← 이전 주</button><span class="muted small">${report.start} ~ ${report.end}</span><button class="btn secondary" data-action="report-next">다음 주 →</button></div>
+ <article class="card" style="margin-top:16px"><h2>체중 변화 · 7일 평균</h2>${weightOverviewCard()}<p class="hint">7일 평균은 측정한 날만 사용해. 생리·염분·배변에 따른 변동을 고려해야 해.</p></article>
+ <div class="grid twoequal"><article class="card"><h2>이번 주 요약</h2><div class="grid metrics" style="grid-template-columns:repeat(2,minmax(0,1fr));gap:10px"><div class="metricbox"><label>식사 기록</label><b>${report.meals}/21끼</b></div><div class="metricbox"><label>운동 완료</label><b>${report.workouts}일</b></div><div class="metricbox"><label>기록한 일수</label><b>${report.daysRecorded}일</b></div><div class="metricbox"><label>기록률</label><b>${report.coverage}%</b></div></div><p class="hint">기록률은 식사 기록 여부일 뿐, 식단 준수율이나 건강 점수가 아니야.</p></article>
+ <article class="card"><h2>기록한 날의 평균 섭취</h2>${report.daysRecorded?`<div class="keyvalue"><span>열량</span><b>${Math.round(daily.kcal)} kcal/기록일</b></div><div class="keyvalue"><span>탄수화물</span><b>${fmt(daily.carb)} g</b></div><div class="keyvalue"><span>단백질</span><b>${fmt(daily.protein)} g</b></div><div class="keyvalue"><span>지방</span><b>${fmt(daily.fat)} g</b></div><div class="keyvalue"><span>당류</span><b>${fmt(daily.sugar)} g</b></div>`:'<div class="notice">기록된 식사가 없어 평균을 계산하지 않았어.</div>'}<p class="hint">기록하지 않은 끼니를 0kcal로 가정하지 않아. 일부 식사만 기록했다면 실제 섭취량보다 낮을 수 있어.</p>${goal?`<div class="notice">현재 목표 날짜 기준 권장 열량: 약 ${goal}kcal/일 (참고값)</div>`:''}</article></div>
+ <article class="card"><h2>요일별 기록</h2>${dailyLines}</article>`;
+}
+
+function smartMacroTargets(est){
+ if(!est.ready)return null;
+ const protein=Math.max(80,Math.min(95,Math.round(est.protein||85)));
+ const fat=Math.round(est.target*0.29/9);
+ const carb=Math.max(90,Math.round((est.target-4*protein-9*fat)/4));
+ return {kcal:est.target,protein,carb,fat};
+}
+function macroDistance(m,target){
+ const terms=[['kcal',120,1.8],['protein',18,1.4],['carb',30,1.0],['fat',12,0.8]];
+ return terms.reduce((s,[k,scale,w])=>s+w*((m[k]-target[k])/scale)**2,0);
+}
+function smartAdjustments(date){
+ const current=macroForDay(date),estimate=smartEstimate(),targets=smartMacroTargets(estimate);
+ if(!targets)return {date,current,estimate,difference:0,steps:[],after:current.kcal,afterMacro:current,targets:null};
+ const meals=detailForDate(date),temp={...current},steps=[];
+ const additions=[['삶은 달걀',50,0],['삶은 달걀',50,2],['닭가슴살',50,1],['닭가슴살',50,2],['군고구마',50,2],['바나나',60,0],['사과',80,0],['식용유',3,2]];
+ const reductions=[];
+ for(let slot=0;slot<3;slot++)for(let index=0;index<meals[slot].items.length;index++){
+  const [name,g]=meals[slot].items[index];
+  // Rice must remain a full 130g pack; yoghurt remains one 100g tub.
+  const config={꿀:[2,4],'오!그래놀라 저당 통보리':[20,5],식용유:[2,2],참기름:[2,2],군고구마:[100,30]}[name];
+  if(config&&g-config[1]>=config[0])reductions.push({type:'reduce',name,grams:config[1],slot,index});
+ }
+ const used=new Set();
+ for(let pass=0;pass<3;pass++){
+  const baselineScore=macroDistance(temp,targets),candidates=[];
+  for(const [name,grams,slot] of additions){candidates.push({type:'add',name,grams,slot})}
+  candidates.push(...reductions);
+  let best=null;
+  for(const c of candidates){
+   const id=c.type+'|'+c.slot+'|'+(c.index??c.name);if(used.has(id))continue;
+   const src=NUTRI_PER100[c.name];if(!src)continue;
+   const sign=c.type==='add'?1:-1;
+   const changed={...temp};NUTRI_KEYS.forEach((k,i)=>changed[k]+=(src[i]*c.grams/100)*sign);
+   if(changed.kcal<1250||changed.kcal>2400||changed.protein<60)continue;
+   const score=macroDistance(changed,targets);
+   if(!best||score<best.score)best={c,score,changed,id};
+  }
+  if(!best||baselineScore-best.score<0.08)break;
+  used.add(best.id);temp.kcal=best.changed.kcal;temp.carb=best.changed.carb;temp.protein=best.changed.protein;temp.fat=best.changed.fat;temp.sugar=best.changed.sugar;
+  steps.push({...best.c,kcal:Math.abs(best.c.grams*NUTRI_PER100[best.c.name][0]/100)});
+ }
+ return {date,current,estimate,difference:estimate.target-current.kcal,steps,after:temp.kcal,afterMacro:temp,targets};
+}
+function adjustDescription(a){
+ if(!a.steps.length){if(!a.estimate.ready)return '체중·목표 날짜를 입력하면 제안이 표시돼';return '무리한 자동 변경 대신 현재 식단을 유지하거나 직접 조정해 줘';}
+ return a.steps.map(s=>`${s.type==='add'?'추가':'줄이기'}: ${s.name} ${fmt(s.grams)}g (${s.type==='add'?'+':'−'}${Math.round(s.kcal)}kcal)`).join(' / ');
+}
+function applySmartDay(date){
+ const proposal=smartAdjustments(date),d=getDay(date);
+ if(Object.values(d.meals||{}).some(r=>r&&((r.checkedItems&&r.checkedItems.length)||r.eaten||r.calcMode==='manual')))return false;
+ if(!proposal.estimate.ready||!proposal.steps.length)return false;
+ // Clone entire current plan first to avoid cross-date or shared-array mutations.
+ const originals=detailForDate(date).map(m=>clone(m));
+ for(const step of proposal.steps){
+  const meal=originals[step.slot];
+  if(step.type==='add')meal.items.push([step.name,step.grams]);
+  else if(meal.items[step.index]&&meal.items[step.index][0]===step.name){meal.items[step.index][1]=Math.max(0,meal.items[step.index][1]-step.grams)}
+  meal.note=(meal.note||'')+' · 영양 균형 조정 제안';
+ }
+ d.planOverrides??={};originals.forEach((m,i)=>d.planOverrides[i]=m);
+ save();return true;
+}
+
+function renderSmart(){
+ const x=smartEstimate(),start=selectedDate>=data.startDate?selectedDate:data.startDate;
+ const suggested=Array.from({length:7},(_,i)=>smartAdjustments(addDays(start,i)));
+ const fallbackDate=localISO(new Date())<data.startDate?data.startDate:localISO(new Date());
+ const weightInput=x.weight?fmt(x.weight):'';
+ const weightView=x.weight?fmt(x.weight)+'kg':'미입력';
+ const kcalView=x.ready?`${fmt(x.target,0)}kcal`:'—';
+ const warning=x.warning?`<div class="smart-warning">${esc(x.warning)}</div>`:'';
+ const goalStatus=x.ready?`<div class="goal-summary"><b>${esc(x.status)}</b><p>현재 ${fmt(x.weight)}kg → 목표 ${fmt(x.goalWeight)}kg · ${esc(fullGoalDate(x.goalDate))}까지 <b>${x.daysLeft}일</b></p><p>계산상 필요 하루 적자 <b>${Math.round(x.needDeficit)}kcal</b> · 이론적 섭취량 <b>${x.required<1200?'과도한 제한 필요':Math.round(x.required)+'kcal/일'}</b> (권장 아님)</p><p>무리하지 않는 앱 권장 섭취량 <b>${Math.round(x.target)}kcal/일</b></p><p>권장 범위를 따른다면 목표일 예상 체중 약 <b>${fmt(x.projected,1)}kg</b> (단순 추정)</p></div>`:'';
+ document.getElementById('smart').innerHTML=`<div class="sectiontop"><div><div class="micro">GOAL-DATE BASED PLAN</div><h2>목표 체중 · 목표 날짜 계산기</h2></div><span class="pill">무료 · 장기 사용</span></div>
+ <div class="card" style="margin-bottom:16px"><h2>현재 체중을 입력하면 권장 열량을 계산해</h2>
+ <div class="formgrid"><div class="field"><label>현재 체중 (kg) · 공복 측정</label><input id="smart-weight-input" type="number" min="30" max="300" step=".1" placeholder="첫 몸무게 입력" value="${esc(weightInput)}"></div>
+ <div class="field"><label>체중 측정일</label><input id="smart-weight-date" type="date" value="${esc(fallbackDate)}"></div></div>
+ <div class="buttonrow" style="margin:12px 0 18px"><button class="btn" data-action="smart-save-weight">체중 저장 · 재계산</button><button class="btn secondary" data-tab="body">전체 신체치수 입력</button></div>
+ <div class="formgrid"><div class="field"><label>희망 목표 체중 (kg)</label><input type="number" min="30" max="300" step=".1" data-goal="weight" value="${esc(data.goals.weight)}"></div><div class="field"><label>목표 날짜 · 언제든 변경</label><input type="date" data-smart="targetDate" value="${esc(x.goalDate)}"></div>
+ <div class="field"><label>키(cm)</label><input type="number" min="130" max="210" step=".1" data-smart="height" value="${fmt(x.height)}"></div><div class="field"><label>출생 연월</label><input type="month" data-smart="birth" value="${esc(data.smart.birth||'1995-04')}"></div>
+ <div class="field"><label>평균 활동량</label><select data-smart="activity"><option value="desk" ${data.smart.activity==='desk'?'selected':''}>사무직 · 가벼운 활동</option><option value="light" ${data.smart.activity==='light'?'selected':''}>자주 걷기 · 규칙적 운동</option><option value="active" ${data.smart.activity==='active'?'selected':''}>활동량 많은 직업 · 운동</option></select></div></div>
+ <div class="grid metrics smart-stats" style="margin-top:16px"><div class="metricbox"><label>최근 체중</label><b>${weightView}</b></div><div class="metricbox"><label>하루 유지 열량 추정</label><b>${x.maintenance?x.maintenance+'kcal':'—'}</b></div><div class="metricbox"><label>목표일 기준 권장 열량</label><b>${kcalView}</b></div><div class="metricbox"><label>단백질 참고 목표</label><b>${x.protein?x.protein+'g':'—'}</b></div></div>
+ ${goalStatus}${warning}
+ <p class="hint">목표일과 체중 차이를 바탕으로 열량을 역산하지만, 감량 속도와 낮은 체중을 고려해 무리한 열량 제한은 자동 제안하지 않아. 계산값은 실제 대사량과 체중 변화를 보장하지 않는 참고치야.</p>
+ ${x.trend?`<div class="notice">최근 체중 변화: 주당 약 ${fmt(x.trend.weekly,2)}kg (기록: ${x.trend.from} ~ ${x.trend.to})</div>`:'<div class="notice">아침 공복 체중을 처음 저장한 뒤, 10~45일 간격의 기록이 쌓이면 체중 변화 추세도 볼 수 있어.</div>'}
+ </div>
+ <div class="card" style="margin-bottom:16px"><h2>체중 7일 평균과 추세</h2>${weightOverviewCard()}</div>
+ <div class="card" style="margin-bottom:16px"><h2>목표에 맞춰 다음 7일 식단 조정</h2>
+ <p class="muted small">목표 날짜나 체중이 바뀌면 <b>식단 제안만 다시 계산</b>돼. 이미 먹은 기록과 기존 식단은 사용자가 적용하기 전까지 그대로야.</p>
+ ${x.ready?`<div class="notice">추천 영양 목표 (하루): 탄수화물 약 ${smartMacroTargets(x).carb}g · 단백질 약 ${smartMacroTargets(x).protein}g · 지방 약 ${smartMacroTargets(x).fat}g. 개인 맞춤 처방이 아닌 참고치야.</div><div class="smart-week-list">${suggested.map(a=>`<div class="smart-weekrow"><div><b>${esc(dateLabel(a.date))}</b><p>${Math.round(a.current.kcal)} → ${Math.round(a.after)}kcal · 권장 ${a.estimate.target}kcal</p><small>탄 ${fmt(a.current.carb)}→${fmt(a.afterMacro.carb)}g · 단 ${fmt(a.current.protein)}→${fmt(a.afterMacro.protein)}g · 지 ${fmt(a.current.fat)}→${fmt(a.afterMacro.fat)}g</small><br><small>${esc(adjustDescription(a))}</small></div><button class="btn secondary tiny" data-action="smart-apply" data-smartdate="${a.date}" ${!a.steps.length?'disabled':''}>적용</button></div>`).join('')}</div><div class="buttonrow" style="margin-top:13px"><button class="btn" data-action="smart-apply-week">이번 7일 제안 적용</button><button class="btn secondary" data-tab="food">식단 확인</button></div>`:'<div class="notice">첫 체중과 목표 날짜를 입력하면 7일 식단 조정 추천이 표시돼.</div>'}
+ <p class="hint">밥은 소분해 둔 130g 한 팩을 유지해. 필요한 경우 달걀·고구마 등 다른 재료량 변경을 제안해. 실제 포만감과 컨디션에 따라 조절해.</p></div>
+ <div class="card" style="margin-bottom:16px"><h2>내 메뉴 취향</h2><p class="muted small">식단의 ♡ 즐겨찾기 또는 추천 제외 버튼으로 기록한 선호야. 앞으로 생성하는 식단에 반영돼.</p><div class="keyvalue"><span>즐겨찾기</span><b>${data.taste.favorites.length}개</b></div><div class="taste-tag-list">${data.taste.favorites.map(name=>`<button class="btn secondary tiny" data-action="taste-favorite" data-name="${esc(name)}">♥ ${esc(name)} ✕</button>`).join('')||'<span class="muted small">아직 없음</span>'}</div><div class="keyvalue"><span>추천 제외</span><b>${data.taste.excluded.length}개</b></div><div class="taste-tag-list">${data.taste.excluded.map(name=>`<button class="btn secondary tiny" data-action="taste-exclude" data-name="${esc(name)}">✕ ${esc(name)}</button>`).join('')||'<span class="muted small">아직 없음</span>'}</div><p class="hint">지난 84일의 이미 정해진 식단은 자동 삭제하지 않고, 85일 차 이후 추천에서 제외 메뉴를 피하도록 했어.</p></div>
+ <div class="card"><h2>12주 이후에도 목표 날짜를 자유롭게 변경</h2><p>기존 84일 식단은 기본 메뉴 모음으로 보관해. 85일 차부터는 <b>요일에 맞춰 좋아하는 메뉴를 새롭게 조합해 제안</b>하고, 목표 체중·목표 날짜는 언제든 바꿀 수 있어. 정해진 12주가 끝났다고 기록이 초기화되지 않아.</p><p class="hint">앱 삭제나 데이터 초기화에 대비해 설정·백업에서 기록을 JSON으로 저장해 줘.</p></div>`;
+}
+function render(){renderNav();if(activeTab==='home')renderHome();else if(activeTab==='food')renderFood();else if(activeTab==='measure')renderMeasure();else if(activeTab==='workout')renderWorkout();else if(activeTab==='body')renderBody();else if(activeTab==='smart')renderSmart();else if(activeTab==='report')renderReport();else renderSettings()}
+function selectedDateBar(){return `<div class="todaybar"><span class="muted small">기록 날짜</span><input class="input" type="date" data-change="date" value="${esc(selectedDate)}"><button class="btn secondary tiny" data-action="today">오늘로</button></div>`}
+function chartSvg(kind){const source=[...data.measurements].filter(v=>v[kind]!==''&&v[kind]!=null&&Number.isFinite(Number(v[kind]))).sort((a,b)=>a.date.localeCompare(b.date));if(source.length===0)return '<div class="empty">아직 측정 기록이 없어. 신체기록 탭에서 첫 기록을 남겨줘.</div>';const values=source.map(x=>n(x[kind]));const min0=Math.min(...values),max0=Math.max(...values),spread=Math.max(1,max0-min0),min=min0-spread*.2,max=max0+spread*.2;const W=720,H=190,pL=38,pR=16,pT=14,pB=27;const x=i=>pL+(W-pL-pR)*(source.length===1?.5:i/(source.length-1));const y=v=>pT+(H-pT-pB)*(max-v)/(max-min);const path=source.map((v,i)=>`${i?'L':'M'}${x(i).toFixed(1)},${y(n(v[kind])).toFixed(1)}`).join(' ');const ticks=[0,1,2,3].map(i=>{let t=min+(max-min)*i;return `<line x1="${pL}" x2="${W-pR}" y1="${y(t)}" y2="${y(t)}" stroke="#ece8e3"/><text x="${pL-6}" y="${y(t)+4}" font-size="10" text-anchor="end" fill="#92908a">${fmt(t,1)}</text>`}).join('');const points=source.map((v,i)=>`<circle cx="${x(i)}" cy="${y(n(v[kind]))}" r="4" fill="#d86d5a" stroke="white" stroke-width="2"><title>${esc(v.date)}: ${esc(v[kind])}</title></circle>`).join('');return `<svg class="trend" viewBox="0 0 ${W} ${H}" role="img" aria-label="${kind==='weight'?'체중':kind==='waist'?'허리':'가슴'} 추이 그래프">${ticks}<path d="${path}" fill="none" stroke="#d86d5a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>${points}<text x="${pL}" y="${H-5}" font-size="11" fill="#777">${source[0].date}</text><text x="${W-pR}" y="${H-5}" font-size="11" text-anchor="end" fill="#777">${source.at(-1).date}</text></svg>`}
+function renderHome(){const wk=weekFrom(localISO(new Date())),done=weekDone(wk),lastW=lastValue('weight'),lastWaist=lastValue('waist'),lastChest=lastValue('chest'),today=(localISO(new Date())<data.startDate?data.startDate:localISO(new Date())),meals=mealForDate(today),d=data.days[today]||{},todayMeals=dailyMeals(today);document.getElementById('home').innerHTML=`
+ <div class="hero"><div><div class="micro">YOUR BODYLINE JOURNEY</div><h1>숫자보다, 내가 원하는 라인으로.</h1><p>체지방은 천천히, 근력은 탄탄하게. 허리와 자세를 함께 관리하며 가슴둘레 변화도 확인하는 계획이야.</p></div><div class="heroicon" aria-hidden="true">✿</div></div>
+ <div class="grid metrics"><div class="card stat"><div class="label">최근 체중</div><div class="value">${fmt(lastW.value)} <span class="small muted">kg</span></div><div class="sub">${esc(changeText('weight','kg'))}</div></div><div class="card stat"><div class="label">최근 허리</div><div class="value">${fmt(lastWaist.value)} <span class="small muted">인치</span></div><div class="sub">${esc(changeText('waist','인치'))}</div></div><div class="card stat"><div class="label">최근 가슴</div><div class="value">${fmt(lastChest.value)} <span class="small muted">cm</span></div><div class="sub">${esc(changeText('chest','cm'))}</div></div><div class="card stat"><div class="label">이번 주 운동</div><div class="value">${done.done}<span class="small muted"> / ${done.total}일</span></div><div class="sub">이번 주에 운동 완료로 체크한 날</div></div></div>
+ <div class="grid two" style="margin-bottom:17px"><article class="card"><div class="sectiontop"><h2>체중 변화</h2><button class="btn tiny secondary" data-tab="body">신체기록 추가</button></div><div class="chart-controls"><div class="switch">${[['weight','체중'],['waist','허리'],['chest','가슴']].map(([k,v])=>`<button data-chart="${k}" class="${chartType===k?'sel':''}">${v}</button>`).join('')}</div></div>${chartSvg(chartType)}<div class="legend"><span>첫 측정 체중 ${data.measurements.some(v=>Number(v.weight)>0)?fmt([...data.measurements].filter(v=>Number(v.weight)>0).sort((a,b)=>a.date.localeCompare(b.date))[0].weight)+'kg':'미입력'}</span><span>최종 목표 ${fmt(data.goals.weight)}kg</span></div><div class="progressbar" style="margin:11px 0 0"><span style="width:${progressPercent()}%"></span></div><p class="goalhelp">목표 날짜는 스마트 관리에서 언제든 변경할 수 있어. 첫 체중을 공복에 측정하고 입력해 줘.</p></article>
+ <article class="card"><div class="sectiontop"><h2>${localISO(new Date())<data.startDate?"첫날의 계획":"오늘의 계획"}</h2><span class="pill warm">${esc(dateLabel(today))}</span></div><button class="btn secondary tiny" data-tab="smart" style="margin:8px 0">스마트 권장 열량 확인</button><div class="microtitle">WORKOUT LOG</div><div style="font-size:18px;font-weight:800;margin:5px 0">${d.workoutDone?'오늘 운동 완료 ✓':'오늘 운동 기록하기'}</div><p class="muted small">${esc(workoutLabel(today))} · 정해진 루틴 없이 자유롭게 체크</p><button class="btn secondary" data-tab="workout">운동 완료·부위 체크</button><div class="hr"></div><div class="microtitle">MEAL PLAN</div><div class="keyvalue"><span>아침</span><span class="small" style="text-align:right;max-width:70%">${esc(meals[0])}</span></div><div class="keyvalue"><span>점심</span><span class="small" style="text-align:right;max-width:70%">${esc(meals[1])}</span></div><div class="keyvalue"><span>저녁</span><span class="small" style="text-align:right;max-width:70%">${esc(meals[2])}</span></div><p class="hint">기록한 섭취열량: ${fmt(todayMeals.kcal,0)}kcal (입력된 항목만 합산)</p><button class="btn secondary" data-tab="food">식단 기록하기</button></article></div>
+ <div class="grid twoequal"><article class="card"><h2>이번 주 운동 기록</h2><p class="muted small">요일별로 완료 여부와 운동 부위만 표시해. 정해진 요일별 운동은 없어.</p><div class="schedule-week">${[1,2,3,4,5,6,0].map((_,i)=>{const date=addDays(weekStart(wk),i),entry=data.days[date]||{};return `<div class="schedule-item"><span>${WEEKDAYS[parseDate(date).getDay()]}</span><b>${entry.workoutDone?'✓ '+esc(workoutLabel(date)):'—'}</b></div>`}).join('')}</div><div class="notice">운동 종류와 횟수는 자유롭게 정해도 돼. 무릎·허리에 통증이 있으면 강도를 낮추고 자세 평가를 받아.</div></article><article class="card"><h2>매일 기억할 것</h2><div class="keyvalue"><span>목표일 기준 권장 열량</span><b>${smartEstimate().ready?smartEstimate().target+'kcal':'첫 체중·목표일 입력 필요'}</b></div><div class="keyvalue"><span>단백질 목표</span><b>${fmt(data.goals.proteinMin,0)}~${fmt(data.goals.proteinMax,0)}g</b></div><div class="keyvalue"><span>수분 목표</span><b>${fmt(data.goals.water,0)}mL</b></div><div class="keyvalue"><span>식이섬유</span><b>천천히 늘리기</b></div><div class="notice">치구 지방을 특정 운동으로 선택 감량할 수는 없어. 유방 크기도 감량 과정에서 변할 수 있으니 체중만으로 성과를 평가하지 않기. 채소를 거의 먹지 않아 식이섬유와 미량영양소가 부족할 수 있으니 적절한 식품 다양성 확보와 변비 진료도 중요해.</div></article></div>`}
+
+function detailForDate(date){const serial=daysBetween(data.startDate,date);const originals=serial<84?MEAL_DETAILS[mealIndex(date)]:futureMenuForDate(date);const changes=data.days[date]?.planOverrides||{};return originals.map((m,i)=>changes[i]||m)}
+
+// v10: 계획 식단 영양값은 재료별 100g 평균치와 제품 표시값을 이용한 추정치.
+// 순서: [열량 kcal, 탄수화물 g, 단백질 g, 지방 g, 당류 g].
+const NUTRI_PER100={"밥":[130,28.6,2.5,0.3,0.1],"달걀":[143,0.7,12.6,9.5,0.4],"식용유":[900,0,0,100,0],"그릭요거트":[95,4.0,9.0,4.5,3.5],"꿀":[304,82.4,0.3,0,82.1],"간장":[53,4.9,8.1,0,0.4],"오!그래놀라 저당 통보리":[486.66666666666663,70.0,6.666666666666667,20.0,4.333333333333334],"소고기살코기":[204,0,27,10.5,0],"김치":[25,4.0,1.5,0.4,1.7],"물":[0,0,0,0,0],"더단백":[42.0,2.8,8.0,0.24,0.32],"바나나":[89,22.8,1.1,0.3,12.2],"참기름":[884,0,0,100,0],"사과":[52,13.8,0.3,0.2,10.4],"닭다리살":[190,0,26,9,0],"귤":[47,12.0,0.7,0.2,9.5],"군고구마":[135,31,1.4,0.2,6],"저당케첩":[45,10,1.0,0.2,4.0],"설탕":[387,100,0,0,100],"하이뮨 커피 더블샷":[41.6,2.8,8.0,0.32,0],"복숭아":[39,9.5,0.9,0.3,8.4],"망고":[60,15,0.8,0.4,13.7],"오렌지":[47,11.8,0.9,0.1,9.3],"포도":[69,18.1,0.7,0.2,15.5],"국간장":[52,3.5,8,0,0.5],"돼지안심":[165,0,28,5.5,0],"감자":[87,20,1.9,0.1,0.9],"다진마늘":[149,33.1,6.4,0.5,1.0],"닭가슴살":[165,0,31,3.6,0],"참치(물담금)":[110,0,25,1.0,0],"새우":[99,0.2,24,0.3,0],"카레고형루":[430,45,6,25,8],"삶은 달걀":[155,1.1,12.6,10.6,1.1],"미역(건조)":[138,41,14,2,0.2],"수박":[30,7.6,0.6,0.2,6.2],"광어회":[100,0,20,1.5,0],"고등어":[245,0,23,17,0],"무(육수용/건짐)":[0,0,0,0,0],"고추장":[220,45,4.5,2.3,22],"김":[350,41,39,6,0.5],"오징어":[92,3.1,16,1.4,0],"대구살":[105,0,23,0.9,0],"굴":[81,5,9.5,2.3,0],"고춧가루":[280,56,12,9,11],"쌈장":[230,30,8,7,12],"파스타면(삶은 것)":[158,31,5.8,0.9,0.5],"소금":[0,0,0,0,0],"쌀국수면(삶은 것)":[108,24,2,0.2,0.2],"와사비":[110,17,4.8,3.5,1],"마요네즈":[680,1,1,75,0],"돼지목살":[260,0,25,18,0]};
+const NUTRI_KEYS=['kcal','carb','protein','fat','sugar'];
+function entryParts(m,index){return m.swapParts?.[index]||[m.items[index]]}
+function entryMacros(m,index){
+ const out={kcal:0,carb:0,protein:0,fat:0,sugar:0};
+ for(const [name,grams] of entryParts(m,index)){
+  const per=NUTRI_PER100[name];if(!per)continue;
+  for(let i=0;i<NUTRI_KEYS.length;i++)out[NUTRI_KEYS[i]]+=per[i]*Number(grams)/100;
+ }
+ return out;
+}
+function macroForMeal(m){
+ if(m.customNutrients)return Object.fromEntries(NUTRI_KEYS.map(k=>[k,n(m.customNutrients[k])]));
+ const out={kcal:0,carb:0,protein:0,fat:0,sugar:0};
+ for(let j=0;j<m.items.length;j++){
+  const item=entryMacros(m,j);
+  for(const key of NUTRI_KEYS)out[key]+=item[key];
+ }
+ return out;
+}
+function entryDescription(m,j){return entryParts(m,j).map(([name,g])=>name+' '+gramNumber(g)).join(' + ')}
+
+function macroForDay(date){
+ const result={kcal:0,carb:0,protein:0,fat:0,sugar:0};
+ for(const meal of detailForDate(date)){
+  const n=macroForMeal(meal);
+  for(const key of NUTRI_KEYS)result[key]+=n[key];
+ }
+ return result;
+}
+function macroView(m,scope='day'){
+ const labels={kcal:['열량','kcal'],carb:['탄수화물','g'],protein:['단백질','g'],fat:['지방','g'],sugar:['당류','g']};
+ return `<div class="macro-grid ${scope==='meal'?'macro-small':''}" aria-label="${scope==='day'?'하루 계획 영양합계':'한 끼 예상 영양'}">${NUTRI_KEYS.map(key=>`<div class="macro-tile"><span>${labels[key][0]}</span><strong>${key==='kcal'?Math.round(m[key]).toLocaleString('ko-KR'):fmt(m[key])}<small>${labels[key][1]}</small></strong></div>`).join('')}</div>`;
+}
+
+function gramNumber(g){return Number(g).toLocaleString('ko-KR',{maximumFractionDigits:1})+'g'}
+function gramRows(items){return items.map(([name,g])=>`<tr><td>${esc(name)}</td><td>${gramNumber(g)}</td></tr>`).join('')}
+function mealDetailCard(m,{open=true}={}){
+ const sv=m.serving;
+ const summary=m.items.map(([k,g])=>`${k} ${gramNumber(g)}`).join(', ');
+ return `<details class="detail-card" ${open?'open':''}><summary>재료별 g 계량표 ${sv?'· 국물 / 건더기 포함':''}</summary><div class="detail-body">
+ <table class="gram-table"><thead><tr><th>재료 / 조리에 들어가는 분량</th><th>무게</th></tr></thead><tbody>${gramRows(m.items.flatMap((_,i)=>entryParts(m,i)))}</tbody></table>
+ ${sv?`<div class="soup-stats"><span>완성된 국물 ${gramNumber(sv.broth)}</span><span>먹는 건더기 ${gramNumber(sv.solids)}</span></div><table class="gram-table"><tbody><tr class="gram-head"><td colspan="2">실제로 먹는 국 건더기 구성</td></tr>${gramRows(sv.parts)}</tbody></table><p class="hint">조리용 물과 완성된 국물은 다른 값이야. ${/무는 육수/.test(sv.note)?'무는 국물을 낼 때만 사용하고 건져내. ':''}${/불린 미역/.test(sv.note)?'미역의 불린 무게는 추정치야.':''}</p>`:''}
+ ${m.note?`<p class="hint">${esc(m.note)}</p>`:''}${m.mode==='외식 대략량'?'<p class="hint">외식 중량은 참고용이야. 실제로 먹은 양을 기록하면 돼.</p>':''}
+ </div></details>`;
+}
+function recipeSteps(m){
+ if(Array.isArray(m.recipeSteps)&&m.recipeSteps.length)return m.recipeSteps;
+ const title=m.name, ing=Object.fromEntries(m.items), has=(k)=>m.items.some(x=>x[0].includes(k));
+ const grams=(k)=>{const row=m.items.find(x=>x[0].includes(k));return row?fmt(row[1])+'g':''};
+ const protein=(m.items.find(([k])=>/소고기|닭다리살|닭가슴살|돼지안심|돼지목살|새우|오징어|참치|대구살|고등어|굴|광어회/.test(k))||[])[0];
+ if(/외식 대략량/.test(m.mode||''))return [
+  '외식 메뉴로, 아래 재료량은 집에서 계량할 때의 참고치야. 식당 조리에 들어가는 기름과 소스는 달라질 수 있어.',
+  '접시에 담긴 밥과 단백질 식품의 먹는 양을 대략 확인하고, 필요하면 식단 탭에서 실제 섭취량을 수정해.',
+  '회·굴·조개류는 위생과 충분한 가열 여부를 확인해.'];
+ if(/그릭|요거트/.test(title))return [
+  '그릭요거트 100g 1통을 그릇에 담아. 차갑게 먹는 메뉴야.',
+  has('그래놀라')?`오!그래놀라 저당 통보리 ${grams('그래놀라')}과 과일을 계량해 요거트 위에 올려.`:'군고구마 또는 과일을 표시된 양으로 곁들여.',
+  has('꿀')?`꿀 ${grams('꿀')}을 골고루 뿌려.`:'추가 양념 없이 먹어.',
+  has('삶은 달걀')||has('달걀')?'삶은 달걀은 전날 완숙으로 삶아 냉장 보관했다가 별도로 곁들여.':'준비한 재료를 바로 먹어.'];
+ if(/단백질 음료|더단백|하이뮨|군고구마/.test(title)&&!has('밥'))return [
+  '단백질 음료는 제품 1팩을 준비하고, 먹기 직전에 흔들어.',
+  '군고구마나 과일은 표에 적힌 먹는 부분의 무게로 계량해.',
+  has('달걀')?'삶은 달걀은 미리 익혀 보관했다가 곁들여.':'도시락 용기에 함께 담아 간단하게 먹어.'];
+ if(/카레/.test(title))return [
+  `고기${protein?'('+protein+' '+grams(protein)+')':''}와 감자를 먹기 좋은 크기로 준비해.`,
+  '팬에 고기를 먼저 익힌 뒤 감자를 넣고, 표시된 물을 부어 충분히 끓여.',
+  `카레고형루 ${grams('카레고형루')}를 넣고 덩어리가 없게 저어 농도를 맞춰.`,
+  `완성된 카레를 밥 ${grams('밥')}과 함께 담아. 밥은 조리 후 중량이야.`];
+ if(/미역국/.test(title))return [
+  `건미역 ${grams('미역')}을 물에 불려 씻고, 소고기는 별도로 준비해.`,
+  '냄비에 소고기와 불린 미역을 참기름으로 가볍게 볶고 물을 부어 끓여.',
+  `국간장 ${grams('국간장')}으로 간을 맞추고 고기를 충분히 익혀.`,
+  m.serving?`완성된 국에서 국물 ${fmt(m.serving.broth)}g과 건더기 ${fmt(m.serving.solids)}g을 따로 계량해 담아.`:'정해진 밥 양과 곁들여.'];
+ if(/뭇국|무국/.test(title))return [
+  '소고기와 무를 표시된 양으로 준비해. 무는 육수를 내는 용도로만 사용할 거야.',
+  '물을 넣고 무와 소고기를 함께 끓여 고기를 완전히 익혀.',
+  '국간장과 다진 마늘로 간을 맞춘 뒤, 무는 건져내.',
+  m.serving?`먹는 양은 국물 ${fmt(m.serving.broth)}g + 소고기 ${fmt(m.serving.solids)}g이야. 밥은 별도 계량해.`:'완성된 국물과 소고기만 정해진 분량으로 담아.'];
+ if(/김치찌개|김치찜/.test(title))return [
+  `김치 ${grams('김치')}와 고기를 먹기 좋게 자른 뒤 냄비에 넣어.`,
+  '물과 표시된 양념을 넣고 끓여 고기를 충분히 익혀.',
+  '완성된 김치·고기 건더기를 정해진 양만큼 담고 국물은 원하는 만큼 조절해.',
+  '조리 후 무게로 계량한 밥을 곁들여.'];
+ if(/오므라이스/.test(title))return [
+  '팬에 고기를 먼저 충분히 익히고 밥을 넣어 골고루 볶아.',
+  `달걀 ${grams('달걀')}을 풀어서 다른 팬에 얇게 부쳐.`,
+  '달걀을 볶은 밥 위에 덮거나 감싸서 모양을 잡아.',
+  `저당케첩 ${grams('저당케첩')}을 계량해서 곁들여.`];
+ if(/볶음밥/.test(title))return [
+  protein?`${protein}을 먼저 팬에서 익혀. (고기·해산물은 중심까지 충분히 익히기)`:'달걀과 김치 등 볶음 재료를 먼저 준비해.',
+  `식용유 ${grams('식용유')||'표시된 분량'}를 사용해 김치·달걀 등 나머지 재료를 볶아.`,
+  `밥 ${grams('밥')}을 넣고 골고루 섞으며 볶아.`,
+  '간장·고추장 등 표에 있는 양념으로 간을 하고 완성된 양을 담아.'];
+ if(/계란밥|달걀밥|수란|간장계란/.test(title))return [
+  '밥을 표시된 조리 후 무게로 담아.',
+  `달걀 ${grams('달걀')||grams('삶은 달걀')}을 취향대로 조리하되 흰자와 노른자가 안전하게 익도록 조리해.`,
+  '참기름·간장·김치·저당케첩 중 실제 표에 있는 재료를 정확히 계량해 넣어.',
+  '밥과 함께 비벼 먹어.'];
+ if(/덮밥|불고기|조림|장조림/.test(title))return [
+  '고기 또는 생선 등 주요 단백질 재료를 먹기 좋은 크기로 준비해.',
+  '팬이나 냄비에서 재료를 충분히 익혀.',
+  '간장·설탕·기름 등 표에 적힌 양념으로 맛을 내고 졸이거나 볶아.',
+  `밥 ${grams('밥')}을 담아 위에 얹거나 따로 곁들여.`];
+ if(/파스타|쌀국수/.test(title))return [
+  '면은 익힌 뒤 표에 적힌 조리 후 무게로 계량해.',
+  '고기나 해산물은 팬에서 충분히 익혀.',
+  '계량한 소스·양념을 넣고 면과 섞어 완성해.'];
+ if(/계란찜|계란말이/.test(title))return [
+  `달걀 ${grams('달걀')}을 풀고, 물·소금이 있으면 계량해 넣어.`,
+  '계란찜은 약불에서 익히고, 계란말이는 기름을 두른 팬에서 나눠 말아 익혀.',
+  '고기·생선·밥 등 다른 재료는 별도로 완전히 조리해 곁들여.'];
+ if(/조개구이|회|초밥/.test(title))return [
+  '외식이라면 아래 재료량을 실제 먹는 양의 참고로 활용해.',
+  '회와 해산물은 위생적으로 관리된 제품을 선택하고 조개·굴은 충분히 가열해.',
+  '밥이나 양념은 따로 계량하거나 먹은 양을 기록해.'];
+ return [
+  '표의 재료와 양념을 계량해 준비해. 밥은 조리 후, 고기는 먹을 부분의 조리 후 무게 기준이야.',
+  protein?`${protein}을 팬이나 냄비에서 중심까지 충분히 익혀.`:'달걀·밥 등 주재료를 메뉴에 맞게 익혀.',
+  '식용유·간장 등 표시된 양념만 사용해 간을 맞춰.',
+  '완성된 음식을 정해진 분량으로 담아.'];
+}
+function mealRecipeCard(m){
+ const steps=recipeSteps(m);
+ const sv=m.serving;
+ return `<article class="card recipe-card"><div class="microtitle">${esc(m.mode||'메뉴')}</div><h2>${esc(m.name)}</h2>
+ <div class="recipe-tags"><span class="recipe-tag">재료 ${m.items.length}종</span><span class="recipe-tag">영양 추정 ${Math.round(macroForMeal(m).kcal)}kcal</span></div>
+ <div class="recipe-subtitle">준비할 재료</div><table class="gram-table"><thead><tr><th>재료</th><th>계량</th></tr></thead><tbody>${gramRows(m.items.flatMap((_,i)=>entryParts(m,i)))}</tbody></table>
+ ${m.replacements&&Object.keys(m.replacements).length?'<div class="notice">일부 재료를 바꾼 식단이야. 아래 만드는 순서는 기본 레시피이므로 대체 재료에 맞춰 조리해 줘.</div>':''}
+ <div class="recipe-subtitle">만드는 순서</div><ol class="recipe-step-list">${steps.map(step=>`<li>${esc(step)}</li>`).join('')}</ol>
+ ${sv?`<div class="soup-stats"><span>실제 먹는 국물 ${gramNumber(sv.broth)}</span><span>건더기 ${gramNumber(sv.solids)}</span></div><table class="gram-table"><tbody>${gramRows(sv.parts)}</tbody></table>${sv.note?`<p class="hint">${esc(sv.note)}</p>`:''}`:''}
+ ${m.customNutrients?'<p class="hint">* 이 메뉴의 영양정보는 사용자가 직접 입력한 추정치야.</p>':''}
+ ${m.note?`<p class="hint">${esc(m.note)}</p>`:''}
+ </article>`;
+}
+function renderMeasure(){
+ const week=weekFrom(selectedDate),base=weekStart(week),plan=detailForDate(selectedDate);
+ const opts=Array.from({length:Math.max(12,week+3)},(_,i)=>`<option value="${i+1}" ${i+1===week?'selected':''}>${i+1}주차</option>`).join('');
+ document.getElementById('measure').innerHTML=`<div class="sectiontop"><div><div class="micro">COOKING GUIDE</div><h2>상세 레시피</h2></div><span class="pill warm">장기 순환 · 하루 3끼</span></div>
+ <div class="card" style="margin-bottom:16px"><div class="measure-weeknav"><button class="btn secondary tiny" data-action="measure-prev" ${week===1?'disabled':''}>← 이전 주</button><select aria-label="레시피 주차" data-change="measure-week">${opts}</select><button class="btn secondary tiny" data-action="measure-next" >다음 주 →</button><button class="btn secondary tiny" data-action="measure-today">오늘</button></div>
+ <div class="measure-day-grid">${Array.from({length:7},(_,i)=>{const date=addDays(base,i);return `<button class="${date===selectedDate?'active':''}" data-detailday="${date}">${WEEKDAYS[parseDate(date).getDay()]}<br>${date.slice(5)}</button>`}).join('')}</div>
+ <div class="measure-note">재료는 식단에 맞춘 1인분 기준이야. 밥·고기·생선은 조리 후 먹는 부분, 과일은 껍질·씨를 뺀 무게야. 상세 조리 순서는 메뉴 종류에 맞춘 기본 가이드로, 실제 조리법과 제품마다 차이가 있어.</div></div>
+ <p class="rice-pack-note">🍚 밥이 들어간 모든 레시피는 조리 후 <b>130g (1팩)</b> 기준이야.</p>
+ <div class="sectiontop"><h2>${esc(dateLabel(selectedDate))} · 만드는 방법</h2><button class="btn secondary tiny" data-tab="food">식단 기록</button></div>
+ <div class="measure-food-list">${plan.map(m=>mealRecipeCard(m)).join('')}</div>`;
+}
+
+// Offline macro-matching substitutions. Values are estimates per 100g, not verified nutrition labels.
+const SWAP_GROUPS={
+ carb:['군고구마','밥','감자','오!그래놀라 저당 통보리'],
+ fruit:['바나나','사과','복숭아','수박','포도','망고','귤','오렌지'],
+ protein:['달걀','삶은 달걀','소고기살코기','돼지안심','닭다리살','닭가슴살','참치(물담금)','고등어','대구살','새우','광어회','오징어'],
+ quick:['그릭요거트','더단백','하이뮨 커피 더블샷','삶은 달걀'],
+ other:['김치','김','미역(건조)']
+};
+const SWAP_CATEGORIES={};for(const [cat,foods] of Object.entries(SWAP_GROUPS))for(const food of foods)SWAP_CATEGORIES[food]=cat;
+function canSwapIngredient(name){return !!SWAP_CATEGORIES[name]&&Number(NUTRI_PER100[name]?.[0])>0}
+let swapSlot=0,swapIngredientIndex=0,swapGroup='similar',swapSearch='';
+const macroTitles={carb:'탄수화물',protein:'단백질',fat:'지방',kcal:'열량',sugar:'당류'};
+function swapGroupFor(name){return SWAP_CATEGORIES[name]||'carb'}
+function originalSwapMacros(){const m=detailForDate(selectedDate)[swapSlot];return entryMacros(m,swapIngredientIndex)}
+function scoreMacros(target,actual){
+ // Carbohydrate and protein matching is primary; fat matching is secondary.
+ // A tiny nutrient quantity is not allowed to dominate the entire score.
+ const weights={carb:1.15,protein:1.15,fat:0.7,sugar:0.25};let sum=0;
+ for(const k of ['carb','protein','fat','sugar']){
+  const scale=k==='sugar'?Math.max(5,target[k]*0.35):Math.max(k==='fat'?2:3,target[k]*0.18);
+  sum+=weights[k]*Math.pow((actual[k]-target[k])/scale,2);
+ }
+ return sum;
+}
+function capsFor(name){
+ if(name==='더단백'||name==='하이뮨 커피 더블샷')return {min:250,max:250,step:250};
+ if(name==='그릭요거트')return {min:100,max:100,step:100};
+ if(name==='밥')return {min:130,max:260,step:130};
+ if(name==='김'||name==='미역(건조)')return {min:5,max:45,step:5};
+ if(['식용유','참기름'].includes(name))return {min:5,max:25,step:5};
+ if(['사과','복숭아','오렌지','귤','포도','망고'].includes(name))return {min:25,max:300,step:5};
+ if(name==='수박')return {min:25,max:400,step:5};
+ return {min:10,max:500,step:5};
+}
+function foodMacros(name,grams){const p=NUTRI_PER100[name],out={};for(let i=0;i<NUTRI_KEYS.length;i++)out[NUTRI_KEYS[i]]=p[i]*grams/100;return out}
+function partsMacros(parts){const out={kcal:0,carb:0,protein:0,fat:0,sugar:0};for(const [name,grams] of parts){const m=foodMacros(name,grams);for(const k of NUTRI_KEYS)out[k]+=m[k]}return out}
+function makeOption(parts,target){
+ const actual=partsMacros(parts),score=scoreMacros(target,actual);
+ const dc=actual.carb-target.carb,dp=actual.protein-target.protein,df=actual.fat-target.fat,ds=actual.sugar-target.sugar;
+ const closeCP=Math.abs(dc)<=Math.max(3,target.carb*0.15)&&Math.abs(dp)<=Math.max(3,target.protein*0.15);
+ const closeFat=Math.abs(df)<=Math.max(2,target.fat*0.2);
+ return {name:parts.map(x=>x[0]).join(' + '),parts,grams:parts.reduce((x,y)=>x+y[1],0),actual,score,
+  label:closeCP&&closeFat?'탄·단·지 유사':closeCP?'탄수·단백질 유사':'영양 차이 확인',
+  differences:{carb:dc,protein:dp,fat:df,sugar:ds}};
+}
+function nearestSingle(name,target){
+ const cap=capsFor(name);let best=null;
+ for(let g=cap.min;g<=cap.max;g+=cap.step){const option=makeOption([[name,g]],target);if(!best||option.score<best.score)best=option}
+ return best;
+}
+function nearestPair(a,b,target){
+ // Two foods can approximate mixed macros better than one. Weighted least-squares
+ // estimates are used for speed, then neighboring practical gram amounts are tested.
+ const ca=capsFor(a),cb=capsFor(b);
+ if(ca.min===ca.max && cb.min===cb.max)return null;
+ const keys=['carb','protein','fat','sugar'],p=NUTRI_PER100[a],q=NUTRI_PER100[b];
+ const nums={carb:1,protein:2,fat:3,sugar:4};let A=0,B=0,C=0,D=0,E=0;
+ for(const k of keys){const scale=k==='sugar'?Math.max(5,target[k]*0.35):Math.max(k==='fat'?2:3,target[k]*0.18),w=(k==='sugar'?0.25:k==='fat'?0.7:1.15)/scale**2;
+  const x=p[nums[k]]/100,y=q[nums[k]]/100,t=target[k];A+=w*x*x;B+=w*x*y;C+=w*y*y;D+=w*x*t;E+=w*y*t;
+ }
+ const det=A*C-B*B;const optimum=det>1e-9?[(D*C-B*E)/det,(A*E-B*D)/det]:[target.carb>target.protein?80:40,50];
+ const gramChoices=(cap,val)=>{
+  if(cap.min===cap.max)return [cap.min];
+  const base=Math.max(cap.min,Math.min(cap.max,Math.round(val/cap.step)*cap.step));
+  return [...new Set([cap.min,base,...[-40,-20,-10,10,20,40].map(x=>Math.max(cap.min,Math.min(cap.max,Math.round((base+x)/cap.step)*cap.step)))])];
+ };
+ let best=null;
+ const first=gramChoices(ca,optimum[0]),second=gramChoices(cb,optimum[1]);
+ for(const g1 of first)for(const g2 of second){
+  if(g1+g2>550)continue;
+  const option=makeOption([[a,g1],[b,g2]],target);
+  // Favor simpler one-food substitutions when accuracy is comparable.
+  option.score+=0.14;
+  if(!best||option.score<best.score)best=option;
+ }
+ return best;
+}
+function swapOptions(){
+ const meal=detailForDate(selectedDate)[swapSlot],entry=meal?.items?.[swapIngredientIndex];if(!entry)return [];
+ const source=entry[0],category=swapGroupFor(source),target=originalSwapMacros();
+ const pool=swapGroup==='similar'?[...(SWAP_GROUPS[category]||[]),...(category==='carb'?['오렌지','사과']:category==='fruit'?['군고구마','밥']:category==='quick'?['달걀','군고구마']:[])]:Object.keys(SWAP_CATEGORIES);
+ const query=swapSearch.toLocaleLowerCase('ko-KR').trim();
+ const unique=[...new Set(pool)].filter(x=>x!==source&&NUTRI_PER100[x]?.[0]>0&&(!query||x.toLocaleLowerCase('ko-KR').includes(query)));
+ let options=unique.map(n=>nearestSingle(n,target)).filter(Boolean);
+ // Add combinations only if they can meaningfully improve macro similarity.
+ // Avoid strange pairings such as two unrelated fruits with seafood.
+ const additional=['밥','군고구마','감자','닭가슴살','돼지안심','소고기살코기','삶은 달걀','달걀','그릭요거트'];
+ const candidateNames=[...new Set([...unique,...additional])].filter(x=>x!==source&&NUTRI_PER100[x]);
+ const limit=swapGroup==='similar'?12:16;
+ const pairCandidates=candidateNames.slice(0,limit);
+ for(let i=0;i<pairCandidates.length;i++)for(let j=i+1;j<pairCandidates.length;j++){
+  const a=pairCandidates[i],b=pairCandidates[j];
+  if(query&&!(a.toLocaleLowerCase('ko-KR').includes(query)||b.toLocaleLowerCase('ko-KR').includes(query)))continue;
+  const typeA=swapGroupFor(a),typeB=swapGroupFor(b);
+  if(typeA==='fruit'&&typeB==='fruit')continue;
+  if(typeA==='protein'&&typeB==='protein'&&target.carb>12)continue;
+  if(typeA==='quick'&&typeB==='quick')continue;
+  const option=nearestPair(a,b,target);
+  if(option&&option.score<6)options.push(option);
+ }
+ options.sort((a,b)=>a.score-b.score||(a.parts.length-b.parts.length)||a.name.localeCompare(b.name,'ko'));
+ // Prefer at most two examples of very similar ingredient pairs in the top results.
+ return options.slice(0,18);
+}
+function openIngredientSwap(slot,index){
+ swapSlot=Number(slot);swapIngredientIndex=Number(index);swapGroup='similar';swapSearch='';
+ const meal=detailForDate(selectedDate)[swapSlot];if(meal.customNutrients){toast('직접 입력한 영양정보 메뉴는 재료별 대체가 어려워. 메뉴 바꾸기를 이용해 줘.');return}
+ const entry=meal.items[swapIngredientIndex];if(!entry||!canSwapIngredient(entry[0]))return;
+ const m=originalSwapMacros();
+ document.getElementById('swap-original').innerHTML=`<strong>${esc(entryDescription(meal,swapIngredientIndex))}</strong><p>탄수화물 ${fmt(m.carb)}g · 단백질 ${fmt(m.protein)}g · 지방 ${fmt(m.fat)}g · 당류 ${fmt(m.sugar)}g · 열량 ${Math.round(m.kcal)}kcal</p><p>탄수화물·단백질을 우선하고 지방·당류도 비교해 비슷한 재료나 2가지 조합을 추천해. 완전히 일치하지 않는 경우 차이를 표시해.</p>`;
+ document.getElementById('swap-search-input').value='';renderSwapOptions();document.getElementById('swap-dialog').showModal();
+}
+function nutrientDelta(v){return (v>=0?'+':'')+fmt(v)+'g'}
+function renderSwapOptions(){
+ const box=document.getElementById('swap-options');if(!box)return;
+ document.querySelectorAll('[data-swapgroup]').forEach(b=>b.classList.toggle('selected',b.dataset.swapgroup===swapGroup));
+ const opts=swapOptions();
+ box.innerHTML=opts.length?opts.map((item,idx)=>`<button class="swap-choice" data-swapchoose="${idx}" type="button"><span><b>${esc(item.parts.map(([n,g])=>n+' '+gramNumber(g)).join(' + '))}</b><small>${item.label} · 탄수 ${nutrientDelta(item.differences.carb)} / 단백질 ${nutrientDelta(item.differences.protein)} / 지방 ${nutrientDelta(item.differences.fat)} / 당류 ${nutrientDelta(item.differences.sugar)}</small><small>대체 후 탄수 ${fmt(item.actual.carb)}g · 단백질 ${fmt(item.actual.protein)}g · 지방 ${fmt(item.actual.fat)}g · 당류 ${fmt(item.actual.sugar)}g · ${Math.round(item.actual.kcal)}kcal</small></span><span class="swap-target-gram">선택<small>${item.parts.length===2?'2가지 조합':'단일 재료'}</small></span></button>`).join(''):'<div class="empty">비슷한 조합이 없어. 전체 음식에서 찾아보거나 직접 메뉴를 변경해 줘.</div>';
+}
+function applyIngredientSwap(optionIndex){
+ const chosen=swapOptions()[Number(optionIndex)];if(!chosen)return;
+ const current=detailForDate(selectedDate)[swapSlot],m=JSON.parse(JSON.stringify(current));
+ m.replacements??={};if(!m.replacements[swapIngredientIndex])m.replacements[swapIngredientIndex]=current.items[swapIngredientIndex];
+ const oldName=m.items[swapIngredientIndex][0],oldG=m.items[swapIngredientIndex][1];
+ const parts=chosen.parts.map(x=>[x[0],x[1]]);
+ if(parts.length>1){m.swapParts??={};m.swapParts[swapIngredientIndex]=parts;
+   m.items[swapIngredientIndex]=[parts.map(p=>p[0]).join(' + '),parts.reduce((v,p)=>v+p[1],0)];
+ }else{if(m.swapParts)delete m.swapParts[swapIngredientIndex];m.items[swapIngredientIndex]=parts[0]}
+ if(m.serving&&m.serving.parts){
+  const part=m.serving.parts.find(x=>x[0]===oldName);
+  if(part){const prev=part[1];part[0]=chosen.name;part[1]=chosen.grams;m.serving.solids=Math.max(0,m.serving.solids-prev+chosen.grams);m.serving.note='대체 재료 기준의 예상 건더기량이야. 조리 결과는 달라질 수 있어.'}
+ }
+ persistSwap(swapSlot,m,swapIngredientIndex);
+ document.getElementById('swap-dialog').close();
+ toast(`${oldName} ${gramNumber(oldG)} → ${chosen.parts.map(p=>p[0]+' '+gramNumber(p[1])).join(' + ')} 대체했어.`);
+}
+function restoreIngredientSwap(slot,index){
+ const m=JSON.parse(JSON.stringify(detailForDate(selectedDate)[slot]));const original=m.replacements?.[index];if(!original)return;
+ const old=m.items[index];m.items[index]=original;
+ if(m.swapParts){delete m.swapParts[index];if(!Object.keys(m.swapParts).length)delete m.swapParts}
+ if(m.serving&&m.serving.parts){const part=m.serving.parts.find(x=>x[0]===old[0]);if(part){const prev=part[1];part[0]=original[0];part[1]=original[1];m.serving.solids=Math.max(0,m.serving.solids-prev+original[1])}}
+ delete m.replacements[index];if(!Object.keys(m.replacements).length)delete m.replacements;
+ persistSwap(slot,m,index);toast('원래 재료로 되돌렸어.');
+}
+function persistSwap(slot,meal,index){
+ const d=getDay(selectedDate);d.planOverrides??={};d.planOverrides[slot]=meal;
+ const row=d.meals[slot]??(d.meals[slot]={});
+ const checked=(Array.isArray(row.checkedItems)?row.checkedItems:[]).filter(i=>i!==index);
+ applyIngredientChecks(slot,checked);
+}
+
+function selectedMealChecklist(m,mealIndex0,saved){
+ const checks=Array.isArray(saved.checkedItems)?saved.checkedItems:[];
+ const replacements=m.replacements||{};
+ return `<div class="ing-check-list"><div class="ing-check-head">먹은 재료만 체크 · 체크한 양으로 영양 자동 합산</div>
+ ${m.items.map(([name,g],j)=>`<div class="ing-check-row ${checks.includes(j)?'ischecked':''}">
+   <label class="ing-check-label"><input type="checkbox" data-ing-meal="${mealIndex0}" data-ing-index="${j}" ${checks.includes(j)?'checked':''}><span class="ing-name">${esc(m.swapParts?.[j]?entryDescription(m,j):name)}${replacements[j]?'<span class="swapped-note">대체됨</span>':''}</span></label>
+   <em>${m.swapParts?.[j]?"조합":gramNumber(g)}</em>
+   ${m.customNutrients?'':replacements[j]?`<button type="button" class="btn secondary tiny ing-swap-btn ing-restore-btn" data-action="restore-ingredient" data-slot="${mealIndex0}" data-index="${j}">되돌리기</button>`:canSwapIngredient(name)?`<button type="button" class="btn secondary tiny ing-swap-btn" data-action="swap-ingredient" data-slot="${mealIndex0}" data-index="${j}">대체하기</button>`:''}
+  </div>`).join('')}</div>`;
+}
+function renderFood(){
+ const d=getDay(selectedDate),plan=detailForDate(selectedDate),macros=macroForDay(selectedDate),s=dailyMeals(selectedDate),names=['아침','점심','저녁'];
+ const dayNum=daysBetween(data.startDate,selectedDate)+1,dayText=dayNum>=1?`${dayNum}일차 · ${dayNum<=84?'초기 84일 메뉴':'장기 맞춤 메뉴'}`:'시작 전 날짜';
+ const first=data.startDate;
+ document.getElementById('food').innerHTML=`
+ <div class="sectiontop"><div><div class="micro">MEAL JOURNAL</div><h2>식단 & 컨디션 기록</h2></div><span class="pill">${weekFrom(selectedDate)}주차</span></div>
+ ${selectedDateBar()}
+ <div class="buttonrow food-daynav" aria-label="날짜별 식단 이동">
+ <button class="btn secondary" data-action="prev-foodday" ${selectedDate<=first?'disabled':''}>← 전날</button>
+ <span class="food-nav-center"><strong>${esc(dateLabel(selectedDate))}</strong><small>${dayText}</small></span>
+ <button class="btn secondary" data-action="next-foodday">다음 날 →</button></div>
+ <div class="grid two">
+ <article class="card">
+ <div class="meal-head"><div><div class="micro">DAILY PLAN</div><h2 style="margin:3px 0 0">${esc(dateLabel(selectedDate))} 식단표</h2></div><button class="btn secondary tiny" data-tab="measure">상세 레시피</button></div>
+  <p class="rice-pack-note">🍚 흰쌀밥은 <strong>조리 후 130g = 냉동밥 1팩</strong> 기준이야. 기존 식단과 레시피 모두 1팩 단위로 맞췄어.</p>
+  <div class="smart-inline">목표일 기준 권장 <b>${smartEstimate().ready?smartEstimate().target+'kcal':'첫 체중·목표일 입력 필요'}</b> · 최근 체중 ${smartEstimate().weight?fmt(smartEstimate().weight)+'kg':'미입력'} <button class="btn secondary tiny" data-tab="smart">자동 조정 추천 보기</button></div>
+  <section class="macro-section"><div class="macro-title"><b>하루 계획 영양 합계</b><span>재료 기준 추정</span></div>${macroView(macros)}</section>
+ <section class="macro-section actual-section"><div class="macro-title"><b>실제 섭취 영양 합계</b><span data-foodtotal="count">${s.count}/3 끼 체크</span></div>${macroView(s)}<p class="hint">재료를 하나씩 체크하면 체크한 양 기준으로 합산돼. 다른 메뉴를 먹었다면 직접 입력할 수도 있어.</p></section>
+ ${names.map((name,i)=>{const saved=d.meals?.[i]||{},m=plan[i],nut=macroForMeal(m),isCustom=!!d.planOverrides?.[i];return `
+ <div class="mealrow">
+  <div class="meal-action-bar"><div class="mealtop" style="margin:0"><strong>${name}</strong><label class="toggle"><input type="checkbox" data-meal="${i}" data-mealfield="eaten" ${saved.eaten?'checked':''}> ${saved.calcMode==='manual'&&saved.text?'식사 기록됨':'식사 완료 (전체 체크)'}</label></div>
+  <div class="buttonrow"><button class="btn secondary tiny" data-action="edit-menu" data-slot="${i}">메뉴 바꾸기</button>${isCustom?`<button class="btn secondary tiny" data-action="reset-menu" data-slot="${i}">원래 메뉴</button>`:''}</div></div>
+  <div class="meal-title-main">${esc(m.name)}${isCustom?' <span class="pill warm">변경됨</span>':''}</div>${tasteButtons(m.name)}
+  ${macroView(nut,'meal')}<p class="nutrition-source">출처: ${esc(m.source||'앱 내 식재료 평균 추정값 · 제품 라벨 확인 필요')}</p>
+  ${selectedMealChecklist(m,i,saved)}
+  ${m.serving?`<div class="soup-stats"><span>국물 ${gramNumber(m.serving.broth)}</span><span>건더기 ${gramNumber(m.serving.solids)}</span></div>`:''}
+  <div class="meal-check-hint">재료를 바꾸면 계획·실제 영양 합계가 갱신돼. 정확한 조리 순서는 <b>상세 레시피</b> 탭에서 확인할 수 있어.</div>
+  <div class="meal-input-heading"><span>실제로 먹은 음식 / 영양 (직접 수정 가능)</span></div>
+  <div class="mealfields v10-food-inputs"><input aria-label="${name} 실제 먹은 음식" placeholder="실제로 먹은 음식" data-meal="${i}" data-mealfield="text" value="${esc(saved.text??'')}">
+  ${[['kcal','열량 kcal'],['carb','탄수화물 g'],['protein','단백질 g'],['fat','지방 g'],['sugar','당류 g']].map(([key,label])=>`<label><span>${label}</span><input type="number" min="0" step="0.1" aria-label="${name} ${label}" placeholder="—" data-meal="${i}" data-mealfield="${key}" value="${esc(saved[key]??'')}"></label>`).join('')}</div>
+ </div>`}).join('')}
+ <p class="hint nutr-note">* 빈 영양정보는 0g으로 간주하지 않아. 직접 등록 시 5가지 항목 확인이 필요해. 기본 메뉴의 영양성분은 재료별 평균치로 계산한 추정값이야. 브랜드별 요거트·그래놀라·단백질 음료 등의 영양표와 실제 조리법에 따라 차이가 있어. 그릭요거트는 한 끼 100g 1통 기준이야.</p>
+ </article>
+ <article class="card"><h2>물 & 몸 상태</h2><div class="field"><label>물 마신 양</label><div class="stepper"><button class="btn secondary tiny" data-action="water-minus" aria-label="물 200ml 줄이기">− 200</button><div class="value">${fmt(d.water,0)}mL</div><button class="btn tiny" data-action="water-plus" aria-label="물 200ml 추가">+ 200</button></div><div class="progressbar" style="margin:10px 0"><span style="width:${Math.min(100,n(d.water)/Math.max(1,n(data.goals.water))*100)}%"></span></div><span class="hint">목표 ${fmt(data.goals.water,0)}mL (음료·음식 속 수분은 별도)</span></div><div class="hr"></div><div class="field"><label for="sleep">수면 시간</label><input type="number" id="sleep" min="0" max="24" step=".5" data-dayfield="sleep" value="${esc(d.sleep??'')}" placeholder="예: 7.5"></div><div style="margin:17px 0" class="buttonrow"><label class="toggle"><input type="checkbox" data-dayfield="bowel" ${d.bowel?'checked':''}> 배변함</label><label class="toggle"><input type="checkbox" data-dayfield="period" ${d.period?'checked':''}> 생리 중</label></div><div class="field"><label>오늘 컨디션 · 메모</label><textarea data-dayfield="note" placeholder="복부 팽만, 생리통, 운동 후 상태 등">${esc(d.note??'')}</textarea></div><div class="notice">배변이 1주일에 1회 이하로 지속되면 식이섬유 보충만 반복하기보다 내과 진료를 받아야 해. 심한 복통·구토·가스 배출 불가가 있으면 빠르게 진료받아.</div></article>
+ </div>`;
+}
+function renderWorkout(){
+ const wk=viewWeek||weekFrom(selectedDate),st=weekStart(wk),dates=Array.from({length:7},(_,i)=>addDays(st,i));
+ const saved=getDay(selectedDate),muscles=Array.isArray(saved.muscleGroups)?saved.muscleGroups:[];
+ const count=weekDone(wk);
+ document.getElementById('workout').innerHTML=`
+ <div class="sectiontop"><div><div class="micro">SIMPLE WORKOUT LOG</div><h2>운동 완료 · 부위 체크</h2></div><span class="pill warm">${wk}주차</span></div>
+ <div class="weeknav"><button class="btn secondary tiny" data-action="prevweek" ${wk<=1?'disabled':''}>← 이전 주</button><strong>${dateLabel(st)} ~ ${dateLabel(addDays(st,6))}</strong><button class="btn secondary tiny" data-action="nextweek">다음 주 →</button></div>
+ <p class="muted small" style="margin:0 0 13px">주간 운동 완료 ${count.done}일 / 7일 · 날짜를 누르면 해당 날짜 기록을 변경할 수 있어.</p>
+ <div class="days">${dates.map(dt=>{const rec=data.days[dt]||{},labels=Array.isArray(rec.muscleGroups)?rec.muscleGroups.filter(x=>MUSCLE_GROUPS.includes(x)):[];return `<button class="day ${selectedDate===dt?'sel':''}" data-selectdate="${dt}"><b>${WEEKDAYS[parseDate(dt).getDay()]}</b><small>${dt.slice(5)}</small><small>${rec.workoutDone?'완료':(labels.length?'선택 중':'미기록')}</small><div class="dot ${rec.workoutDone?'done':''}"></div></button>`}).join('')}</div>
+ <div class="grid two"><article class="card"><div class="sectiontop"><div><h2>${esc(dateLabel(selectedDate))} 운동 기록</h2><p class="muted small" style="margin:5px 0 0">하고 싶은 부위를 여러 개 선택해도 돼.</p></div><span class="pill">${muscles.length}개 선택</span></div>
+ <h3 style="margin:14px 0 9px">어떤 부위를 운동했어?</h3>
+ <div class="muscle-grid">${MUSCLE_GROUPS.map(name=>`<label class="muscle-chip ${muscles.includes(name)?'selected':''}"><input type="checkbox" data-muscle="${name}" ${muscles.includes(name)?'checked':''}><span>${name}</span></label>`).join('')}</div>
+ <label class="done-toggle ${saved.workoutDone?'active':''}"><input type="checkbox" data-workout-done ${saved.workoutDone?'checked':''}><span><strong>오늘 운동 완료</strong><small>${saved.workoutDone?'완료했어!':'운동을 마쳤다면 체크해 줘'}</small></span></label>
+ <p class="hint">부위 선택과 완료 체크는 자동 저장돼. 휴식한 날은 체크하지 않아도 괜찮아.</p>
+ </article><article class="card"><h2>이번 주 기록</h2><div class="workout-recap">${dates.map(dt=>{const rec=data.days[dt]||{};return `<div class="workout-recap-row"><span>${esc(dateLabel(dt))}</span><b>${rec.workoutDone?'✓ ':''}${esc(workoutLabel(dt))}</b></div>`}).join('')}</div><div class="notice">운동 루틴은 정해두지 않았어. 그날 운동한 부위와 완료 여부만 간단히 관리하면 돼.</div></article></div>`;
+}
+const BODY_FIELDS=[['weight','체중','kg'],['waist','허리 가장 얇은 곳','인치'],['belly','아랫배','인치'],['chest','가슴둘레','cm'],['underbust','밑가슴','cm'],['thigh','허벅지','cm'],['calf','종아리','cm'],['ankle','발목','cm'],['arm','팔뚝','cm']];
+function renderBody(){let record=editingIndex>=0?data.measurements[editingIndex]:null;document.getElementById('body').innerHTML=`<div class="sectiontop"><div><div class="micro">BODY MEASUREMENTS</div><h2>신체 치수 & 체중 기록</h2></div><span class="pill">2~4주 간격 비교</span></div><div class="grid two"><article class="card"><h2>${editingIndex>=0?'기존 측정 수정':'새 측정 기록'}</h2><div class="field" style="margin-bottom:13px"><label>측정일</label><input type="date" id="bodydate" value="${esc(record?.date||(localISO(new Date())<data.startDate?data.startDate:localISO(new Date())))}"></div><div class="formgrid">${BODY_FIELDS.map(([k,name,unit])=>`<div class="field"><label>${name} (${unit})</label><input type="number" step="0.1" min="0" id="measure-${k}" value="${esc(record?.[k]??'')}" placeholder="0 (측정 전)"></div>`).join('')}</div><div class="field" style="margin-top:13px"><label>메모 (선택)</label><textarea id="body-note" placeholder="컨디션, 생리 여부, 가슴 변화 등">${esc(record?.note||'')}</textarea></div><div class="buttonrow" style="margin-top:15px"><button class="btn" data-action="save-measure">${editingIndex>=0?'수정 저장':'측정 기록 저장'}</button>${editingIndex>=0?'<button class="btn secondary" data-action="cancel-edit">수정 취소</button>':''}</div><div class="notice">기본값은 모두 0이야. 실제 측정값을 처음 저장하면 그날부터 기록이 시작돼. 0은 측정값이 아니야.</div></article><article class="card"><h2>시작 기준값 · 측정 전 0</h2><div class="metricgrid">${BODY_FIELDS.map(([k,name,unit])=>`<div class="metricbox"><label>${name}</label><b>${fmt(data.baseline[k])}</b><span class="mini muted"> ${unit}</span></div>`).join('')}</div><div class="hr"></div><h3>목표 메모</h3><p class="small muted">목표 체중 ${fmt(data.goals.weight)}kg · 목표일 ${fullGoalDate(data.smart.targetDate)} · 허리 24인치 희망 · 가슴둘레 유지 희망.</p><p class="small muted">체중이나 허리 목표는 보장되는 수치가 아니며, 감량 중 컨디션과 가슴둘레 변화가 우선이야.</p></article></div><article class="card" style="margin-top:17px"><div class="sectiontop"><h2>측정 기록 내역</h2><button class="btn secondary tiny" data-action="csv">CSV 내보내기</button></div>${data.measurements.length?`<div class="history"><table><thead><tr><th>날짜</th>${BODY_FIELDS.map(([k,v,u])=>`<th>${v} (${u})</th>`).join('')}<th>관리</th></tr></thead><tbody>${data.measurements.map((v,i)=>`<tr><td>${esc(v.date)}</td>${BODY_FIELDS.map(([k])=>`<td>${v[k]!==''&&v[k]!=null?esc(v[k]):'—'}</td>`).join('')}<td><button class="btn secondary tiny" data-edit="${i}">수정</button> <button class="btn danger tiny" data-del="${i}">삭제</button></td></tr>`).join('')}</tbody></table></div>`:'<div class="empty">아직 측정 기록이 없어. 오늘 측정한 값부터 기록해 보자.</div>'}</article>`}
+function renderSettings(){document.getElementById('settings').innerHTML=`<div class="sectiontop"><div><div class="micro">PREFERENCES & BACKUP</div><h2>목표 설정 · 백업</h2></div></div><div class="grid two"><article class="card"><h2>프로그램 설정</h2><div class="formgrid"><div class="field"><label>식단 시작일</label><input type="date" data-setting="startDate" value="${esc(data.startDate)}"></div><div class="field"><label>중간점검 체중 (kg)</label><input type="number" min="1" step=".1" data-goal="checkpoint" value="${esc(data.goals.checkpoint)}"></div><div class="field"><label>최종 희망 체중 (kg)</label><input type="number" min="1" step=".1" data-goal="weight" value="${esc(data.goals.weight)}"></div><div class="field"><label>목표 날짜 (언제든 수정)</label><input type="date" data-smart="targetDate" value="${esc(data.smart.targetDate||'')}"></div><div class="field"><label>희망 허리 (인치)</label><input type="number" min="1" step=".1" data-goal="waist" value="${esc(data.goals.waist)}"></div><div class="field"><label>수동 설정 열량 하한 (kcal)</label><input type="number" min="1" step="10" data-goal="caloriesMin" value="${esc(data.goals.caloriesMin)}"></div><div class="field"><label>수동 설정 열량 상한 (kcal)</label><input type="number" min="1" step="10" data-goal="caloriesMax" value="${esc(data.goals.caloriesMax)}"></div><div class="field"><label>단백질 하한 (g)</label><input type="number" min="1" step="1" data-goal="proteinMin" value="${esc(data.goals.proteinMin)}"></div><div class="field"><label>단백질 상한 (g)</label><input type="number" min="1" step="1" data-goal="proteinMax" value="${esc(data.goals.proteinMax)}"></div><div class="field"><label>물 목표 (mL)</label><input type="number" min="100" step="100" data-goal="water" value="${esc(data.goals.water)}"></div></div><div class="notice">스마트 관리 탭의 권장 열량은 현재 체중·목표 체중·목표 날짜·활동량을 기준으로 계산돼. 이곳의 수동 열량 범위는 기존 설정 참고값일 뿐 자동 권장량이 아니야. 급격한 제한, 생리불순·어지럼증이 생기면 전문가와 상담해.</div><div class="hr"></div><h3>기존 신체치수 수정</h3><div class="formgrid">${BODY_FIELDS.map(([k,name,unit])=>`<div class="field"><label>${name} (${unit})</label><input type="number" min="0" step="0.1" data-baseline="${k}" value="${esc(data.baseline[k])}"></div>`).join('')}</div></article><article class="card"><h2>기록 안전하게 보관하기</h2><div class="notice" id="backup-status">${esc(backupStatusText())}<br>자동 저장: ${deviceMeta.savedAt?esc(new Date(deviceMeta.savedAt).toLocaleString('ko-KR')):'아직 없음'}</div><div class="buttonrow"><button class="btn secondary tiny" data-action="undo-last-save" ${!undoSnapshot?'disabled':''}>직전 저장 되돌리기</button></div><p class="small muted">이 앱은 별도 가입이나 서버 없이 동작해. 입력한 정보는 지금 이 브라우저에 저장되고 다른 기기와 자동 동기화되지 않아. 파일을 다른 기기에서 열면 기록도 자동으로 옮겨지지 않아.</p><div class="buttonrow"><button class="btn" data-action="export">전체 기록 백업 (.json)</button><button class="btn secondary" data-action="import">백업 복원</button><button class="btn secondary" data-action="csv">신체기록 CSV</button></div><div class="notice">브라우저 데이터를 삭제하거나 시크릿 모드를 사용하면 기록이 사라질 수 있어. 백업 파일을 주기적으로 저장해 두고, 다른 기기에서는 ‘백업 복원’을 이용해.</div><div class="hr"></div><h3>앱 사용 방법</h3><p class="small">① 이 HTML 파일을 내려받아 엣지/크롬으로 열기</p><p class="small">② 브라우저 즐겨찾기에 추가하기</p><p class="small">③ 기록하면 자동 저장 · 주기적으로 JSON 백업하기</p><p class="small">④ 백업을 다른 기기에 옮겨 불러오면 데이터 이전 가능</p><div class="hr"></div><h3>개인 맞춤 핵심 조건</h3><div class="keyvalue"><span>신장</span><b>166.5cm</b></div><div class="keyvalue"><span>밥 소분량</span><b>취사 후 130g = 1팩</b></div><div class="keyvalue"><span>식단</span><b>84일 식단 · 그릭요거트·꿀·통보리 그래놀라·더단백/하이뮨 · 평일 도시락 · 주말 외식 · 재료 g 표기</b></div><div class="keyvalue"><span>영양제 참고</span><b>락토핏 솔루션1 · 프로메가 오메가3 트리플 · 쌩쌩타민 · NOW 마그네슘 글리시네이트</b></div><div class="keyvalue"><span>운동</span><b>완료 여부 및 하체·등·가슴·어깨·코어·팔 자유 선택</b></div><div class="keyvalue"><span>중요</span><b>가슴 유지 희망 · 자세 개선</b></div><div class="hr"></div><button class="btn danger" data-action="reset">모든 기록 초기화</button><p class="goalhelp">초기화 전에는 반드시 전체 기록을 백업해.</p></article></div>`}
+function download(name,content,mime){if(window.MyLineAndroid && typeof window.MyLineAndroid.saveFile==='function'){window.MyLineAndroid.saveFile(name,content,mime);return;}const blob=new Blob([content],{type:mime});const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1500)}
+function exportData(){download(`MY_LINE_백업_${localISO(new Date())}.json`,JSON.stringify({app:'MY_LINE',version:1,exportedAt:new Date().toISOString(),data},null,2),'application/json;charset=utf-8');toast('백업 내보내기를 요청했어. 저장된 파일을 확인해 줘.')}
+function csvExport(){const headers=['날짜',...BODY_FIELDS.map(([,label,unit])=>`${label}(${unit})`),'메모'];const rows=[headers,...[...data.measurements].sort((a,b)=>a.date.localeCompare(b.date)).map(x=>[x.date,...BODY_FIELDS.map(([k])=>x[k]??''),x.note??''])];const quote=s=>'"'+String(s).replace(/"/g,'""')+'"';download(`MY_LINE_신체기록_${localISO(new Date())}.csv`,'\uFEFF'+rows.map(row=>row.map(quote).join(',')).join('\r\n'),'text/csv;charset=utf-8');toast('CSV 파일을 저장했어.')}
+
+function applyIngredientChecks(slot,checkedIdx){
+ const d=getDay(selectedDate),meal=detailForDate(selectedDate)[slot],row=d.meals[slot]||(d.meals[slot]={});
+ const valid=checkedIdx.filter(i=>Number.isInteger(i)&&i>=0&&i<meal.items.length);
+ row.checkedItems=valid.sort((a,b)=>a-b);
+ const values={kcal:0,carb:0,protein:0,fat:0,sugar:0};
+ for(const idx of valid){const part=entryMacros(meal,idx);for(const k of NUTRI_KEYS)values[k]+=part[k]}
+ // User-entered nutrition for an entirely custom item cannot be apportioned accurately.
+ const all=valid.length===meal.items.length;
+ if(meal.customNutrients && all)Object.assign(values,macroForMeal(meal));
+ row.calcMode='ingredients';row.eaten=all && meal.items.length>0;
+ for(const k of NUTRI_KEYS)row[k]=Number(values[k]).toFixed(k==='kcal'?0:1);
+ row.text=valid.map(j=>entryDescription(meal,j)).join(', ');
+ save();renderFood();
+}
+function planOverride(slot,meal){
+ const d=getDay(selectedDate);d.planOverrides??={};d.planOverrides[slot]=JSON.parse(JSON.stringify(meal));
+ // Prevent stale quantities from the old recipe being checked for the new one.
+ d.meals[slot]={};save();renderFood();
+}
+function planRestore(slot){
+ const d=getDay(selectedDate);if(!d.planOverrides)return;
+ delete d.planOverrides[slot];d.meals[slot]={};save();renderFood();
+}
+const MENU_PRESETS=(()=>{
+ const seen=new Set(),result=[];
+ MEAL_DETAILS.flat().forEach(m=>{if(!seen.has(m.name)){seen.add(m.name);result.push(m)}});
+ return result;
+})();
+let onlineFoodHits=[],onlineFoodLastSearch=0;
+function onlineFoodResults(html){const el=document.getElementById('online-food-results');if(el)el.innerHTML=html}
+function onlineFoodStatus(msg){const el=document.getElementById('online-food-status');if(el)el.textContent=msg}
+async function searchOnlineFood(){
+ const query=(document.getElementById('online-food-query')?.value||'').trim();
+ if(query.length<2){onlineFoodStatus('검색어를 2글자 이상 입력해 줘.');return}
+ const now=Date.now();if(now-onlineFoodLastSearch<7000){onlineFoodStatus('무료 검색 서비스 보호를 위해 7초 간격으로 검색할 수 있어.');return}
+ onlineFoodLastSearch=now;onlineFoodHits=[];
+ onlineFoodStatus('무료 제품 DB를 검색 중이야…');onlineFoodResults('');
+ const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),12000);
+ try{
+  // OFF legacy full-text search endpoint; no API key, max 10 search requests/min/IP.
+  const params=new URLSearchParams({search_terms:query,search_simple:'1',action:'process',json:'1',page_size:'15',fields:'code,product_name,product_name_ko,brands,nutriments,quantity'});
+  const res=await fetch('https://world.openfoodfacts.org/cgi/search.pl?'+params.toString(),{signal:controller.signal,headers:{Accept:'application/json'}});
+  if(!res.ok)throw Error('HTTP '+res.status);
+  const body=await res.json();
+  const products=(Array.isArray(body.products)?body.products:[]).map(p=>{
+   const q=p.nutriments||{}; const name=(p.product_name_ko||p.product_name||'').trim();
+   const vals=[q['energy-kcal_100g'],q.carbohydrates_100g,q.proteins_100g,q.fat_100g,q.sugars_100g].map(v=>v===''||v==null?null:Number(v));
+   if(!name||vals.slice(0,4).some(x=>x==null||!Number.isFinite(x)||x<0))return null;
+   return {name,brand:p.brands||'',code:p.code||'',per:vals,source:'Open Food Facts · 사용자 등록 라벨'};
+  }).filter(Boolean);
+  const dedup=new Set();onlineFoodHits=products.filter(x=>{const k=x.code||x.name;if(dedup.has(k))return false;dedup.add(k);return true});
+  if(!onlineFoodHits.length){onlineFoodStatus('영양정보가 있는 검색 결과가 없어. 제품명을 바꾸거나 아래 직접 등록을 이용해 줘.');return}
+  onlineFoodStatus(`검색 결과 ${onlineFoodHits.length}개 · 제품명과 라벨 정보를 확인해 선택해 줘.`);
+  onlineFoodResults(onlineFoodHits.map((x,i)=>`<button class="menu-result" data-onlinechoice="${i}"><b>${esc(x.name)}</b><span>${esc(x.brand)} · 100g 기준 ${fmt(x.per[0])}kcal / 탄 ${fmt(x.per[1])}g / 단 ${fmt(x.per[2])}g / 지 ${fmt(x.per[3])}g ${x.per[4]==null?'· 당류 정보 없음':''}</span></button>`).join(''));
+ }catch(err){onlineFoodStatus('온라인 검색에 연결하지 못했어. 인터넷 상태나 서비스 제한을 확인해 줘. 기존 로컬 메뉴 검색은 계속 사용할 수 있어.');}
+ finally{clearTimeout(timer)}
+}
+function selectOnlineFood(index){
+ const item=onlineFoodHits[index];if(!item)return;
+ const grams=Math.max(1,Math.min(2000,Number(document.getElementById('online-food-grams').value)||100));
+ const name=item.name; document.getElementById('new-menu-name').value=name;
+ document.getElementById('new-menu-source').value=item.source+' · '+(item.brand||'브랜드 미기재')+' · '+(item.code||'식별번호 없음');
+ document.getElementById('new-menu-items').value=`${name} ${grams}g`;
+ const macroKeys=['kcal','carb','protein','fat','sugar'];
+ macroKeys.forEach((key,i)=>{const el=document.getElementById('new-menu-'+key);el.value=item.per[i]==null?'':(i===0?Math.round(item.per[i]*grams/100):fmt(item.per[i]*grams/100));});
+ const lack=item.per[4]==null;
+ document.getElementById('menu-ingredient-result').textContent=`Open Food Facts 검색값 · 먹은 양 ${grams}g 기준으로 입력했어. ${lack?'당류 정보가 없어서 포장지 확인 후 당류를 입력해야 저장할 수 있어.':'확인한 뒤 이 메뉴로 변경·저장을 눌러 줘.'}`;
+}
+let menuSlot=0, menuSearch='';
+function menuSearchCandidates(){
+ const term=menuSearch.toLocaleLowerCase('ko-KR').trim();
+ const all=[...data.customMenus.map(x=>({...x,mode:'내가 등록한 메뉴'})),...MENU_PRESETS];
+ return all.map((m,i)=>({m,i})).filter(({m})=>!data.taste.excluded.includes(m.name)&&(!term||m.name.toLowerCase().includes(term)||m.items.some(([name])=>name.toLowerCase().includes(term)))).sort((a,b)=>Number(data.taste.favorites.includes(b.m.name))-Number(data.taste.favorites.includes(a.m.name))).slice(0,24);
+}
+function renderMenuSearchResults(){
+ const el=document.getElementById('menu-search-results');if(!el)return;
+ const hits=menuSearchCandidates();
+ el.innerHTML=hits.length?hits.map(({m,i})=>`<button type="button" class="menu-result" data-preset="${i}"><b>${esc(m.name)}</b><span>${Math.round(macroForMeal(m).kcal)}kcal · 단백질 ${fmt(macroForMeal(m).protein)}g</span></button>`).join(''):'<p class="menu-info">검색 결과가 없어. 아래에서 직접 새 메뉴를 등록해 봐.</p>';
+}
+function openMenuEditor(slot){menuSlot=Number(slot);menuSearch='';
+ const dlg=document.getElementById('menu-dialog');
+ document.getElementById('menu-slot-name').textContent=['아침','점심','저녁'][menuSlot];
+ for(const id of ['new-menu-name','new-menu-items','new-menu-steps','new-menu-source'])document.getElementById(id).value='';
+ for(const k of NUTRI_KEYS)document.getElementById('new-menu-'+k).value='';
+ document.getElementById('menu-search-input').value='';
+ document.getElementById('online-food-query').value='';onlineFoodResults('');onlineFoodStatus('제품명을 입력하고 무료 검색을 눌러 줘.');
+ document.getElementById('menu-ingredient-result').textContent='';document.getElementById('menu-chat-prompt').style.display='none';
+ renderMenuSearchResults();dlg.showModal();
+}
+function closeMenuEditor(){document.getElementById('menu-dialog').close()}
+function parseIngredientList(textValue){
+ const out=[];
+ for(const part of String(textValue).split(/[\n,，]+/)){
+  const str=part.trim();if(!str)continue;
+  const match=str.match(/^(.+?)\s+(\d+(?:\.\d+)?)\s*g?$/i);
+  if(!match)return {items:out,error:`'${str}' 형식은 '재료명 100g'처럼 입력해 줘.`};
+  out.push([match[1].trim(),Number(match[2])]);
+ }
+ return {items:out,error:''};
+}
+function calculateNewMenu(){
+ const parsed=parseIngredientList(document.getElementById('new-menu-items').value);
+ if(parsed.error){document.getElementById('menu-ingredient-result').textContent=parsed.error;return}
+ if(!parsed.items.length){document.getElementById('menu-ingredient-result').textContent='재료를 입력해 줘.';return}
+ const unknown=parsed.items.filter(([name])=>!NUTRI_PER100[name]).map(([name])=>name);
+ const vals=macroForMeal({items:parsed.items});
+ for(const k of NUTRI_KEYS)document.getElementById('new-menu-'+k).value=unknown.length?'':(k==='kcal'?Math.round(vals[k]):fmt(vals[k]));
+ document.getElementById('new-menu-source').value=unknown.length?'직접 입력 · 출처 미확인':'앱 내 식재료 평균 추정치 · 실제 제품 표시 확인 필요';
+ document.getElementById('menu-ingredient-result').textContent=unknown.length?`앱에 없는 재료: ${unknown.join(', ')}. 영양성분을 자동 계산할 수 없어. 아래 5개 값을 직접 입력해 줘.`:`자동 계산 완료 · 예상 ${Math.round(vals.kcal)}kcal, 단백질 ${fmt(vals.protein)}g (식품 평균 추정)`;
+}
+function saveNewMenu(){
+ const name=document.getElementById('new-menu-name').value.trim();
+ const parsed=parseIngredientList(document.getElementById('new-menu-items').value);
+ if(!name){toast('메뉴 이름을 입력해 줘.');return}
+ if(parsed.error){toast(parsed.error);return}
+ const nutritions={},vals=NUTRI_KEYS.map(k=>document.getElementById('new-menu-'+k).value);
+ if(vals.some(v=>v===''||!Number.isFinite(Number(v))||Number(v)<0)){toast('영양정보 5개를 모두 입력해 줘.');return}
+ NUTRI_KEYS.forEach((k,i)=>nutritions[k]=Number(vals[i]));
+ const steps=document.getElementById('new-menu-steps').value.trim();
+ const m={name,items:parsed.items.length?parsed.items:[[name,100]],mode:'직접 등록',source:document.getElementById('new-menu-source').value.trim()||'직접 입력 · 출처 미확인',customNutrients:nutritions,recipeSteps:steps?steps.split('\n').map(x=>x.trim()).filter(Boolean):[]};
+ const ix=data.customMenus.findIndex(x=>x.name===name);
+ if(ix>=0)data.customMenus[ix]=m;else data.customMenus.push(m);
+ planOverride(menuSlot,m);closeMenuEditor();toast('새 메뉴를 등록하고 오늘 식단에 넣었어.');
+}
+function recordActualFromEditor(){
+ const name=(document.getElementById('new-menu-name').value||'').trim();
+ if(!name){toast('음식 이름부터 입력해 줘.');return}
+ const parsed=parseIngredientList(document.getElementById('new-menu-items').value);
+ if(parsed.error){toast(parsed.error);return}
+ const nutrients={};
+ for(const k of NUTRI_KEYS){const el=document.getElementById('new-menu-'+k);if(el.value===''||!Number.isFinite(Number(el.value))||Number(el.value)<0){toast('열량·탄수화물·단백질·지방·당류를 모두 확인해 줘.');return}nutrients[k]=Number(el.value)}
+ const day=getDay(selectedDate);
+ day.meals[menuSlot]={text:name,eaten:true,calcMode:'manual',checkedItems:[],...nutrients};
+ const items=parsed.items.length?parsed.items:[[name,100]];
+ const menu={name,items,mode:'내가 먹은 음식',source:document.getElementById('new-menu-source').value.trim()||'직접 입력 · 출처 미확인',customNutrients:{...nutrients}};
+ const ix=data.customMenus.findIndex(x=>x.name===name);
+ if(ix>=0)data.customMenus[ix]=menu;else data.customMenus.push(menu);
+ save();closeMenuEditor();renderFood();toast('실제로 먹은 음식으로 기록했어. 계획 메뉴는 그대로야.');
+}
+function openChatGPTSearch(){
+ const name=document.getElementById('new-menu-name').value.trim()||'새 메뉴';
+ const items=document.getElementById('new-menu-items').value.trim();
+ const prompt=`'${name}' 1인분 (${items||'구체적인 재료 및 그램수는 미정'})의 열량(kcal), 탄수화물(g), 단백질(g), 지방(g), 당류(g)를 추정하고 근거 및 불확실성을 알려줘. 조리 후 섭취량 기준으로 설명해줘.`;
+ const promptArea=document.getElementById('menu-chat-prompt');promptArea.style.display='block';promptArea.value=prompt;promptArea.focus();promptArea.select();
+ // External ChatGPT has no direct access to this offline file or its private data.
+ if(navigator.clipboard?.writeText)navigator.clipboard.writeText(prompt).catch(()=>{});
+ window.open('https://chatgpt.com/','_blank','noopener,noreferrer');
+ document.getElementById('menu-ingredient-result').textContent='질문 문구를 복사해 열린 ChatGPT에 붙여넣고, 확인한 영양정보를 아래 칸에 직접 입력해 줘. 자동 동기화는 지원하지 않아.';
+}
+
+function updateMeal(target){const id=Number(target.dataset.meal),field=target.dataset.mealfield,day=getDay(selectedDate);day.meals[id]??={};const row=day.meals[id];if(field==='eaten'){if(target.checked){const m=detailForDate(selectedDate)[id];const nut=macroForMeal(m);row.checkedItems=m.items.map((_,j)=>j);for(const k of NUTRI_KEYS)row[k]=String(k==='kcal'?Math.round(nut[k]):Number(nut[k].toFixed(1)));row.text=m.name;row.calcMode='plan';row.eaten=true;}else{row.checkedItems=[];row.eaten=false;if(row.calcMode==='plan'||row.calcMode==='ingredients'){for(const k of NUTRI_KEYS)row[k]='';row.text='';}row.calcMode='manual';}}else{row[field]=target.value;row.calcMode='manual';}save()}
+function updateFoodTotals(){const s=dailyMeals(selectedDate);const el=document.querySelector('#food .actual-section .macro-grid');if(el)el.outerHTML=macroView(s);const cnt=document.querySelector('[data-foodtotal="count"]');if(cnt)cnt.textContent=s.count+'/3 끼 체크'}
+document.addEventListener('click',e=>{const target=e.target.closest('button');if(!target)return;
+ if(target.dataset.onlinechoice!=null){selectOnlineFood(Number(target.dataset.onlinechoice));return}
+ if(target.dataset.action==='taste-favorite'||target.dataset.action==='taste-exclude'){toggleTaste(target.dataset.action==='taste-favorite'?'favorite':'exclude',target.dataset.name);return}
+ if(target.dataset.swapchoose!=null){applyIngredientSwap(Number(target.dataset.swapchoose));return}
+ if(target.dataset.swapgroup!=null){swapGroup=target.dataset.swapgroup;renderSwapOptions();return}
+ if(target.dataset.preset!=null){const item=menuSearchCandidates().find(x=>x.i===Number(target.dataset.preset));if(item){planOverride(menuSlot,item.m);closeMenuEditor();toast('선택한 메뉴로 변경했어.')}return}
+ if(target.dataset.tab){activeTab=target.dataset.tab;if(activeTab==='workout')viewWeek=weekFrom(selectedDate);render();window.scrollTo({top:0,behavior:'smooth'});return}
+ if(target.dataset.detailday){selectedDate=target.dataset.detailday;renderMeasure();return}
+ if(target.dataset.jumpSoup){selectedDate=target.dataset.jumpSoup;activeTab='measure';render();window.scrollTo({top:0,behavior:'smooth'});return}
+ if(target.dataset.chart){chartType=target.dataset.chart;renderHome();return}
+ if(target.dataset.selectdate){selectedDate=target.dataset.selectdate;renderWorkout();return}
+ if(target.dataset.edit!=null){editingIndex=Number(target.dataset.edit);renderBody();window.scrollTo({top:0,behavior:'smooth'});return}
+ if(target.dataset.del!=null){if(confirm('이 측정 기록을 삭제할까?')){data.measurements.splice(Number(target.dataset.del),1);save();renderBody();toast('측정 기록을 삭제했어.')}return}
+ const act=target.dataset.action;if(!act)return;
+ if(act==='online-food-search'){searchOnlineFood();return}
+ if(act==='report-prev'||act==='report-next'){selectedDate=weekStart(Math.max(1,weekFrom(selectedDate)+(act==='report-prev'?-1:1)));renderReport();return}
+ if(act==='undo-last-save'){undoLastSave();return}
+ if(act==='record-actual-online'){recordActualFromEditor();return}
+ if(act==='smart-save-weight'){
+   const weightField=document.getElementById('smart-weight-input'),dateField=document.getElementById('smart-weight-date');
+   const weight=Number(weightField?.value),date=dateField?.value;
+   if(!weightField?.value||!Number.isFinite(weight)||weight<30||weight>300||!date){toast('측정일과 몸무게(kg)를 입력해 줘.');return}
+   if(date>localISO(new Date())){toast('미래 날짜의 체중은 미리 기록할 수 없어. 측정한 날 저장해 줘.');return}
+   const existing=data.measurements.find(v=>v.date===date);
+   if(existing)existing.weight=String(weight);else data.measurements.push({date,weight:String(weight),note:'스마트 관리에서 기록'});
+   data.measurements.sort((a,b)=>a.date.localeCompare(b.date));save();renderSmart();toast('공복 체중을 저장했어. 목표일 기준 권장량을 다시 계산했어.');return;
+ }
+ if(act==='smart-apply'){const ok=applySmartDay(target.dataset.smartdate);toast(ok?'식단에 추천을 반영했어.':'기록된 식사이거나 조정이 필요 없는 날짜야.');renderSmart();return}
+ if(act==='smart-apply-week'){const start=selectedDate>=data.startDate?selectedDate:data.startDate;let count=0;for(let i=0;i<7;i++)if(applySmartDay(addDays(start,i)))count++;toast(`${count}일의 식단에 추천을 반영했어. 기록한 식사는 건드리지 않았어.`);renderSmart();return}
+ if(act==='swap-ingredient'){openIngredientSwap(target.dataset.slot,target.dataset.index);return}
+ if(act==='restore-ingredient'){restoreIngredientSwap(Number(target.dataset.slot),Number(target.dataset.index));return}
+ if(act==='close-swap'){document.getElementById('swap-dialog').close();return}
+ if(act==='edit-menu'){openMenuEditor(Number(target.dataset.slot));return}
+ if(act==='reset-menu'){planRestore(Number(target.dataset.slot));toast('기본 메뉴로 돌아왔어.');return}
+ if(act==='close-menu'){closeMenuEditor();return}
+ if(act==='calc-custom'){calculateNewMenu();return}
+ if(act==='save-custom'){saveNewMenu();return}
+ if(act==='ask-chatgpt'){openChatGPTSearch();return}
+ if(act==='today'){selectedDate=(localISO(new Date())<data.startDate?data.startDate:localISO(new Date()));viewWeek=weekFrom(selectedDate);render();return}
+ if(act==='measure-prev'||act==='measure-next'){const w=Math.max(1,weekFrom(selectedDate)+(act==='measure-prev'?-1:1));selectedDate=weekStart(w);renderMeasure();return}
+ if(act==='measure-today'){selectedDate=(localISO(new Date())<data.startDate?data.startDate:localISO(new Date()));renderMeasure();return}
+ if(act==='prev-foodday'||act==='next-foodday'){const first=data.startDate,next=addDays(selectedDate,act==='prev-foodday'?-1:1);if(next>=first){selectedDate=next;viewWeek=weekFrom(selectedDate);renderFood()}return}
+ if(act==='water-plus'||act==='water-minus'){const d=getDay(selectedDate);d.water=Math.max(0,n(d.water)+(act==='water-plus'?200:-200));save();renderFood();return}
+ if(act==='prevweek'||act==='nextweek'){viewWeek=Math.max(1,(viewWeek||weekFrom(selectedDate))+(act==='nextweek'?1:-1));selectedDate=weekStart(viewWeek);renderWorkout();return}
+ if(act==='save-measure'){const date=document.getElementById('bodydate').value;if(!date){toast('측정 날짜를 입력해 줘.');return}const entry={date,note:document.getElementById('body-note').value};let nonempty=0;for(const [k] of BODY_FIELDS){const val=document.getElementById('measure-'+k).value;if(val!==''&&n(val)<=0){toast('치수에는 0보다 큰 숫자를 입력해 줘.');return}entry[k]=val;if(val!=='')nonempty++}if(!nonempty){toast('최소 한 가지 신체 치수를 입력해 줘.');return}if(editingIndex>=0)data.measurements[editingIndex]=entry;else data.measurements.push(entry);data.measurements.sort((a,b)=>a.date.localeCompare(b.date));editingIndex=-1;save();renderBody();toast('신체 치수를 저장했어. 스마트 권장량도 새 체중 기준으로 계산돼.');return}
+ if(act==='cancel-edit'){editingIndex=-1;renderBody();return}
+ if(act==='export'){exportData();return}
+ if(act==='csv'){csvExport();return}
+ if(act==='import'){document.getElementById('importfile').click();return}
+ if(act==='reset'){if(confirm('모든 식단·운동·신체 기록이 삭제돼. 계속할까?')&&confirm('정말 초기화할까? 백업 파일 없이 복구할 수 없어.')){data=defaultData();editingIndex=-1;save();render();toast('초기화했어.')}return}
+});
+document.addEventListener('input',e=>{const t=e.target;if(t.id==='swap-search-input'){swapSearch=t.value;renderSwapOptions();return}if(t.id==='menu-search-input'){menuSearch=t.value;renderMenuSearchResults();return}if(t.type==='checkbox')return;if(t.dataset.meal!=null){updateMeal(t);updateFoodTotals();return}if(t.dataset.dayfield){getDay(selectedDate)[t.dataset.dayfield]=t.value;save();return}});
+document.addEventListener('change',e=>{const t=e.target;if(t.dataset.ingMeal!=null){const slot=Number(t.dataset.ingMeal),ix=Number(t.dataset.ingIndex),row=getDay(selectedDate).meals[slot]||{},chosen=new Set(Array.isArray(row.checkedItems)?row.checkedItems:[]);if(t.checked)chosen.add(ix);else chosen.delete(ix);applyIngredientChecks(slot,[...chosen]);return}if(t.dataset.smart){const field=t.dataset.smart;const value=field==='height'?Number(t.value):t.value;if(field==='height' && (value<130||value>210)){toast('키를 확인해 줘.');render();return}data.smart[field]=value;save();render();return}if(t.dataset.change==='date'){selectedDate=t.value||localISO(new Date());viewWeek=weekFrom(selectedDate);render();return}if(t.dataset.change==='measure-week'){selectedDate=weekStart(Number(t.value));renderMeasure();return}if(t.dataset.meal!=null){if(t.type==='checkbox'){updateMeal(t);renderFood()}return}if(t.dataset.muscle!=null){const day=getDay(selectedDate);const selected=new Set(Array.isArray(day.muscleGroups)?day.muscleGroups:[]);if(t.checked)selected.add(t.dataset.muscle);else selected.delete(t.dataset.muscle);day.muscleGroups=MUSCLE_GROUPS.filter(x=>selected.has(x));save();renderWorkout();return}if(t.hasAttribute('data-workout-done')){getDay(selectedDate).workoutDone=t.checked;save();renderWorkout();return}if(t.dataset.dayfield){if(t.type==='checkbox'){getDay(selectedDate)[t.dataset.dayfield]=t.checked;save()}return}if(t.dataset.setting==='startDate'){if(!t.value)return;data.startDate=t.value;save();render();toast('시작일을 바꿨어.');return}if(t.dataset.goal){let val=n(t.value);if(val<=0){toast('0보다 큰 값을 입력해 줘.');render();return}data.goals[t.dataset.goal]=val;save();render();return}if(t.dataset.baseline){let val=n(t.value);if(val<0){toast('0 이상을 입력해 줘.');render();return}data.baseline[t.dataset.baseline]=val;save();return}});
+document.getElementById('importfile').addEventListener('change',async e=>{const file=e.target.files?.[0];if(!file)return;try{const obj=JSON.parse(await file.text()),payload=obj.data||obj;if(!payload||!payload.startDate||!Array.isArray(payload.measurements)||typeof payload.days!=='object'||!payload.baseline)throw new Error('형식 불일치');if(!confirm('백업을 불러오면 현재 브라우저에 저장된 기록을 덮어써. 복원할까?'))return;data={startDate:payload.startDate==='2026-11-16'?START:payload.startDate,baseline:{...BASE,...payload.baseline},goals:{...GOALS,...payload.goals},measurements:payload.measurements,days:payload.days,customMenus:Array.isArray(payload.customMenus)?payload.customMenus:[],smart:{...SMART_DEFAULT,...(payload.smart||{})},taste:{favorites:Array.isArray(payload.taste?.favorites)?payload.taste.favorites:[],excluded:Array.isArray(payload.taste?.excluded)?payload.taste.excluded:[]}};for(const [k,old] of Object.entries(LEGACY_SAMPLE)){if(Number(data.baseline[k])===old)data.baseline[k]=0}save();editingIndex=-1;render();toast('백업을 복원했어.')}catch(err){toast('올바른 MY LINE 백업 JSON 파일이 아니야.')}finally{e.target.value=''}});
+
+/* MY LINE v19 — explicit, non-destructive meal editing. Existing KEY/JSON structure is unchanged. */
+const V19_MENU_SLOTS=['아침','점심','저녁'];
+let v19PlanDrafts={};let v19ActualDrafts={};let v19MenuMode='whole';let v19MenuIndex=-1;let v19NativeReq=0;
+if(!data.customFoods||typeof data.customFoods!=='object')data.customFoods={};
+for(const [name,food] of Object.entries(data.customFoods)){
+ if(Array.isArray(food?.per)&&food.per.length===5&&food.per.every(x=>Number.isFinite(Number(x))))NUTRI_PER100[name]=food.per.map(Number);
+}
+NUTRI_PER100['계란후라이']=[196,0.7,13.6,15,0.4]; // Approx. 100 g, including typical frying oil.
+const v19BaseRenderFood=renderFood;
+const v19BaseOpenMenuEditor=openMenuEditor;
+const v19BaseSearchOnlineFood=searchOnlineFood;
+function v19HasDraft(){return Object.keys(v19PlanDrafts).length>0||Object.keys(v19ActualDrafts).length>0}
+function v19DiscardDrafts(){if(!v19HasDraft())return true;if(!confirm('저장하지 않은 식단 수정 내용이 있어. 저장하지 않고 이동할까?'))return false;v19PlanDrafts={};v19ActualDrafts={};return true}
+function v19Draft(slot){if(!v19PlanDrafts[slot])v19PlanDrafts[slot]=clone(detailForDate(selectedDate)[slot]);return v19PlanDrafts[slot]}
+function v19BeginPlan(slot){v19Draft(slot);renderFood()}
+function v19ResetActualIndices(slot){
+ const d=getDay(selectedDate),row=d.meals[slot];if(!row)return;
+ if(row.text||row.calcMode==='manual'||row.calcMode==='ingredients'||row.eaten){
+  row.checkedItems=[];
+  row.calcMode='historical'; // preserve original actual values and text when planned recipe changes
+ }
+}
+function v19CommitPlan(slot){
+ const draft=v19PlanDrafts[slot];if(!draft)return;
+ if(!draft.items?.length){toast('한 끼에 음식이 최소 하나는 있어야 해.');return}
+ if(draft.items.some(([name,g])=>!String(name).trim()||!Number.isFinite(Number(g))||Number(g)<=0)){toast('재료와 g을 다시 확인해 줘.');return}
+ if(!confirm(`${V19_MENU_SLOTS[slot]} 계획 식단을 수정한 내용으로 저장할까? 기존 실제 섭취 기록은 그대로 유지돼.`))return;
+ const d=getDay(selectedDate),oldMeal=detailForDate(selectedDate)[slot],row=d.meals[slot];
+ const sameFoods=oldMeal.items.length===draft.items.length && oldMeal.items.every((v,i)=>v[0]===draft.items[i][0]);
+ d.planOverrides??={};d.planOverrides[slot]=clone(draft);
+ if(row&&sameFoods&&['ingredients','plan'].includes(row.calcMode)&&Array.isArray(row.checkedItems)){
+  const checked=row.checkedItems.filter(j=>j>=0&&j<draft.items.length),vals={kcal:0,carb:0,protein:0,fat:0,sugar:0};
+  for(const ix of checked){const v=entryMacros(draft,ix);for(const k of NUTRI_KEYS)vals[k]+=v[k]}
+  if(draft.customNutrients&&checked.length===draft.items.length)Object.assign(vals,macroForMeal(draft));
+  for(const k of NUTRI_KEYS)row[k]=String(Number(vals[k].toFixed(k==='kcal'?0:1)));
+  row.text=checked.map(ix=>entryDescription(draft,ix)).join(', ');
+  row.eaten=checked.length===draft.items.length;
+ }else{v19ResetActualIndices(slot)}
+ delete v19PlanDrafts[slot];save();renderFood();toast('계획 식단 저장 완료 · 실제 섭취 기록 유지');
+}
+function v19CancelPlan(slot){if(!confirm('저장하지 않은 계획 수정 내용을 취소할까?'))return;delete v19PlanDrafts[slot];renderFood()}
+function v19RemovePart(slot,index){const draft=v19Draft(slot);if(!draft.items[index])return;
+ if(draft.items.length<=1){toast('한 끼에서 마지막 음식은 삭제할 수 없어. 전체 메뉴 변경을 이용해 줘.');return}
+ if(!confirm(`${draft.items[index][0]} ${gramNumber(draft.items[index][1])}을(를) 이 끼니에서 삭제할까? 저장하기 전에는 실제 계획에 반영되지 않아.`))return;
+ const old=draft.items;draft.items=old.filter((_,i)=>i!==index);
+ if(draft.swapParts||draft.replacements){delete draft.swapParts;delete draft.replacements}
+ if(draft.serving){delete draft.serving}
+ if(draft.customNutrients){delete draft.customNutrients}
+ renderFood();
+}
+function v19GramChange(slot,index,value){
+ const draft=v19Draft(slot),item=draft.items[index];if(!item)return;
+ const grams=Number(value);
+ if(!Number.isFinite(grams)||grams<=0||grams>2500){toast('무게는 0보다 크고 2,500g 이하여야 해.');renderFood();return}
+ const original=Number(item[1]);
+ if(draft.swapParts?.[index]&&draft.swapParts[index].length>1){toast('조합 재료는 먼저 개별 교체하거나 되돌린 뒤 g을 수정해 줘.');renderFood();return}
+ if(draft.customNutrients){
+   if(draft.items.length>1){toast('직접 등록한 복합 메뉴는 재료별 영양정보를 알 수 없어. 직접 재등록해 줘.');renderFood();return}
+   for(const k of NUTRI_KEYS)draft.customNutrients[k]=Number(draft.customNutrients[k])*grams/original;
+ }
+ item[1]=grams;
+ if(draft.serving){delete draft.serving;} // serving weights would otherwise be inaccurate
+ renderFood();
+}
+function v19ActualStart(slot){const saved=getDay(selectedDate).meals[slot]||{};v19ActualDrafts[slot]={text:saved.text||'',kcal:saved.kcal??'',carb:saved.carb??'',protein:saved.protein??'',fat:saved.fat??'',sugar:saved.sugar??''};renderFood()}
+function v19ActualSave(slot){const input=v19ActualDrafts[slot];if(!input)return;
+ if(!input.text.trim()){toast('실제로 먹은 음식 이름을 입력해 줘.');return}
+ const all=NUTRI_KEYS.map(k=>String(input[k]??''));if(all.some(x=>x.trim()===''||!Number.isFinite(Number(x))||Number(x)<0)){toast('칼로리·탄수화물·단백질·지방·당류 5가지를 확인해 줘.');return}
+ const row=getDay(selectedDate).meals[slot]||{};
+ if((row.text||row.eaten||row.checkedItems?.length)&&!confirm('기존 실제 섭취 기록을 새 입력값으로 수정할까?'))return;
+ getDay(selectedDate).meals[slot]={...row,...Object.fromEntries(NUTRI_KEYS.map(k=>[k,String(input[k])])),text:input.text.trim(),calcMode:'manual',eaten:true,checkedItems:[]};
+ delete v19ActualDrafts[slot];save();renderFood();toast('실제 섭취 기록 저장 완료');
+}
+function v19ActualCancel(slot){if(!confirm('저장하지 않은 실제 식사 입력을 취소할까?'))return;delete v19ActualDrafts[slot];renderFood()}
+function v19ActualDelete(slot){const d=getDay(selectedDate);if(!d.meals?.[slot])return;
+ if(!confirm('이 끼니의 실제 섭취 기록을 삭제할까? 계획 식단은 그대로야.'))return;
+ delete d.meals[slot];delete v19ActualDrafts[slot];save();renderFood();toast('실제 섭취 기록 삭제됨');
+}
+// Render legacy app, then add the editor without duplicating its existing plan/records.
+renderFood=function(){
+ v19BaseRenderFood();
+ const rows=[...document.querySelectorAll('#food .mealrow')];
+ rows.forEach((row,slot)=>{
+  const draft=v19PlanDrafts[slot],actualDraft=v19ActualDrafts[slot],meal=draft||detailForDate(selectedDate)[slot];
+  const action=row.querySelector('.meal-action-bar .buttonrow');
+  if(action){action.innerHTML=`${draft?`<span class="v19-badge">수정 중 · 미저장</span><button class="btn tiny" data-v19="save-plan" data-slot="${slot}">계획 저장</button><button class="btn secondary tiny" data-v19="cancel-plan" data-slot="${slot}">취소</button>`:
+   `<button class="btn secondary tiny" data-v19="start-plan" data-slot="${slot}">계획 수정</button><button class="btn secondary tiny" data-v19="menu-whole" data-slot="${slot}">전체 메뉴 변경</button><button class="btn secondary tiny" data-v19="menu-add" data-slot="${slot}">음식 추가</button>`}
+   ${!draft&&getDay(selectedDate).planOverrides?.[slot]?`<button class="btn secondary tiny" data-v19="restore-plan" data-slot="${slot}">원래 계획</button>`:''}`;}
+  const ing=row.querySelector('.ing-check-list');
+  if(draft){
+   const prev=row.querySelector('.meal-title-main');if(prev)prev.innerHTML=`${esc(meal.name)} <span class="v19-badge">수정 미저장</span>`;
+   if(ing)ing.style.display='none';
+   const edit=document.createElement('div');edit.className='v19-editor';
+   edit.innerHTML=`<b>재료별 무게 수정 · 계획 저장 전에는 기존 기록이 바뀌지 않아</b><p class="v19-plan-preview">수정안: ${Math.round(macroForMeal(meal).kcal)}kcal / 탄수화물 ${fmt(macroForMeal(meal).carb)}g / 단백질 ${fmt(macroForMeal(meal).protein)}g / 지방 ${fmt(macroForMeal(meal).fat)}g</p>
+   ${meal.items.map(([name,g],i)=>`<div class="v19-editrow"><span class="ingredient">${esc(name)}</span><input type="number" inputmode="decimal" data-v19gram="${slot}" data-index="${i}" min="0.1" max="2500" step="0.1" value="${fmt(g)}" aria-label="${esc(name)} 무게 g"><span>g</span><button class="btn secondary tiny" data-v19="part-swap" data-slot="${slot}" data-index="${i}">개별 바꾸기</button><button class="btn secondary tiny" data-v19="part-remove" data-slot="${slot}" data-index="${i}">삭제</button></div>`).join('')}
+   <div class="v19-buttons"><button class="btn secondary tiny" data-v19="menu-add" data-slot="${slot}">+ 음식 추가</button><button class="btn secondary tiny" data-v19="menu-whole" data-slot="${slot}">전체 교체</button><button class="btn" data-v19="save-plan" data-slot="${slot}">계획 저장</button><button class="btn secondary tiny" data-v19="cancel-plan" data-slot="${slot}">취소</button></div>
+   ${meal.customNutrients?'<p class="v19-warning">직접 등록 음식은 영양정보의 출처를 확인해야 해. 복합 음식은 g을 변경해도 정확히 재계산되지 않을 수 있어.</p>':''}`;
+   if(ing)ing.before(edit);
+  }else if(ing){
+   const hint=document.createElement('div');hint.className='v19-buttons';hint.innerHTML=`<span class="v19-badge">개별 변경은 ‘계획 수정’에서 가능해</span>`;ing.before(hint);
+  }
+  const manual=row.querySelector('.mealfields');
+  if(manual){
+   const current=getDay(selectedDate).meals[slot]||{};
+   const h=row.querySelector('.meal-input-heading');if(h)h.innerHTML='<span>실제 먹은 음식 · 별도 저장</span>';
+   const values=actualDraft||current;
+   manual.querySelectorAll('[data-mealfield]').forEach(el=>{const k=el.dataset.mealfield;
+    el.value=values[k]??'';el.disabled=!actualDraft;el.classList.toggle('v19-readonly',!actualDraft);
+    el.setAttribute('data-v19actual',slot);
+   });
+   const actions=document.createElement('div');actions.className='v19-buttons';
+   actions.innerHTML=actualDraft?`<button class="btn" data-v19="save-actual" data-slot="${slot}">실제 식사 저장</button><button class="btn secondary" data-v19="cancel-actual" data-slot="${slot}">취소</button>`:
+   `<button class="btn secondary" data-v19="start-actual" data-slot="${slot}">${current.text?'실제 식사 수정':'실제 식사 입력'}</button>${current.text?`<button class="btn secondary tiny" data-v19="delete-actual" data-slot="${slot}">기록 삭제</button>`:''}`;
+   manual.after(actions);
+  }
+ });
+};
+function v19OpenMenu(slot,mode,index=-1){
+ menuSlot=Number(slot);v19MenuMode=mode;v19MenuIndex=Number(index);
+ v19Draft(menuSlot);
+ v19BaseOpenMenuEditor(menuSlot);
+ document.querySelector('#menu-dialog h2').textContent=mode==='whole'?'전체 메뉴 변경':mode==='add'?'음식 추가':'개별 음식 교체';
+ const info=document.getElementById('v19-menu-mode-info');if(info)info.textContent=mode==='whole'?'선택한 메뉴로 이 끼니의 계획을 바꿔. 실제 섭취 기록은 유지돼.':mode==='add'?'기존 재료는 유지하고 선택한 음식만 추가해.':`선택한 한 재료만 교체해. 나머지 계획은 유지돼.`;
+ renderMenuSearchResults();
+}
+function v19SelectMenu(menu){
+ if(!menu?.items?.length)return;
+ const chosen=clone(menu),d=v19Draft(menuSlot);
+ if(v19MenuMode==='whole')v19PlanDrafts[menuSlot]=chosen;
+ else if(v19MenuMode==='add'){
+  if(d.customNutrients){toast('직접 영양 입력된 메뉴에는 추가 계산이 어려워. 전체 변경을 이용해 줘.');return}
+  d.items.push(...chosen.items);
+  d.name=d.name+' + '+chosen.name;
+  delete d.serving;
+ }else{
+  if(v19MenuIndex<0||!d.items[v19MenuIndex]||chosen.items.length!==1){toast('개별 교체는 재료 1종만 선택할 수 있어.');return}
+  if(d.customNutrients){toast('직접 입력한 전체 영양값 메뉴는 개별 교체가 어려워.');return}
+  d.items[v19MenuIndex]=chosen.items[0];delete d.serving;
+ }
+ if(v19MenuMode!=='whole'){delete d.swapParts;delete d.replacements}
+ closeMenuEditor();renderFood();toast('수정안에 추가했어. ‘계획 저장’을 누르면 반영돼.');
+}
+const v19BaseMenuSearchResults=renderMenuSearchResults;
+renderMenuSearchResults=function(){
+ const target=document.getElementById('menu-search-results');if(!target)return;
+ const text=(document.getElementById('menu-search-input')?.value||'').trim().toLocaleLowerCase('ko-KR');menuSearch=text;
+ const preset=menuSearchCandidates();
+ const foods=Object.entries(NUTRI_PER100).filter(([name,per])=>!text||name.toLocaleLowerCase('ko-KR').includes(text));
+ const suggest=foods.filter(([name])=>name!=='물').slice(0,35);
+ const foodsHtml=suggest.map(([name,per])=>`<button type="button" class="menu-result" data-v19food="${esc(name)}"><b>재료 · ${esc(name)}</b><span>기본 50g · ${Math.round(Number(per[0])*0.5)}kcal</span></button>`).join('');
+ const plans=v19MenuMode==='item'?'':preset.map(({m,i})=>`<button type="button" class="menu-result" data-v19preset="${i}"><b>메뉴 · ${esc(m.name)}</b><span>${Math.round(macroForMeal(m).kcal)}kcal / 단백질 ${fmt(macroForMeal(m).protein)}g</span></button>`).join('');
+ target.innerHTML=(v19MenuMode==='whole'?plans+foodsHtml:foodsHtml+plans)||'<p class="menu-info">검색 결과가 없어. 아래에서 직접 메뉴를 등록해 줘.</p>';
+};
+function v19SelectQuickFood(name){
+ const per=NUTRI_PER100[name];if(!per)return;
+ const g=name==='밥'?130:name==='그릭요거트'?100:['더단백','하이뮨 커피 더블샷'].includes(name)?250:50;
+ v19SelectMenu({name,items:[[name,g]],mode:'개별 음식',source:'앱 내 영양 추정값'});
+}
+function v19RegisterCustomFromEditor(){
+ const name=document.getElementById('new-menu-name').value.trim();
+ const parsed=parseIngredientList(document.getElementById('new-menu-items').value);
+ if(!name){toast('음식 이름을 먼저 입력해 줘.');return}
+ if(parsed.error){toast(parsed.error);return}
+ const arr=NUTRI_KEYS.map(k=>Number(document.getElementById('new-menu-'+k).value));
+ if(NUTRI_KEYS.some(k=>document.getElementById('new-menu-'+k).value==='')||arr.some(v=>!Number.isFinite(v)||v<0)){toast('영양정보 5가지를 모두 확인해 줘.');return}
+ const items=parsed.items.length?parsed.items:[[name,100]];
+ const menu={name,items,mode:'직접 등록',source:document.getElementById('new-menu-source').value.trim()||'사용자 직접 입력',customNutrients:Object.fromEntries(NUTRI_KEYS.map((k,i)=>[k,arr[i]])),recipeSteps:document.getElementById('new-menu-steps').value.split('\n').filter(Boolean)};
+ const old=data.customMenus.findIndex(m=>m.name===name);if(old<0)data.customMenus.push(menu);else data.customMenus[old]=menu;
+ if(v19MenuMode==='add'||v19MenuMode==='item'){
+  if(items.length!==1){toast('음식 추가·개별 교체는 재료 1종으로 등록해 줘.');return}
+  const grams=items[0][1];data.customFoods[name]={per:arr.map(v=>v*100/grams),source:menu.source};NUTRI_PER100[name]=data.customFoods[name].per;
+  v19SelectMenu({name,items:[[name,grams]],source:menu.source});
+ }else v19SelectMenu(menu);
+ save();
+}
+// Explicit save is required for manual nutrition inputs. Capture handlers override older autosave logic.
+document.addEventListener('input',e=>{
+ const t=e.target;
+ if(t.dataset.v19actual!=null){e.stopImmediatePropagation();const slot=Number(t.dataset.v19actual);if(v19ActualDrafts[slot])v19ActualDrafts[slot][t.dataset.mealfield]=t.value;return}
+},true);
+document.addEventListener('change',e=>{
+ const t=e.target;
+ if(t.dataset.v19gram!=null){e.stopImmediatePropagation();v19GramChange(Number(t.dataset.v19gram),Number(t.dataset.index),t.value);return}
+ if(t.dataset.change==='date'&&v19HasDraft()&&!v19DiscardDrafts()){e.stopImmediatePropagation();t.value=selectedDate;return}
+ if(t.dataset.ingMeal!=null){const row=getDay(selectedDate).meals[Number(t.dataset.ingMeal)]||{};
+  if(((row.calcMode==='manual'||row.calcMode==='historical')||(!t.checked&&Array.isArray(row.checkedItems)&&row.checkedItems.includes(Number(t.dataset.ingIndex))))
+      &&!confirm('기록된 재료 체크/실제 섭취 내용을 변경할까? 기존 값을 확인해 줘.')){e.stopImmediatePropagation();renderFood();return}
+ }
+ if(t.dataset.meal!=null&&t.dataset.mealfield==='eaten'){
+  const row=getDay(selectedDate).meals[Number(t.dataset.meal)]||{};
+  if(((row.calcMode==='manual'||row.calcMode==='historical')||(!t.checked&&row.eaten))&&!confirm('기존 실제 섭취 기록을 변경할까?')){e.stopImmediatePropagation();renderFood();return}
+ }
+},true);
+document.addEventListener('click',e=>{
+ const t=e.target.closest('button');if(!t)return;
+ const act=t.dataset.v19;
+ if(act){e.stopImmediatePropagation();e.preventDefault();const s=Number(t.dataset.slot);const i=Number(t.dataset.index);
+  if(act==='start-plan')v19BeginPlan(s);
+  if(act==='save-plan')v19CommitPlan(s);
+  if(act==='cancel-plan')v19CancelPlan(s);
+  if(act==='part-remove')v19RemovePart(s,i);
+  if(act==='part-swap')v19OpenMenu(s,'item',i);
+  if(act==='menu-whole')v19OpenMenu(s,'whole');
+  if(act==='menu-add')v19OpenMenu(s,'add');
+  if(act==='restore-plan'){
+    if(confirm('원래 식단으로 되돌릴까? 기존 실제 섭취 기록은 유지돼.')){
+      const d=getDay(selectedDate);if(d.planOverrides)delete d.planOverrides[s];v19ResetActualIndices(s);save();renderFood();toast('원래 계획으로 되돌렸어.');
+    }
+  }
+  if(act==='start-actual')v19ActualStart(s);
+  if(act==='save-actual')v19ActualSave(s);
+  if(act==='cancel-actual')v19ActualCancel(s);
+  if(act==='delete-actual')v19ActualDelete(s);
+  return;
+ }
+ if(t.dataset.v19food!=null){e.stopImmediatePropagation();e.preventDefault();v19SelectQuickFood(t.dataset.v19food);return}
+ if(t.dataset.v19preset!=null){e.stopImmediatePropagation();e.preventDefault();const v=menuSearchCandidates().find(x=>x.i===Number(t.dataset.v19preset));if(v)v19SelectMenu(v.m);return}
+ if(t.dataset.preset!=null){e.stopImmediatePropagation();e.preventDefault();const v=menuSearchCandidates().find(x=>x.i===Number(t.dataset.preset));if(v)v19SelectMenu(v.m);return}
+ if(t.dataset.action==='save-custom'){e.stopImmediatePropagation();e.preventDefault();v19RegisterCustomFromEditor();return}
+ if(t.dataset.action==='record-actual-online'){
+  // Do not overwrite existing records without confirmation; keep original UI in manual edit mode.
+  const row=getDay(selectedDate).meals[menuSlot]||{};
+  if((row.text||row.eaten)&&!confirm('기존 실제 섭취 기록을 변경할까?')){e.stopImmediatePropagation();e.preventDefault();return}
+ }
+ if(t.dataset.action==='reset-menu'){e.stopImmediatePropagation();e.preventDefault();if(confirm('원래 계획으로 되돌릴까? 기존 실제 섭취 기록은 유지돼.')){const d=getDay(selectedDate);if(d.planOverrides)delete d.planOverrides[Number(t.dataset.slot)];v19ResetActualIndices(Number(t.dataset.slot));save();renderFood()}return}
+ if(t.dataset.tab||['today','prev-foodday','next-foodday','measure-prev','measure-next','measure-today','report-prev','report-next'].includes(t.dataset.action)){
+  if(v19HasDraft()&&!v19DiscardDrafts()){e.stopImmediatePropagation();e.preventDefault();return}
+ }
+},true);
+// Native Android network request bypasses WebView cross-origin limitations. Browser preview keeps web fetch fallback.
+window.myLineOnlineResult=function(raw){
+ try{
+  const body=JSON.parse(raw),products=body.products||[];
+  onlineFoodHits=products.map(p=>{const q=p.nutriments||{};const name=String(p.product_name_ko||p.product_name||'').trim();
+   const per=[q['energy-kcal_100g'],q.carbohydrates_100g,q.proteins_100g,q.fat_100g,q.sugars_100g].map(v=>v===''||v==null?null:Number(v));
+   if(!name||per.slice(0,4).some(v=>v==null||!Number.isFinite(v)||v<0))return null;
+   return {name,brand:p.brands||'',code:p.code||'',per,source:'Open Food Facts · 사용자 등록 영양표'};
+  }).filter(Boolean);
+  onlineFoodStatus(onlineFoodHits.length?`검색 결과 ${onlineFoodHits.length}개 · 제품 라벨을 확인해 줘.`:'영양정보가 있는 제품을 찾지 못했어. 앱 내 음식 검색이나 직접 등록을 이용해 줘.');
+  onlineFoodResults(onlineFoodHits.map((x,i)=>`<button class="menu-result" data-onlinechoice="${i}"><b>${esc(x.name)}</b><span>${esc(x.brand)} · 100g당 ${fmt(x.per[0])}kcal / 탄 ${fmt(x.per[1])}g / 단 ${fmt(x.per[2])}g / 지 ${fmt(x.per[3])}g${x.per[4]==null?' · 당류 미기재':''}</span></button>`).join(''));
+ }catch(err){onlineFoodStatus('검색 응답을 처리하지 못했어. 앱 내 음식 검색을 이용해 줘.')}
+};
+window.myLineOnlineError=function(message){onlineFoodStatus('온라인 제품 검색 실패: '+message+' · 앱 내 음식 검색과 직접 입력은 계속 가능해.');onlineFoodResults('');};
+searchOnlineFood=function(){
+ const query=(document.getElementById('online-food-query')?.value||'').trim();
+ if(query.length<2){onlineFoodStatus('검색어를 두 글자 이상 입력해 줘.');return}
+ if(typeof MyLineAndroid!=='undefined'&&typeof MyLineAndroid.searchProducts==='function'){
+  onlineFoodStatus('인터넷에서 상품 검색 중이야…');onlineFoodResults('');
+  try{MyLineAndroid.searchProducts(query)}catch(err){window.myLineOnlineError('연결 실패')}
+  return;
+ }
+ v19BaseSearchOnlineFood();
+};
+const v19OldSelectOnlineFood=selectOnlineFood;
+selectOnlineFood=function(index){v19OldSelectOnlineFood(index);const row=onlineFoodHits[index];if(!row)return;
+ document.getElementById('menu-ingredient-result').textContent+=' · 실제 먹은 음식으로 기록할 때는 기존 기록 덮어쓰기 확인이 필요해.';
+};
+// Mark the editor's mode and explain draft behavior.
+document.addEventListener('DOMContentLoaded',()=>{const v19Modenote=document.createElement('p');v19Modenote.id='v19-menu-mode-info';v19Modenote.className='menu-info';
+document.querySelector('#menu-dialog .menu-search').before(v19Modenote);
+document.querySelector('#menu-dialog .menu-actions [data-action="save-custom"]').textContent='계획 수정안에 반영';
+document.querySelector('#menu-dialog .menu-actions [data-action="record-actual-online"]').textContent='실제 먹은 음식으로 저장';
+document.querySelector('#menu-dialog h2').textContent='메뉴 · 음식 수정';
+document.querySelector('.foot').textContent='MY LINE v19 · 식단 편집은 명시적 저장 후 적용 · 기록은 휴대폰 안에 보관 · 백업 권장';});
+
+render();
+if(deviceMeta.savedAt){const label=document.getElementById('save-indicator');if(label)label.textContent='✓ 이전 기록 있음'}
+</script>
+<dialog id="menu-dialog" style="border:1px solid #e4dbd4;border-radius:18px;padding:0;max-width:min(96vw,670px);width:100%;max-height:90vh;overflow:auto;box-shadow:0 18px 70px #0004;background:#f8f5f1">
+<div class="menu-editor" style="margin:0;border:0;border-radius:18px;padding:22px">
+ <div class="meal-action-bar"><div><div class="micro">MENU EDITOR</div><h2 style="margin:2px 0">메뉴 검색 · 변경</h2><p class="small muted"><b id="menu-slot-name">아침</b> 메뉴를 변경해도 다른 날짜 식단은 유지돼.</p></div><button class="btn secondary tiny" data-action="close-menu">닫기 ✕</button></div>
+ <div class="menu-search"><label for="menu-search-input"><b>앱에 있는 메뉴 검색</b></label><input id="menu-search-input" type="text" placeholder="예: 오므라이스, 미역국, 계란밥" autocomplete="off"></div>
+ <div id="menu-search-results" class="menu-results"></div>
+ <hr class="hr"><h3>무료 온라인 가공식품 검색</h3>
+ <p class="menu-info">Open Food Facts에 등록된 제품을 검색해 100g 기준 영양정보를 가져와. 회원가입·API 결제는 필요 없어. <b>검색 버튼을 눌렀을 때만</b> 인터넷을 사용해.</p>
+ <div class="online-searchbar"><input id="online-food-query" class="input" placeholder="예: 더단백, 요거트, 그래놀라" autocomplete="off"><input id="online-food-grams" class="input" type="number" min="1" max="2000" step="1" value="100" aria-label="먹은 양 g"><button class="btn secondary" data-action="online-food-search">무료 검색</button></div>
+ <div class="menu-info" id="online-food-status" aria-live="polite">가공식품 중심 검색이야. 음식·집밥은 아래에 있는 기존 메뉴와 재료 DB를 이용해 줘.</div>
+ <div id="online-food-results" class="online-results"></div>
+ <p class="hint">제품 DB는 사용자 참여 자료라 등록되지 않은 제품이나 영양표가 부정확한 경우도 있어. 제품 포장지 표시와 비교해 줘.</p>
+ <hr class="hr"><h3>새로운 메뉴 직접 등록</h3>
+ <p class="menu-info">앱에 없는 메뉴는 이름과 재료별 g을 적어. 5가지 영양값을 계산 또는 직접 입력하면 선택한 날짜의 계획 및 합계에 반영돼.</p>
+ <div class="field"><label>메뉴 이름</label><input id="new-menu-name" type="text" placeholder="예: 소고기 수란덮밥"></div>
+ <div class="field" style="margin-top:10px"><label>재료 이름과 먹는 양 (쉼표 또는 줄바꿈으로 구분)</label><textarea id="new-menu-items" rows="3" placeholder="밥 150g, 달걀 100g, 간장 10g, 참기름 5g"></textarea></div>
+ <div class="menu-actions"><button class="btn secondary tiny" data-action="calc-custom">알려진 재료로 영양 계산</button><button class="btn secondary tiny" data-action="ask-chatgpt">ChatGPT에 질문 열기</button></div>
+ <p class="menu-info" id="menu-ingredient-result"></p><textarea id="menu-chat-prompt" style="display:none;width:100%;min-height:110px;margin-bottom:10px" readonly aria-label="ChatGPT에 붙여 넣을 질문"></textarea>
+ <div class="menu-edit-fields"><label>열량 kcal<input id="new-menu-kcal" type="number" min="0" step="0.1"></label><label>탄수화물 g<input id="new-menu-carb" type="number" min="0" step="0.1"></label><label>단백질 g<input id="new-menu-protein" type="number" min="0" step="0.1"></label><label>지방 g<input id="new-menu-fat" type="number" min="0" step="0.1"></label><label>당류 g<input id="new-menu-sugar" type="number" min="0" step="0.1"></label></div>
+ <div class="field" style="margin-top:12px"><label>영양정보 출처 (선택 · 확인용)</label><input id="new-menu-source" type="text" placeholder="예: 제품 포장지 2026-11 / 앱 내 추정치"></div><div class="field" style="margin-top:12px"><label>레시피 단계 (선택 · 한 줄에 한 단계)</label><textarea id="new-menu-steps" rows="3" placeholder="달걀을 프라이팬에 익힌다.&#10;밥에 달걀을 올리고 양념을 뿌린다."></textarea></div>
+ <div class="menu-actions"><button class="btn" data-action="record-actual-online">실제로 먹은 음식으로 기록</button><button class="btn secondary" data-action="save-custom">계획 식단으로 변경</button><button class="btn secondary" data-action="close-menu">취소</button></div>
+ <p class="menu-info">※ ChatGPT AI 실시간 연동은 없지만 무료 제품 DB 검색을 지원해.  'ChatGPT에 질문 열기'은 별도 창을 열고, 검토한 결과를 수동으로 입력하는 방식이야. 원한다면 추후 서버·API 연동 버전으로 확장할 수 있어.</p>
+ </div></dialog>
+
+<dialog id="swap-dialog" class="swap-modal" aria-labelledby="swap-heading">
+ <div class="swap-content">
+ <div class="meal-action-bar"><div><div class="micro">MACRO-MATCH SWAP</div><h2 id="swap-heading" style="margin:4px 0">영양성분 비슷한 재료로 대체하기</h2></div><button class="btn secondary tiny" data-action="close-swap">닫기 ✕</button></div>
+ <div id="swap-original" class="swap-source"></div>
+ <div class="swap-pills"><button type="button" class="swap-pill selected" data-swapgroup="similar">추천 목록</button><button type="button" class="swap-pill" data-swapgroup="all">전체 음식</button></div>
+ <div class="field"><label for="swap-search-input">대체 음식 이름 검색</label><input id="swap-search-input" placeholder="예: 밥, 바나나, 감자, 달걀" autocomplete="off"></div>
+ <div id="swap-options" class="swap-options"></div>
+ <div class="notice">정확히 동일한 탄수화물·단백질·지방을 맞추지 못할 수도 있어. 가장 비슷한 재료·두 가지 조합을 먼저 표시하고 차이를 보여줘. 영양값은 식품 평균 추정치이므로 제품 영양표와 조리법에 따라 달라져. 음식 대체는 식품군과 미량영양소까지 동등하다는 뜻은 아니야.</div>
+ </div>
+</dialog>
+</body></html>
